@@ -1,0 +1,44 @@
+.main {
+  padding-top: 0px;
+  padding-bottom: 25px;
+  margin: 0px auto;
+  width: 800px;
+}
+
+.section{
+  width: 800px !important;
+  margin: auto;
+} 
+
+#editor { 
+  margin: 20px;
+  margin-top: 0px;
+  border: 2px solid #d0d0d0;      
+  width: 550px;
+  height: 450px;
+  display: inline-block;
+}
+.display {
+  position: absolute;
+  /*background-color: #FFF;*/
+  z-index: 99999;
+}
+
+#sketch {
+  border: 1px solid #000000;
+}
+
+.controls {
+  margin-left: 20px;
+}
+
+#reference {
+  display: inline-block;
+  padding: 6px;
+  border: 1px solid #CCC;
+  margin-left: 575px;
+  height: 440px;
+  width: 110px;
+  font-family: "Monaco","Menlo","Ubuntu Mono","Droid Sans Mono","Consolas",monospace;
+  font-size: 14px;
+}

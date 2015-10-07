@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Processing JS, editor demo</title>
+  <link rel="stylesheet" type="text/css" href="resources/styles/jquery.fullPage.css" />
+  <link rel="stylesheet" type="text/css" href="resources/styles/main.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="resources/js/jquery.fullPage.js" type="text/javascript"></script>
+  <script src="resources/ace/src/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="resources/processing/processing-1.4.1.js" type="text/javascript" charset="utf-8"></script> 
+  <script src="resources/js/jquery.hotkeys.js"></script>
+  <script src="resources/js/main.js"></script>
+</head>
+
+<body>
+  <div id="fullpage">
+    <div class="section">
+      <div class="slide">
+        <h1>Mehackit Processing Demo</h1>
+  
+        <div class="display" style="display: block">
+          <canvas id="sketch" class="canvas"></canvas>    
+        </div>
+  
+        <div class="controls">
+          <button class="editor_button" id="btn_start">Start</button>
+          <button class="editor_button" id="btn_stop">Stop</button>        
+        </div>
+
+<pre id="editor" filepath="sketches/example/example.txt">
+//example:
+
+int i = 0; 
+
+void setup() {
+  size(400, 400); 
+  background(255);
+  smooth();
+  strokeWeight(15);
+  frameRate(24);
+} 
+
+void draw() {
+  stroke(random(50), random(255), random(255), 100);
+  line(i, 0, random(0, width), height);
+  if (i &lt; width) {
+    i++;
+  } else {
+    i = 0; 
+  }
+}
+</pre>
+
+        <div id="reference">
+          <b>Reference</b><br/>
+          <a href="http://processing.org/reference/background_.html" target="p5ref">background</a><br/>
+          <a href="http://processing.org/reference/draw_.html" target="p5ref">draw</a><br/>
+          <a href="http://processing.org/reference/line_.html" target="p5ref">line</a><br/>
+          <a href="http://processing.org/reference/random_.html" target="p5ref">random</a><br/>
+          <a href="http://processing.org/reference/void.html" target="p5ref">void</a><br/>
+        </div>
+      </div>
+
+      <div class="slide">
+        <h1>Slide</h1>
+      </div>
+
+    </div>
+
+    <div class="section">
+      <div class="slide">
+        <h1>Example</h1>
+        <div class="display" style="display: block">
+          <canvas id="sketch" class="canvas"></canvas>    
+        </div>
+<pre id="example" style="visibility: hidden">
+//example:
+
+boolean animate_noise = true;
+
+color bg_color = color(250);
+color cordinates_color = color(0);
+color cordinates_limit_color = color(200, 100);
+color noise_color = color(200, 0, 0);
+color noise_color_light = color(150, 100);
+color cordinate_annotation_color = color(150, 0, 0, 100);
+
+int padding = 20;
+int origo_x = 50;
+int origo_y = 200;
+int cordinate_height = 250;
+int noise_height = 150;
+int animate_x = 0;
+float noise_d = 100;
+int noise_selector_x = 314;
+
+int time = -99;
+int delay = 50;
+
+int code_x = origo_x;
+int code_y = 350;
+
+void setup() {
+    size(600, 600);
+}
+
+void draw() {
+    background(bg_color);
+    draw_increment_control();
+    drawCordinates(origo_x, origo_y, cordinate_height);
+    drawCode();
+    drawNoise(origo_x, origo_y);
+}
+
+void draw_increment_control() {
+    fill(0);
+    text("Select increment to x_seed:", origo_x, cordinate_height);
+    stroke(0);
+    fill(200);
+    rect(origo_x, cordinate_height + 10, width - origo_x - padding, 50);
+    if (mouseX > origo_x && mouseX < width - padding && mouseY > cordinate_height + 10 && mouseY < cordinate_height + 10 + 50) {
+        noise_d = map(mouseX, origo_x, width - padding, 1, 200);
+        noise_selector_x = mouseX;
+    }
+    line(noise_selector_x, cordinate_height + 10, noise_selector_x, cordinate_height + 10 + 50);
+    fill(0);
+    text(1.0 / noise_d, noise_selector_x + 3, cordinate_height + 40);
+}
+
+void drawCordinates(int origo_x, int origo_y, int cordinate_height) {
+    fill(0);
+    text("x", width - 10, origo_y + 3);
+    text("y", origo_x - 3, 12);
+    text("1", 5, origo_y - noise_height + 3);
+    text("0", 5, origo_y + 3);
+    stroke(cordinates_color);
+    line(origo_x, padding, origo_x, cordinate_height - padding);
+    line(padding, origo_y, width - padding, origo_y);
+    stroke(cordinates_limit_color);
+    line(padding, origo_y-noise_height, width - padding, origo_y-noise_height);
+
+}
+
+void drawCode() {
+    fill(0);
+    String code = "float x_seed = 0;\n\nvoid setup() {\n    size(530, 30);\n}\n\nvoid draw() {\n    background(255);\n    float x = noise(x_seed) * width;\n    rect(x, 10, 10, 10);\n    x_seed = x_seed + " + 1 / noise_d +";\n}";
+    text(code, code_x, code_y);
+}
+
+void drawExplanation(float value_x, float value_noise) {
+    fill(0);
+    String x = ("x_seed: " + value_x);
+    text(x, value_x + 55, origo_y + 12);
+    String y = ("noise(" + value_x + "): " + value_noise);
+    text(y, value_x + 55, origo_y - value_noise * noise_height - 2);
+}
+
+void drawNoise(int origo_x, int origo_y) {
+    stroke(noise_color_light);
+    for (int x = 0; x < width - padding - origo_x; ++x) {
+        point(x + origo_x, origo_y - noise(x / noise_d)*noise_height);
+    }
+
+    stroke(noise_color);
+    for (int x = 0; x < animate_x; ++x) {
+        point(x + origo_x, origo_y - noise(x / noise_d)*noise_height);
+        if (x == animate_x - 1) {
+            stroke(cordinate_annotation_color);
+            line(x + origo_x, origo_y, x + origo_x, origo_y - noise(x / noise_d)*noise_height);
+        }
+    }
+
+    drawExplanation(animate_x, noise(animate_x / noise_d));
+    draw_rect(noise(animate_x / noise_d));
+    
+
+    if (millis() - time > delay) {
+        if (animate_x < width - padding - origo_x) {
+            animate_x++;
+        } else {
+            animate_x = 0;
+        }
+        
+        time = millis();
+    }
+}
+
+void draw_rect(float x) {
+    stroke(0);
+    fill(255);
+    rect(origo_x, 520, width - origo_x - padding, 30);
+    rect(origo_x + x * (width - origo_x - padding), 520 + 10, 10, 10);
+    fill(0);
+    String str = "noise(x_seed) * width: \n" + x * (width - origo_x - padding);
+    text(str, origo_x + x * (width - origo_x - padding) + 15, 520 + 11);
+}
+</pre>
+      </div>
+      <div class="slide">
+        <h1>Taas</h1>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="slide">
+
+        <h1>Hei</h1>
+
+        <div class="display" style="display: block">
+          <canvas id="sketch" class="canvas"></canvas>    
+        </div>
+  
+        <div class="controls">
+          <button class="editor_button" id="btn_start">Start</button>
+          <button class="editor_button" id="btn_stop">Stop</button>        
+        </div>
+
+<pre id="editor" filepath="sketches/example/example.txt">
+//example 2:
+
+float x_seed = 0;
+ 
+void setup() {
+   size(500,30);
+}
+ 
+void draw() {
+  background(255);
+  float x = noise(x_seed) * width;  
+  rect(x, 10, 10, 10);
+  x_seed = x_seed + 0.01;
+}
+</pre>
+
+        <div id="reference">
+          <b>Reference</b><br/>
+          <a href="http://processing.org/reference/background_.html" target="p5ref">background</a><br/>
+          <a href="http://processing.org/reference/draw_.html" target="p5ref">draw</a><br/>
+          <a href="http://processing.org/reference/line_.html" target="p5ref">line</a><br/>
+          <a href="http://processing.org/reference/random_.html" target="p5ref">random</a><br/>
+          <a href="http://processing.org/reference/void.html" target="p5ref">void</a><br/>
+        </div>
+      </div>
+      </div>
+      <div class="slide">
+        <h1>Taas</h1>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
