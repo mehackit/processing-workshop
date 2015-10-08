@@ -1,14 +1,12 @@
-.main {
-  padding-top: 0px;
-  padding-bottom: 25px;
-  margin: 0px auto;
-  width: 800px;
-}
-
 .section{
   width: 800px !important;
   margin: auto;
+  position: relative;
 } 
+
+.slide{
+  position: relative;
+}
 
 #editor { 
   margin: 20px;

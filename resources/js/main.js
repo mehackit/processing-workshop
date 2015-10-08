@@ -28,16 +28,16 @@ function initialize_fullpage() {
 }
 
 function add_editor_if_needed(slide) {
-  var editor = slide.find('#editor');
+  var editor = slide.find('#editor:first');
   if (editor.length > 0) {
     initialize_ace(editor, slide);
   };
 }
 
 function add_example_if_needed(slide) {
-  var example = slide.find('#example');
+  var example = slide.find('#example:first');
   if (example.length > 0) {
-    var canvas = slide.find('#sketch')[0]; //slide.find('#sketch')[0] gets the actual DOM element instead of jQuery object
+    var canvas = slide.find('#sketch:first')[0]; //slide.find('#sketch:first')[0] gets the actual DOM element instead of jQuery object
     startSketch(example.text(), canvas, slide);
   };
 }
@@ -51,9 +51,9 @@ function initialize_ace(editor, slide) {
 
   var canvas = slide.find('#sketch')[0];
 
-  slide.find(".display").hide();
-  slide.find("#btn_start").click(function() { startSketch(ace_editor.getValue(), canvas, slide); }).show();
-  slide.find("#btn_stop").click(function() { stopSketch(slide); }).hide();
+  slide.find(".display:first").attr('style', 'display: none;');
+  slide.find("#btn_start:first").click(function() { startSketch(ace_editor.getValue(), canvas, slide); }).show();
+  slide.find("#btn_stop:first").click(function() { stopSketch(slide); }).hide();
 
   // $( document ).bind('keypress', 's', function() { stopSketch(slide); });
   // $( document ).bind('keydown', 'esc', function() { startSketch(ace_editor.getValue(), canvas, slide); });
@@ -78,23 +78,28 @@ function startSketch(processingCode, canvas, slide) {
   // put Processing sketch to run
   switchSketchState(true);
 
-  slide.find(".display").show();
+  // slide.find(".display:first").show();
   //center allign canvas
-  var top = $( window ).height() / 2 - slide.find("#sketch").height() / 2;
-  var left = parseInt($(".section").css( "width" )) / 2 - slide.find("#sketch").width() / 2;
-  $(".display").css({'top': top, 'left': left});
+  slide.find(".display:first").attr('style', 'display: block;');
+  var top = $( window ).height() / 2 - slide.find("#sketch:first").height() / 2;
+  var left = parseInt($(".section").css( "width" )) / 2 - slide.find("#sketch:first").width() / 2;
+  slide.find(".display:first").attr('style', 'display: block; left: ' + left + 'px; top: ' + top + 'px');
+
+
+  // $(".display").css({'top': top, 'left': left});
+  // $(".display").attr('style','left: 300px');
 
   
-  slide.find("#btn_start").hide();
-  slide.find("#btn_stop").show();
+  slide.find("#btn_start:first").hide();
+  slide.find("#btn_stop:first").show();
 }
 
 function stopSketch(slide) {
   switchSketchState(false);
   processingInstance = null;
-  slide.find(".display").hide();
-  slide.find("#btn_start").show();
-  slide.find("#btn_stop").hide();
+  slide.find(".display:first").attr('style', 'display: none;  ');
+  slide.find("#btn_start:first").show();
+  slide.find("#btn_stop:first").hide();
 }
 
 function switchSketchState(on) {
@@ -109,4 +114,9 @@ function switchSketchState(on) {
 
 $(document).ready(function(){
   initialize_fullpage();
+  $( document ).mousemove(function( event ) {
+    var msg = "Handler for .mousemove() called at ";
+    msg += event.pageX + ", " + event.pageY;
+    console.log(msg)
+  });
 });
