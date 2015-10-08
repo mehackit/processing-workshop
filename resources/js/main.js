@@ -13,8 +13,15 @@ function initialize_fullpage() {
     controlArrows: false,
 
     afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
+      add_editor_if_needed($(this).find('.slide:first'));
+      add_example_if_needed($(this).find('.slide:first'));
+      console.log($(this).find('.slide:first').attr("asdf"));
+    },
+
+    afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
       add_editor_if_needed($(this));
       add_example_if_needed($(this));
+      console.log($(this).attr("asdf"));
     }
 
   });
@@ -30,13 +37,9 @@ function add_editor_if_needed(slide) {
 function add_example_if_needed(slide) {
   var example = slide.find('#example');
   if (example.length > 0) {
-    initialize_example(example, slide);
+    var canvas = slide.find('#sketch')[0]; //slide.find('#sketch')[0] gets the actual DOM element instead of jQuery object
+    startSketch(example.text(), canvas, slide);
   };
-}
-
-function initialize_example(example, slide) {
-  var canvas = slide.find('#sketch')[0];
-  startSketch(example.text(), canvas, slide);
 }
 
 function initialize_ace(editor, slide) {

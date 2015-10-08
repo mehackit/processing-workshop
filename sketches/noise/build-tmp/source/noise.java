@@ -88,9 +88,9 @@ public void drawCode() {
 public void drawExplanation(float value_x, float value_noise) {
     fill(0);
     String x = ("x_seed: " + value_x);
-    text(x, value_x + 55, origo_y + 12);
+    text(x, value_x * noise_d + 55, origo_y + 12);
     String y = ("noise(" + value_x + "): " + value_noise);
-    text(y, value_x + 55, origo_y - value_noise * noise_height - 2);
+    text(y, value_x * noise_d + 55, origo_y - value_noise * noise_height - 2);
 }
 
 public void drawNoise(int origo_x, int origo_y) {
@@ -108,7 +108,7 @@ public void drawNoise(int origo_x, int origo_y) {
         }
     }
 
-    drawExplanation(animate_x, noise(animate_x / noise_d));
+    drawExplanation(animate_x / noise_d, noise(animate_x / noise_d));
     draw_rect(noise(animate_x / noise_d));
     
 

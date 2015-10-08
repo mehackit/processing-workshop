@@ -18,9 +18,9 @@
 <body>
   <div id="fullpage">
     <div class="section">
-      <div class="slide">
+      <div class="slide" asdf="1">
         <h1>Mehackit Processing Demo</h1>
-  
+
         <div class="display" style="display: block">
           <canvas id="sketch" class="canvas"></canvas>    
         </div>
@@ -44,13 +44,9 @@ void setup() {
 } 
 
 void draw() {
-  stroke(random(50), random(255), random(255), 100);
-  line(i, 0, random(0, width), height);
-  if (i &lt; width) {
-    i++;
-  } else {
-    i = 0; 
-  }
+  background(255);
+  fill(0);
+  text(mouseX + "\n" + mouseY, mouseX, 100);
 }
 </pre>
 
@@ -64,20 +60,62 @@ void draw() {
         </div>
       </div>
 
-      <div class="slide">
+      <div class="slide" asdf="2">
         <h1>Slide</h1>
       </div>
+      
+      <div class="slide" asdf="3">
+        <h1>Mehackit Processing Demo</h1>
+
+        <div class="display" style="display: block">
+          <canvas id="sketch" class="canvas"></canvas>    
+        </div>
+  
+        <div class="controls">
+          <button class="editor_button" id="btn_start">Start</button>
+          <button class="editor_button" id="btn_stop">Stop</button>        
+        </div>
+
+<pre id="editor" filepath="sketches/example/example.txt">
+//example:
+
+int i = 0; 
+
+void setup() {
+  size(400, 400); 
+  background(255);
+  smooth();
+  strokeWeight(15);
+  frameRate(24);
+} 
+
+void draw() {
+  background(255);
+  fill(0);
+  text(mouseX + "\n" + mouseY, mouseX, 100);
+}
+</pre>
+
+        <div id="reference">
+          <b>Reference</b><br/>
+          <a href="http://processing.org/reference/background_.html" target="p5ref">background</a><br/>
+          <a href="http://processing.org/reference/draw_.html" target="p5ref">draw</a><br/>
+          <a href="http://processing.org/reference/line_.html" target="p5ref">line</a><br/>
+          <a href="http://processing.org/reference/random_.html" target="p5ref">random</a><br/>
+          <a href="http://processing.org/reference/void.html" target="p5ref">void</a><br/>
+        </div>
+      </div>
+     
 
     </div>
 
     <div class="section">
-      <div class="slide">
+      <div class="slide" asdf="4">
         <h1>Example</h1>
         <div class="display" style="display: block">
           <canvas id="sketch" class="canvas"></canvas>    
         </div>
 <pre id="example" style="visibility: hidden">
-//example:
 
 boolean animate_noise = true;
 
@@ -113,6 +151,9 @@ void draw() {
     drawCordinates(origo_x, origo_y, cordinate_height);
     drawCode();
     drawNoise(origo_x, origo_y);
+    //fill(0);
+    //text(mouseX + "\n" + mouseY, mouseX + 10, mouseY);
+    //text(mouseX + "\n" + mouseY, mouseX, 100);
 }
 
 void draw_increment_control() {
@@ -199,13 +240,15 @@ void draw_rect(float x) {
 }
 </pre>
       </div>
-      <div class="slide">
+
+      <div class="slide" asdf="4">
         <h1>Taas</h1>
       </div>
+
     </div>
 
     <div class="section">
-      <div class="slide">
+      <div class="slide" asdf="5">
 
         <h1>Hei</h1>
 
@@ -244,10 +287,11 @@ void draw() {
           <a href="http://processing.org/reference/void.html" target="p5ref">void</a><br/>
         </div>
       </div>
-      </div>
-      <div class="slide">
+      
+      <div class="slide" asdf="6">
         <h1>Taas</h1>
       </div>
+
     </div>
   </div>
 </body>
