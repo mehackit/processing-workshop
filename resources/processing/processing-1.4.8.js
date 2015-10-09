@@ -7375,13 +7375,20 @@ module.exports = function withTouch(p, curElement, attachEventHandler, document,
   }
 
   // simple relative position
-  function updateMousePosition(curElement, event) {
-    var offset = calculateOffset(curElement, event);
-    // Dropping support for IE clientX and clientY, switching to pageX and pageY
-    // so we don't have to calculate scroll offset.
-    // Removed in ticket #184. See rev: 2f106d1c7017fed92d045ba918db47d28e5c16f4
-    p.mouseX = event.pageX - offset.X;
-    p.mouseY = event.pageY - offset.Y;
+  // function updateMousePosition(curElement, event) {
+  //   var offset = calculateOffset(curElement, event);
+  //   // Dropping support for IE clientX and clientY, switching to pageX and pageY
+  //   // so we don't have to calculate scroll offset.
+  //   // Removed in ticket #184. See rev: 2f106d1c7017fed92d045ba918db47d28e5c16f4
+  //   p.mouseX = event.pageX - offset.X;
+  //   p.mouseY = event.pageY - offset.Y;
+  // }
+
+  //Dirty hack to use mouse position with fullpage.js
+  function updateMousePosition(curElement, event) { 
+    var rect = curElement.getBoundingClientRect(); 
+    p.mouseX = event.clientX - rect.left - 2.5; 
+    p.mouseY = event.clientY - rect.top - 2.5; 
   }
 
   /**

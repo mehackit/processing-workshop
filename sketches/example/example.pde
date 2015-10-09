@@ -1,4 +1,4 @@
-//example:
+//here
 
 int i = 0; 
 
@@ -11,11 +11,8 @@ void setup() {
 } 
 
 void draw() {
-  stroke(random(50), random(255), random(255), 100);
-  line(i, 0, random(0, width), height);
-  if (i &lt; width) {
-    i++;
-  } else {
-    i = 0; 
-  }
+  background(255);
+  fill(0);
+  text(mouseX + "\n" + mouseY, 100, 100);
 }
+
