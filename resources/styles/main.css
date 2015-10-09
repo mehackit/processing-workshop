@@ -23,7 +23,7 @@
   z-index: 99999;
 }
 
-#sketch {
+.canvas {
   border: 1px solid #000000;
 }
 
