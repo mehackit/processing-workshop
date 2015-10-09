@@ -1,5 +1,4 @@
 var processingInstance;
-//var processingInstance, ace_editor, canvas;
 
 function initialize_fullpage() {
   $('#fullpage').fullpage({
@@ -26,7 +25,7 @@ function initialize_fullpage() {
 
 //check if slide contains an editor and init it
 function add_editor_if_needed(slide) {
-  var editor = slide.find('#editor');
+  var editor = slide.find('#editor:first');
   if (editor.length > 0) {
     initialize_ace(editor, slide);
   };
@@ -34,11 +33,11 @@ function add_editor_if_needed(slide) {
 
 //check if slide contains an example and run it
 function add_example_if_needed(slide) {
-  var example = slide.find('[type=example]');
+  var example = slide.find('[type=example]:first');
   if (example.length > 0) {
     processingInstance = Processing.getInstanceById('sketch');
     switchSketchState(true);
-    slide.find('.fp-tableCell').attr('style', 'vertical-align: baseline;');
+    slide.find('.fp-tableCell:first').attr('style', 'vertical-align: baseline;');
     centerAlignCanvas(slide);
   };
 }
@@ -61,20 +60,20 @@ function initialize_ace(editor, slide) {
         ace_editor.setValue(data, -1);
 
         // get canvas DOM_element from slide
-        var canvas = slide.find('.canvas')[0];
+        var canvas = slide.find('.canvas:first')[0];
 
         // hide canvas
-        slide.find(".display").attr('style', 'display: none;');
+        slide.find(".display:first").attr('style', 'display: none;');
 
         // add startSketch funtion to start button and show button
-        slide.find("#btn_start").click(function() { 
+        slide.find("#btn_start:first").click(function() { 
           // get processing sketch source code from ACE editor
           var sourceCode = ace_editor.getValue();
           startSketch(sourceCode, canvas, slide); 
         }).show();
 
         // add stopSketch function to stop button and hide button
-        slide.find("#btn_stop").click(function() { 
+        slide.find("#btn_stop:first").click(function() { 
           stopSketch(slide); 
         }).hide();
     }
@@ -105,10 +104,10 @@ function startSketch(processingCode, canvas, slide) {
 
 function centerAlignCanvas(slide){
   //center allign canvas
-  slide.find(".display").attr('style', 'display: block;');
-  var top = $( window ).height() / 2 - slide.find("#sketch").height() / 2;
-  var left = parseInt($(".section").css( "width" )) / 2 - slide.find("#sketch").width() / 2;
-  slide.find(".display").attr('style', 'display: block; left: ' + left + 'px; top: ' + top + 'px');
+  slide.find(".display:first").attr('style', 'display: block;');
+  var top = $( window ).height() / 2 - slide.find("#sketch:first").height() / 2;
+  var left = parseInt($(".section").css( "width" )) / 2 - slide.find("#sketch:first").width() / 2;
+  slide.find(".display:first").attr('style', 'display: block; left: ' + left + 'px; top: ' + top + 'px');
 }
 
 function stopSketch(slide) {

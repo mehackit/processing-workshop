@@ -1,0 +1,6 @@
+<div class="slide">
+    <h1>Hello World!</h1>
+    <div class="display">
+      <canvas id="sketch" class="canvas" type='example' data-processing-sources="sketches/helloworld1/helloworld1.pde"></canvas>
+    </div>
+</div>

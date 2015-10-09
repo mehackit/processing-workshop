@@ -1,0 +1,23 @@
+<div class="slide">
+  <h1>HelloWorld</h1>
+
+  <div class="display">
+    <canvas class="canvas" id="sketch"></canvas>
+  </div>
+
+  <div class="controls">
+    <button class="editor_button" id="btn_start">Start</button>
+    <button class="editor_button" id="btn_stop">Stop</button>        
+  </div>
+
+  <pre id="editor" filepath="sketches/example/example.pde"></pre>
+
+  <div id="reference">
+    <b>Reference</b><br/>
+    <a href="http://processing.org/reference/background_.html" target="p5ref">background</a><br/>
+    <a href="http://processing.org/reference/draw_.html" target="p5ref">draw</a><br/>
+    <a href="http://processing.org/reference/line_.html" target="p5ref">line</a><br/>
+    <a href="http://processing.org/reference/random_.html" target="p5ref">random</a><br/>
+    <a href="http://processing.org/reference/void.html" target="p5ref">void</a><br/>
+  </div>
+</div>
