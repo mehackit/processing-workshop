@@ -2,9 +2,9 @@ var processingInstance;
 
 function initialize_fullpage() {
   $('#fullpage').fullpage({
-    anchors:['firstChapter', 'secondChapter', 'thirdChapter'],
+    anchors: ['welcome', 'helloWorld', 'interaction'],
+    menu: '#menu',
     verticalCentered: true,
-    menu: true,
     navigation: true,
     navigationPosition: 'right',
     slidesNavigation: true,
@@ -12,8 +12,8 @@ function initialize_fullpage() {
     controlArrows: false,
 
     afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
-      add_editor_if_needed($(this));
-      add_example_if_needed($(this));
+      //add_editor_if_needed($(this).first());
+      add_example_if_needed($(this).first());
     },
 
     afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
@@ -35,7 +35,13 @@ function add_editor_if_needed(slide) {
 function add_example_if_needed(slide) {
   var example = slide.find('[type=example]:first');
   if (example.length > 0) {
-    processingInstance = Processing.getInstanceById('sketch');
+    //stop processing if running
+    if (processingInstance) {
+      switchSketchState(false);
+      processingInstance = null;
+    };
+    //start sketch
+    processingInstance = Processing.getInstanceById(example.attr('id'));
     switchSketchState(true);
     slide.find('.fp-tableCell:first').attr('style', 'vertical-align: baseline;');
     centerAlignCanvas(slide);
@@ -105,8 +111,8 @@ function startSketch(processingCode, canvas, slide) {
 function centerAlignCanvas(slide){
   //center allign canvas
   slide.find(".display:first").attr('style', 'display: block;');
-  var top = $( window ).height() / 2 - slide.find("#sketch:first").height() / 2;
-  var left = parseInt($(".section").css( "width" )) / 2 - slide.find("#sketch:first").width() / 2;
+  var top = $( window ).height() / 2 - slide.find(".canvas:first").height() / 2;
+  var left = parseInt($(".section").css( "width" )) / 2 - slide.find(".canvas:first").width() / 2;
   slide.find(".display:first").attr('style', 'display: block; left: ' + left + 'px; top: ' + top + 'px');
 }
 

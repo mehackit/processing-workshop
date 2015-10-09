@@ -3,6 +3,8 @@ void setup() {
 }
 
 void draw() {
-    rect(random(0,width), 100, 50, 50);
-    ellipse(50, 50, 50, 50); 
+    float x = random(0, width);
+    float y = random(0, height);
+    float radius = random(0, 100);
+    ellipse(x, y, radius, radius); 
 }
