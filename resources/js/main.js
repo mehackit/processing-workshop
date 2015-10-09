@@ -13,31 +13,32 @@ function initialize_fullpage() {
     controlArrows: false,
 
     afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
-      var slide = $(this).find('.slide:first');
-      add_editor_if_needed(slide);
-      add_example_if_needed(slide);
+      add_editor_if_needed($(this));
+      add_example_if_needed($(this));
     },
 
     afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
       add_editor_if_needed($(this));
       add_example_if_needed($(this));
     }
-
   });
 }
 
+//check if slide contains an editor and init it
 function add_editor_if_needed(slide) {
-  var editor = slide.find('#editor:first');
+  var editor = slide.find('#editor');
   if (editor.length > 0) {
     initialize_ace(editor, slide);
   };
 }
 
+//check if slide contains an example and run it
 function add_example_if_needed(slide) {
   var example = slide.find('[type=example]');
   if (example.length > 0) {
     processingInstance = Processing.getInstanceById('sketch');
     switchSketchState(true);
+    slide.find('.fp-tableCell').attr('style', 'vertical-align: baseline;');
     centerAlignCanvas(slide);
   };
 }
@@ -49,33 +50,35 @@ function initialize_ace(editor, slide) {
   ace_editor.getSession().setMode("ace/mode/java");
   ace_editor.getSession().setTabSize(2);
 
-  $.ajax('sketches/example/example.pde', {
+  // get processing sketch filepath form filepath attribute
+  var filepath = editor.attr('filepath');
+
+  // load file with ajax and pass a function that runs after success
+  $.ajax(filepath, {
     dataType: 'text',
     success: function (data) {
+        // set data to editor and move cursor to beginning
         ace_editor.setValue(data, -1);
-        var canvas = slide.find('#sketch:first')[0];
 
-        slide.find(".display:first").attr('style', 'display: none;');
-        slide.find("#btn_start:first").click(function() { 
-          startSketch(ace_editor.getValue(), canvas, slide); 
+        // get canvas DOM_element from slide
+        var canvas = slide.find('.canvas')[0];
+
+        // hide canvas
+        slide.find(".display").attr('style', 'display: none;');
+
+        // add startSketch funtion to start button and show button
+        slide.find("#btn_start").click(function() { 
+          // get processing sketch source code from ACE editor
+          var sourceCode = ace_editor.getValue();
+          startSketch(sourceCode, canvas, slide); 
         }).show();
-        slide.find("#btn_stop:first").click(function() { 
+
+        // add stopSketch function to stop button and hide button
+        slide.find("#btn_stop").click(function() { 
           stopSketch(slide); 
         }).hide();
     }
   });
-
-  // var canvas = slide.find('#sketch:first')[0];
-
-  // slide.find(".display:first").attr('style', 'display: none;');
-  // slide.find("#btn_start:first").click(function() { startSketch(ace_editor.getValue(), canvas, slide); }).show();
-  // slide.find("#btn_stop:first").click(function() { stopSketch(slide); }).hide();
-
-  // $( document ).bind('keypress', 's', function() { stopSketch(slide); });
-  // $( document ).bind('keydown', 'esc', function() { startSketch(ace_editor.getValue(), canvas, slide); });
-
-  // $( document ).bind('keypress', 's', stopSketch(slide) );
-  // $( document ).bind('keydown', 'esc', startSketch(ace_editor.getValue(), canvas, slide) );
 }
 
 function startSketch(processingCode, canvas, slide) {
@@ -84,9 +87,7 @@ function startSketch(processingCode, canvas, slide) {
     stopSketch(slide);
   }
 
-  // get processing sketch source code from ACE editor
-  // var processingCode = ace_editor.getValue();
-  // compile it using Processing JS 
+  // compile processingCode using Processing JS 
   var jsCodeStr = Processing.compile(processingCode).sourceCode;
   // evaluate it to actual JS code
   var jsCode = eval(jsCodeStr);
@@ -104,11 +105,10 @@ function startSketch(processingCode, canvas, slide) {
 
 function centerAlignCanvas(slide){
   //center allign canvas
-  slide.find(".display:first").attr('style', 'display: block;');
-  var top = $( window ).height() / 2 - slide.find("#sketch:first").height() / 2;
-  var left = parseInt($(".section").css( "width" )) / 2 - slide.find("#sketch:first").width() / 2;
-  slide.find(".display:first").attr('style', 'display: block; left: ' + left + 'px; top: ' + top + 'px');
-
+  slide.find(".display").attr('style', 'display: block;');
+  var top = $( window ).height() / 2 - slide.find("#sketch").height() / 2;
+  var left = parseInt($(".section").css( "width" )) / 2 - slide.find("#sketch").width() / 2;
+  slide.find(".display").attr('style', 'display: block; left: ' + left + 'px; top: ' + top + 'px');
 }
 
 function stopSketch(slide) {
@@ -131,9 +131,4 @@ function switchSketchState(on) {
 
 $(document).ready(function(){
   initialize_fullpage();
-  // $( document ).mousemove(function( event ) {
-  //   var msg = "Handler for .mousemove() called at ";
-  //   msg += event.pageX + ", " + event.pageY;
-  //   console.log(msg)
-  // });
 });
