@@ -4,6 +4,7 @@ function initialize_fullpage() {
   $('#fullpage').fullpage({
     anchors: ['welcome', 'helloWorld', 'interaction'],
     menu: '#menu',
+    paddingTop: 40,
     verticalCentered: true,
     navigation: true,
     navigationPosition: 'right',
@@ -12,8 +13,8 @@ function initialize_fullpage() {
     controlArrows: false,
 
     afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
-      //add_editor_if_needed($(this).first());
-      add_example_if_needed($(this).first());
+      add_editor_if_needed($(this).find('.slide:first'));
+      add_example_if_needed($(this).find('.slide:first'));
     },
 
     afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){

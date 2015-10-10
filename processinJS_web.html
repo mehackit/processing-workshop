@@ -16,34 +16,27 @@
 </head>
 
 <body>
-
-  <ul id="menu">
-    <li data-menuanchor="welcome" class="active"><a href="#welcome">Welcome</a></li>
-    <li data-menuanchor="helloWorld"><a href="#helloWorld">Animation</a></li>
-    <li data-menuanchor="interaction"><a href="#interaction">Interaction</a></li>
-  </ul>
+  <header>
+    <ul id="menu">
+      <li data-menuanchor="welcome" class="active"><a href="#welcome">Welcome</a></li>
+      <li data-menuanchor="helloWorld"><a href="#helloWorld">Animation</a></li>
+      <li data-menuanchor="interaction"><a href="#interaction">Interaction</a></li>
+    </ul>
+  </header>
 
   <div id="fullpage">
     <div class="section active">
       <div class="slide">
         <h1>Welcome</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div> <!-- section -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div> <!-- slide -->
+
       <div class="slide">
         <h1>Welcome again</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div> <!-- section -->
-    </div> <!-- slide -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div> <!-- slide -->
+    </div> <!-- section -->
+
 
     <div class="section"> 
 
@@ -56,200 +49,151 @@
 
       <div class="slide">
         <h1>Cordinates and rectangles</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <div class="help">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
 
-        <div class="display">
-          <canvas class="canvas" id="sketch2"></canvas>
-        </div>
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="sketch2"></canvas>
+          </div>
 
-        <div class="controls">
-          <button class="editor_button" id="btn_start">Start</button>
-          <button class="editor_button" id="btn_stop">Stop</button>        
-        </div>
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
 
-        <pre id="editor" filepath="sketches/helloworld2/helloworld2.pde"></pre>
+          <pre id="editor" filepath="sketches/helloworld2/helloworld2.pde"></pre>
 
-        <div id="reference">
-          <b>Reference</b><br/>
-          <a href="https://processing.org/reference/void.html" target="p5ref">void</a><br/>
-          <a href="https://processing.org/reference/setup_.html" target="p5ref">setup</a><br/>
-          <a href="https://processing.org/reference/draw_.html" target="p5ref">draw</a><br/>
-          <a href="https://processing.org/reference/rect_.html" target="p5ref">rect</a><br/>
-          <a href="https://processing.org/reference/ellipse_.html" target="p5ref">ellipse</a><br/>
-          <a href="https://processing.org/reference/line_.html" target="p5ref">line</a><br/>
-          <a href="https://processing.org/reference/point_.html" target="p5ref">point</a><br/>
-          <a href="https://processing.org/tutorials/drawing/" target="p5ref">coordinate system</a><br/>
-        </div>
+          <div id="reference">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/reference/void.html" target="p5ref">void</a><br/>
+            <a href="https://processing.org/reference/setup_.html" target="p5ref">setup</a><br/>
+            <a href="https://processing.org/reference/draw_.html" target="p5ref">draw</a><br/>
+            <a href="https://processing.org/reference/rect_.html" target="p5ref">rect</a><br/>
+            <a href="https://processing.org/reference/ellipse_.html" target="p5ref">ellipse</a><br/>
+            <a href="https://processing.org/reference/line_.html" target="p5ref">line</a><br/>
+            <a href="https://processing.org/reference/point_.html" target="p5ref">point</a><br/>
+            <a href="https://processing.org/tutorials/drawing/" target="p5ref">coordinate system</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
       </div> <!-- slide -->
 
       <div class="slide">
         <h1>Random</h1>
 
-        <div class="help">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <div class="display">
-          <canvas class="canvas" id="sketch3"></canvas>
-        </div>
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="sketch3"></canvas>
+          </div>
 
-        <div class="controls">
-          <button class="editor_button" id="btn_start">Start</button>
-          <button class="editor_button" id="btn_stop">Stop</button>        
-        </div>
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
 
-        <pre id="editor" filepath="sketches/helloworld3/helloworld3.pde"></pre>
+          <pre id="editor" filepath="sketches/helloworld3/helloworld3.pde"></pre>
 
-        <div id="reference">
-          <b>Reference</b><br/>
-          <a href="https://processing.org/reference/random_.html" target="p5ref">random</a><br/>
-          <a href="https://processing.org/reference/rect_.html" target="p5ref">rect</a><br/>
-          <a href="https://processing.org/tutorials/drawing/" target="p5ref">coordinate system</a><br/>
-        </div>
+          <div id="reference">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/reference/random_.html" target="p5ref">random</a><br/>
+            <a href="https://processing.org/reference/rect_.html" target="p5ref">rect</a><br/>
+            <a href="https://processing.org/tutorials/drawing/" target="p5ref">coordinate system</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
       </div> <!-- slide -->
 
       <div class="slide">
         <h1>Variables</h1>
 
-        <div class="help">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
 
-        <div class="display">
-          <canvas class="canvas" id="sketch4"></canvas>
-        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <div class="controls">
-          <button class="editor_button" id="btn_start">Start</button>
-          <button class="editor_button" id="btn_stop">Stop</button>        
-        </div>
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="sketch4"></canvas>
+          </div>
 
-        <pre id="editor" filepath="sketches/helloworld4/helloworld4.pde"></pre>
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
 
-        <div id="reference">
-          <b>Reference</b><br/>
+          <pre id="editor" filepath="sketches/helloworld4/helloworld4.pde"></pre>
 
-          <a href="https://processing.org/reference/float.html" target="p5ref">float</a><br/>
-          <a href="https://processing.org/reference/width.html" target="p5ref">width</a><br/>
-          <a href="https://processing.org/reference/height.html" target="p5ref">height</a><br/>
-          <a href="https://processing.org/reference/random_.html" target="p5ref">random</a><br/>
-          <a href="https://processing.org/reference/ellipse_.html" target="p5ref">ellipse</a><br/>
-          <a href="https://processing.org/tutorials/drawing/" target="p5ref">coordinate system</a><br/>
-        </div>
+          <div id="reference">
+            <b>Reference</b><br/>
+
+            <a href="https://processing.org/reference/float.html" target="p5ref">float</a><br/>
+            <a href="https://processing.org/reference/width.html" target="p5ref">width</a><br/>
+            <a href="https://processing.org/reference/height.html" target="p5ref">height</a><br/>
+            <a href="https://processing.org/reference/random_.html" target="p5ref">random</a><br/>
+            <a href="https://processing.org/reference/ellipse_.html" target="p5ref">ellipse</a><br/>
+            <a href="https://processing.org/tutorials/drawing/" target="p5ref">coordinate system</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
       </div> <!-- slide -->
 
       <div class="slide">
         <h1>Colors, fill, stroke and background</h1>
 
-        <div class="help">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <div class="display">
-          <canvas class="canvas" id="sketch5"></canvas>
-        </div>
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="sketch5"></canvas>
+          </div>
 
-        <div class="controls">
-          <button class="editor_button" id="btn_start">Start</button>
-          <button class="editor_button" id="btn_stop">Stop</button>        
-        </div>
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
 
-        <pre id="editor" filepath="sketches/helloworld5/helloworld5.pde"></pre>
+          <pre id="editor" filepath="sketches/helloworld5/helloworld5.pde"></pre>
 
-        <div id="reference">
-          <b>Reference</b><br/>
-          <a href="https://processing.org/tutorials/color/" target="p5ref">color</a><br/>
-          <a href="https://processing.org/reference/fill_.html" target="p5ref">fill</a><br/>
-          <a href="https://processing.org/reference/stroke_.html" target="p5ref">stroke</a><br/>
-        </div>
+          <div id="reference">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/tutorials/color/" target="p5ref">color</a><br/>
+            <a href="https://processing.org/reference/fill_.html" target="p5ref">fill</a><br/>
+            <a href="https://processing.org/reference/stroke_.html" target="p5ref">stroke</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
       </div> <!-- slide -->
 
       <div class="slide">
         <h1>Fade background</h1>
 
-        <div class="help">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <div class="display">
-          <canvas class="canvas" id="sketch6"></canvas>
-        </div>
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="sketch6"></canvas>
+          </div>
 
-        <div class="controls">
-          <button class="editor_button" id="btn_start">Start</button>
-          <button class="editor_button" id="btn_stop">Stop</button>        
-        </div>
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
 
-        <pre id="editor" filepath="sketches/helloworld6/helloworld6.pde"></pre>
+          <pre id="editor" filepath="sketches/helloworld6/helloworld6.pde"></pre>
 
-        <div id="reference">
-          <b>Reference</b><br/>
+          <div id="reference">
+            <b>Reference</b><br/>
 
-          <a href="https://processing.org/reference/float.html" target="p5ref">float</a><br/>
-          <a href="https://processing.org/reference/width.html" target="p5ref">width</a><br/>
-          <a href="https://processing.org/reference/height.html" target="p5ref">height</a><br/>
-          <a href="https://processing.org/reference/random_.html" target="p5ref">random</a><br/>
-          <a href="https://processing.org/reference/ellipse_.html" target="p5ref">ellipse</a><br/>
-          <a href="https://processing.org/tutorials/drawing/" target="p5ref">coordinate system</a><br/>
-        </div>
+            <a href="https://processing.org/reference/float.html" target="p5ref">float</a><br/>
+            <a href="https://processing.org/reference/width.html" target="p5ref">width</a><br/>
+            <a href="https://processing.org/reference/height.html" target="p5ref">height</a><br/>
+            <a href="https://processing.org/reference/random_.html" target="p5ref">random</a><br/>
+            <a href="https://processing.org/reference/ellipse_.html" target="p5ref">ellipse</a><br/>
+            <a href="https://processing.org/tutorials/drawing/" target="p5ref">coordinate system</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
       </div> <!-- slide -->
 
     </div> <!-- section -->
@@ -266,43 +210,33 @@
       <div class="slide">
         <h1>Mouse</h1>
 
-        <div class="help">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <div class="display">
-          <canvas class="canvas" id="sketch6"></canvas>
-        </div>
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="sketch6"></canvas>
+          </div>
 
-        <div class="controls">
-          <button class="editor_button" id="btn_start">Start</button>
-          <button class="editor_button" id="btn_stop">Stop</button>        
-        </div>
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
 
-        <pre id="editor" filepath="sketches/interaction2/interaction2.pde"></pre>
+          <pre id="editor" filepath="sketches/interaction2/interaction2.pde"></pre>
 
-        <div id="reference">
-          <b>Reference</b><br/>
+          <div id="reference">
+            <b>Reference</b><br/>
 
-          <a href="https://processing.org/reference/point_.html" target="p5ref">point</a><br/>
-          <a href="https://processing.org/reference/line_.html" target="p5ref">line</a><br/>
-          <a href="https://processing.org/reference/mouseClicked_.html" target="p5ref">mouseClicked</a><br/>
-          <a href="https://processing.org/reference/mouseX.html" target="p5ref">mouseX</a><br/>
-          <a href="https://processing.org/reference/mouseY.html" target="p5ref">mouseY</a><br/>
-          <a href="https://processing.org/reference/pmouseX.html" target="p5ref">pmouseX</a><br/>
-          <a href="https://processing.org/reference/pmouseY.html" target="p5ref">pmouseY</a><br/>
-        </div>
+            <a href="https://processing.org/reference/point_.html" target="p5ref">point</a><br/>
+            <a href="https://processing.org/reference/line_.html" target="p5ref">line</a><br/>
+            <a href="https://processing.org/reference/mouseClicked_.html" target="p5ref">mouseClicked</a><br/>
+            <a href="https://processing.org/reference/mouseX.html" target="p5ref">mouseX</a><br/>
+            <a href="https://processing.org/reference/mouseY.html" target="p5ref">mouseY</a><br/>
+            <a href="https://processing.org/reference/pmouseX.html" target="p5ref">pmouseX</a><br/>
+            <a href="https://processing.org/reference/pmouseY.html" target="p5ref">pmouseY</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
       </div> <!-- slide -->
 
     </div> <!-- section -->

@@ -1,16 +1,24 @@
 .section{
-  width: 800px !important;
+  width: 1000px !important;
   margin: auto;
   position: relative;
-} 
+}
+
+.section h1 {
+  text-align: center;
+}
 
 .slide{
   position: relative;
 }
 
+.editor-wrapper {
+  width:680px; 
+  margin: auto;
+}
+
 #editor { 
-  margin: 20px;
-  margin-top: 0px;
+  margin: 0px;
   border: 2px solid #d0d0d0;      
   width: 550px;
   height: 350px;
@@ -28,33 +36,51 @@
 }
 
 .controls {
-  margin-left: 20px;
+  margin: 0px;
 }
 
 #reference {
   display: inline-block;
   padding: 6px;
   border: 1px solid #CCC;
-  margin-left: 575px;
+  margin-left: 553px;
   height: 340px;
   width: 130px;
   font-family: "Monaco","Menlo","Ubuntu Mono","Droid Sans Mono","Consolas",monospace;
   font-size: 14px;
 }
 
+#menu {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #C9C9C9;
+  text-align:center;
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 1px solid;
+}
+
+
 #menu li {
-  display:inline-block;
-  margin: 10px;
+  display: inline-block;
+  /*margin: 10px;*/
   color: #000;
   background:#fff;
   background: rgba(255,255,255, 0.5);
-  -webkit-border-radius: 10px;
-      border-radius: 10px;
+  height: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 #menu li.active{
   background:#666;
   background: rgba(0,0,0, 0.5);
   color: #fff;
+  height: 100%;
 }
 #menu li a{
   text-decoration:none;
@@ -68,19 +94,9 @@
 }
 #menu li a,
 #menu li.active a{
-  padding: 9px 18px;
-  display:block;
+  /*padding: 9px 18px;*/
+  /*display:block;*/
 }
 #menu li.active a{
   color: #fff;
-}
-#menu{
-  position:fixed;
-  top:0;
-  left:0;
-  height: 40px;
-  z-index: 70;
-  width: 100%;
-  padding: 0;
-  margin:0;
 }
