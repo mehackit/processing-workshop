@@ -4,7 +4,7 @@ function initialize_fullpage() {
   $('#fullpage').fullpage({
     anchors: ['welcome', 'helloWorld', 'interaction'],
     menu: '#menu',
-    paddingTop: 40,
+    paddingTop: 50,
     verticalCentered: true,
     navigation: true,
     navigationPosition: 'right',
@@ -137,4 +137,6 @@ function switchSketchState(on) {
 
 $(document).ready(function(){
   initialize_fullpage();
+  $.fn.fullpage.setMouseWheelScrolling(false);
+  $.fn.fullpage.setAllowScrolling(false);
 });

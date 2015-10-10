@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="resources/styles/jquery.fullPage.css" />
   <link rel="stylesheet" type="text/css" href="resources/styles/main.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="resources/js/jquery-1.11.3.min.js"></script>
   <script src="resources/js/jquery.fullPage.js" type="text/javascript"></script>
   <script src="resources/ace/src/ace.js" type="text/javascript" charset="utf-8"></script>
   <script src="resources/processing/processing-1.4.8.js" type="text/javascript" charset="utf-8"></script> 
@@ -16,13 +16,39 @@
 </head>
 
 <body>
-  <header>
-    <ul id="menu">
-      <li data-menuanchor="welcome" class="active"><a href="#welcome">Welcome</a></li>
-      <li data-menuanchor="helloWorld"><a href="#helloWorld">Animation</a></li>
-      <li data-menuanchor="interaction"><a href="#interaction">Interaction</a></li>
-    </ul>
-  </header>
+  <nav>
+    <div id="logo">
+      <a href="#welcome">
+        <img alt="logo" src="resources/img/mehackit_logo_white.png">
+      </a>
+    </div>
+    <div id="navmenu">
+      <ul id="menu">
+        <li data-menuanchor="welcome" class="active">
+          <a href="#welcome">Welcome</a>
+          <ul>
+            <li><a href="#welcome/1">Instructions</a></li>
+          </ul>
+        </li>
+        <li data-menuanchor="helloWorld">
+          <a href="#helloWorld">Animation</a>
+          <ul>
+            <li><a href="#helloWorld/1">Cordinates and rectangles</a></li>
+            <li><a href="#helloWorld/2">Random</a></li>
+            <li><a href="#helloWorld/3">Variables</a></li>
+            <li><a href="#helloWorld/4">Colors, fill, stroke and background</a></li>
+            <li><a href="#helloWorld/5">Background fade</a></li>
+          </ul>
+        </li>
+        <li data-menuanchor="interaction">
+          <a href="#interaction">Interaction</a>
+          <ul>
+            <li><a href="#interaction/1">Mouse</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
   <div id="fullpage">
     <div class="section active">

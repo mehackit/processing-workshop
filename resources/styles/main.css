@@ -1,5 +1,49 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Gravitas+One);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+/******************** RESET ********************/
+
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
+  margin: 0; padding: 0; border: 0;
+}
+
+/******************** GENERAL ********************/
+
+body {
+  background-color: #E4E4E4;
+  color: #303030;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/******************** TYPOGRAPHY ********************/
+
+h1 {
+  padding-top: 18px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-family: 'Gravitas One';
+}
+
+h2 {
+  padding: 6px;
+  font-family: 'Oswald', sans-serif;
+}
+
+p {
+  padding: 6px;
+}
+
+p:last-of-type {
+  padding-bottom: 12px;
+}
+
+/******************** FULLPAGE.JS ********************/
+
 .section{
-  width: 1000px !important;
+  width: 800px !important;
   margin: auto;
   position: relative;
 }
@@ -12,6 +56,8 @@
   position: relative;
 }
 
+/******************** EDITOR AND CANVAS ********************/
+
 .editor-wrapper {
   width:680px; 
   margin: auto;
@@ -21,7 +67,7 @@
   margin: 0px;
   border: 2px solid #d0d0d0;      
   width: 550px;
-  height: 350px;
+  height: 300px;
   display: inline-block;
 }
 
@@ -32,7 +78,7 @@
 }
 
 .canvas {
-  /*border: 1px solid #000000;*/
+  border: 1px solid #000000;
 }
 
 .controls {
@@ -40,63 +86,111 @@
 }
 
 #reference {
+  background-color: #FFF;
   display: inline-block;
   padding: 6px;
   border: 1px solid #CCC;
   margin-left: 553px;
-  height: 340px;
+  height: 290px;
   width: 130px;
   font-family: "Monaco","Menlo","Ubuntu Mono","Droid Sans Mono","Consolas",monospace;
   font-size: 14px;
 }
 
-#menu {
+/******************** MENU ********************/
+
+nav {
   position: fixed;
-  z-index: 9999;
+  text-align: center;
   width: 100%;
-  height: 40px;
-  line-height: 40px;
-  background-color: #C9C9C9;
-  text-align:center;
-  margin: 0px;
-  padding: 0px;
-  border-bottom: 1px solid;
+  font-family: 'Oswald', sans-serif;
+  background: #333333;
+  height: 50px;
+  z-index: 9999;
+} 
+
+#logo {
+  float: left;
+  margin-left: 100px;
 }
 
+#logo a {
+  display: block;
+  margin: auto;
+  line-height: 50px;
+}
 
-#menu li {
-  display: inline-block;
-  /*margin: 10px;*/
-  color: #000;
-  background:#fff;
-  background: rgba(255,255,255, 0.5);
-  height: 40px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
+#logo a img {
+  height: 20px;
+  vertical-align: middle;
+  padding-bottom: 9px;
 }
-#menu li.active{
-  background:#666;
-  background: rgba(0,0,0, 0.5);
-  color: #fff;
-  height: 100%;
+
+#navmenu {
+  float: right;
 }
-#menu li a{
-  text-decoration:none;
-  color: #000;
+
+nav ul {
+  list-style: none;
+  margin-right: 100px;
 }
-#menu li.active a:hover{
-  color: #000;
+
+nav ul:after {
+  content: ""; clear: both; display: block;
 }
-#menu li:hover{
-  background: rgba(255,255,255, 0.8);
+
+nav ul li {
+  float: left;
 }
-#menu li a,
-#menu li.active a{
-  /*padding: 9px 18px;*/
-  /*display:block;*/
+
+nav ul li:hover > ul {
+  display: block;
 }
-#menu li.active a{
-  color: #fff;
+
+nav ul li.active {
+  background: #4E4E4E;
+}
+
+nav ul li:hover a {
+  color: #ffffff;
+}
+
+nav ul li a {
+  display: block; 
+  padding: 15px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #CCC;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+nav ul ul {
+  display: none;
+}
+
+nav ul ul {
+  border-radius: 0px; 
+  padding: 0;
+  position: absolute; 
+  top: 100%;
+}
+nav ul ul li {
+  float: none; 
+  border-top: 1px solid #6b727c;
+  border-bottom: 1px solid #575f6a; position: relative;
+}
+nav ul ul li a {
+  border-bottom: 1px solid rgba(150, 150, 150, 0.15);
+  padding: 6px 10px;
+  width: 170px;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: 300;
+  background: #333333;
+} 
+
+nav ul ul li a:hover {
+  background: #4E4E4E;
 }
