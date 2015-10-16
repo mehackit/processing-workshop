@@ -7,11 +7,12 @@ void setup() {
     y1 = noise(seed + 4) * height;
     x2 = noise(seed + 6) * width;
     y2 = noise(seed + 8) * height;
+    background(255);
 }
 
 void draw() {
     noStroke();
-    fill(240, 3); //set fill to very transparent white
+    fill(255, 3); //set fill to very transparent white
     rect(0, 0, width, height); 
 
     strokeWeight(5);

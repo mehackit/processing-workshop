@@ -6,6 +6,7 @@
   <title>Processing JS, editor demo</title>
   <link rel="stylesheet" type="text/css" href="resources/styles/jquery.fullPage.css" />
   <link rel="stylesheet" type="text/css" href="resources/styles/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
   <script src="resources/js/jquery-1.11.3.min.js"></script>
   <script src="resources/js/jquery.fullPage.js" type="text/javascript"></script>
@@ -18,7 +19,7 @@
 <body>
   <nav>
     <div id="logo">
-      <a href="#welcome">
+      <a href="#home">
         <img alt="logo" src="resources/img/mehackit_logo_white.png">
       </a>
     </div>
@@ -33,11 +34,12 @@
         <li data-menuanchor="helloWorld">
           <a href="#helloWorld">Animation</a>
           <ul>
-            <li><a href="#helloWorld/1">Cordinates and rectangles</a></li>
-            <li><a href="#helloWorld/2">Random</a></li>
-            <li><a href="#helloWorld/3">Variables</a></li>
-            <li><a href="#helloWorld/4">Colors, fill, stroke and background</a></li>
-            <li><a href="#helloWorld/5">Background fade</a></li>
+            <li><a href="#helloWorld/1">Coordinates</a></li>
+            <li><a href="#helloWorld/2">Rectangles and shapes</a></li>
+            <li><a href="#helloWorld/3">Random</a></li>
+            <li><a href="#helloWorld/4">Variables</a></li>
+            <li><a href="#helloWorld/5">Colors, fill, stroke and background</a></li>
+            <li><a href="#helloWorld/6">Background fade</a></li>
           </ul>
         </li>
         <li data-menuanchor="interaction">
@@ -51,15 +53,52 @@
   </nav>
 
   <div id="fullpage">
+
     <div class="section active">
       <div class="slide">
+        <div id="welcome_text">
+          <h1>Mehackit</h1>
+          <h2>Media Art Hackaton with Procesing</h2>
+          <div id="arrow1"></div>
+          <script>
+            setTimeout(function(){
+              $( '#arrow1' ).append('<p>Press down arrow to continue</p><i class="fa fa-arrow-down fa-2x"></i>')
+            }, 3000);
+          </script>
+        </div>
+
+        <div id="welcome_animation">
+          <canvas id="sketch" class="canvas noborder" type='example' data-processing-sources="sketches/bg_animation/bg_animation.pde"></canvas>
+        </div>
+
+      </div> <!-- slide --> 
+    </div> <!-- section -->
+
+    <div class="section">
+      <div class="slide">
         <h1>Welcome</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can make with code and a bit on how to achieve those things. We'll be working with a language and environment called <a href="https://processing.org/">Processing</a>, which is widely used by students, artists, designers, researchers, and hobbyists. It's a good choice for for learning how to code within the context of the visual arts.</p>
+
+        <p>First, <a href="https://processing.org/download/?processing">download and install Processing</a>. After that, press right arrow to move to the next slide. Next slide explains how to use this site.</p>
+        <div id="arrow2" style="text-align: center;"></div>
+        <script>
+          setTimeout(function(){
+            $( '#arrow2' ).append('<p>Press right arrow to move to next slide <i class="fa fa-arrow-right"></i></p>')
+          }, 3000);
+        </script>
       </div> <!-- slide -->
 
       <div class="slide">
-        <h1>Welcome again</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h1>Introduction</h1>
+        <p>The material is divided into four sections. Each section exhibits a small project and introduces new concepts along the way. After completing a section you can start creating your own project or move to the next section. Each section gives you more inspiration and tools to work with.</p>
+        <p>The goal is that you create your own work of art and export it to a video. You can first follow the first section to get started and then decide wereither to move to the next section or start working on your own project.</p>
+        <p style="text-align: center;"><img src="resources/img/content.png"></p>
+        <div id="arrow3" style="text-align: center;"></div>
+          <script>
+            setTimeout(function(){
+              $( '#arrow3' ).append('<p>Press down arrow to move to next section <i class="fa fa-arrow-down"></i></p>')
+            }, 3000);
+          </script>
       </div> <!-- slide -->
     </div> <!-- section -->
 
@@ -67,17 +106,25 @@
     <div class="section"> 
 
       <div class="slide">
-        <h1>Hello World!</h1>
+        <h1>Animation</h1>
         <div class="display">
           <canvas id="sketch1" class="canvas" type='example' data-processing-sources="sketches/helloworld1/helloworld1.pde"></canvas>
         </div>
       </div> <!-- slide -->
 
       <div class="slide">
-        <h1>Cordinates and rectangles</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h1>Coordinates</h1>
+        <p>Processing canvas works with coordinates. It might be a bit different than you could have learnt in school: the upper left corner is (0,0) and when you go left x gets bigger and when you go down y gets bigger. The sketch below illustrates this.</p>
+        <div class="display">
+          <canvas id="sketch1.1" class="canvas" type='example' data-processing-sources="sketches/coordinates/coordinates.pde"></canvas>
+        </div>
+      </div> <!-- slide -->
 
+      <div class="slide">
+        <h1>Rectangles and shapes</h1>
+        
+        <p>Let's start with drawing basic shapes to the canvas. You can open Processing and create new sketch or try the examples with the editor below. Notice that the browser editor doesn't save your work and Processing editor might help you if you make mistakes. Below you find some heavily commented Processing code. The example walks you through the basics of a processing sketch. The statements that make up the program are divided into two functions: setup() and draw(). Statements in setup function are executed once when the program begins and statements in the draw function are executed again and again, as long as the program runs.</p>
+        <p>In the draw function you find the following statement: 'rect(100, 100, 50, 50);'. This statement tells the computer to draw a rectangle with the x-coordinate 100, y-coordinate 100, width of 50 and height of 50. Try to change the paremeters, so that the rectangle is drawn with coordintaes(200,200) and width and height of 112. After that try to draw circles for eyes with the ellipse function and line as a mouth with the line function.</p>
 
         <div class="editor-wrapper">
           <div class="display">
@@ -108,8 +155,8 @@
       <div class="slide">
         <h1>Random</h1>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>In the last example, everything was a bit static. You propably would have been faster with using a pen when you draw your smiley face. Let's do something where the computer is good at. Let's create an animation with the help of a random generator.</p>
+        <p>'random(min, max);' returns a random decimal number between min and max. You could use random function to generate x and y coordinates for a shape. Try the example below and create different shapes with random position and size.</p>
 
         <div class="editor-wrapper">
           <div class="display">
@@ -135,9 +182,9 @@
       <div class="slide">
         <h1>Variables</h1>
 
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Quite often you'll want to store something. You can store different things with a thing called variable. A variable is like a box where you can put things and take things out when you need them.</p>
+        <p>In Processing you'll have to state what kind of things you want to store in the box. For a computer a whole number (1, 2, 4902, ...) is a different thing than a decimal number (1.0, 3.14, ...). So when you create a variable, you'll have to state is the variable for a whole number, decimal number, a string or maybe something other (boolean, color, int, float, String are quite common, but for now just use float).</p>
+        <p>It also matter where you create your variable. If you create your variable inside the draw function, it will only be visible in the draw function. If you create the variable before setup funciton, it will be visible to the whole sketch.</p>
 
         <div class="editor-wrapper">
           <div class="display">
@@ -167,8 +214,9 @@
       <div class="slide">
         <h1>Colors, fill, stroke and background</h1>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>So far, everything has been quite grey. Now it's the time to add some color. <a href="https://processing.org/tutorials/color/">Color tutorial by Daniel Shiffman</a> is a good place to start. Take a look at it and then come back.</p>
+        <p>Fill function changes the fill color of all drawn things until another fill function is called. The same applies to stroke, but stroke changes the outline color. Background paints the whole screen with the given color.</p>
+        <p>Try to add some color to your previous animation. You can use random function with colors too if you wish.</p>
 
         <div class="editor-wrapper">
           <div class="display">
@@ -194,8 +242,8 @@
       <div class="slide">
         <h1>Fade background</h1>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>You can do a lot of cool thing with transparen colors. For example, you get a nice fade effect if you use a transparent color instead of a solid background color.</p>
+        <p>Background function doesent allow a transparent color as a parameter, but you can draw a canvas-sized rectangle instead. Check the example below and use it in your animation if you wish.</p>
 
         <div class="editor-wrapper">
           <div class="display">
@@ -222,12 +270,18 @@
         </div> <!-- editor-wrapper -->
       </div> <!-- slide -->
 
+      <div class="slide">
+        <h1>Next</h1>
+        <p>Next you can continue working on your animation or move to the next section.</p>
+        <p>If you wish to continue with the animation, you can check out noise section to see if you find something interesting. Processing.org <a href="https://processing.org/examples/">examples</a> and <a href="https://processing.org/reference/">references</a> are also good resources for more tools and from <a href="http://www.openprocessing.org/">openprocessing.org</a> you can find many inspiring examples.</p>
+      </div> <!-- slide -->
+
     </div> <!-- section -->
 
     <div class="section">
 
       <div class="slide">
-        <h1>Hello World!</h1>
+        <h1>Interaction</h1>
         <div class="display">
           <canvas id="sketch7" class="canvas" type='example' data-processing-sources="sketches/interaction1/interaction1.pde"></canvas>
         </div>
@@ -236,8 +290,9 @@
       <div class="slide">
         <h1>Mouse</h1>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Let's make something interactive. Processing has some nice functions for working with the users mouse. You can get the coordinates with mouseX and mouseY variables, which are updated each frame.</p>
+
+        <p>In the example below, I have used a mouseMoved function. This function gets called (and its statements executed) every time the mouse is moved. Other similar funtions are mouseClicked(), mouseDragged(), mousePressed() and mouseReleased().</p>
 
         <div class="editor-wrapper">
           <div class="display">
@@ -263,6 +318,105 @@
             <a href="https://processing.org/reference/pmouseY.html" target="p5ref">pmouseY</a><br/>
           </div>
         </div> <!-- editor-wrapper -->
+      </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>Drawing a line</h1>
+
+        <p>Point function makes the drawing a bit, well, pointy. We can make a smoother result usling line. Line function draws a line bitween two points. We get the curren mouse position with mouseX and mouseY. Processing also has variables for the previous positions called pmouseX and pmouseY.</p>
+        <p>In the draw function I have used an if-statement. If-statement checks if the given condition is true and, if it is, executes the statements</p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="sketch6"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
+
+          <pre id="editor" filepath="sketches/interaction3/interaction3.pde"></pre>
+
+          <div id="reference">
+            <b>Reference</b><br/>
+
+            <a href="https://processing.org/reference/point_.html" target="p5ref">point</a><br/>
+            <a href="https://processing.org/reference/line_.html" target="p5ref">line</a><br/>
+            <a href="https://processing.org/reference/mouseClicked_.html" target="p5ref">mouseClicked</a><br/>
+            <a href="https://processing.org/reference/mouseX.html" target="p5ref">mouseX</a><br/>
+            <a href="https://processing.org/reference/mouseY.html" target="p5ref">mouseY</a><br/>
+            <a href="https://processing.org/reference/pmouseX.html" target="p5ref">pmouseX</a><br/>
+            <a href="https://processing.org/reference/pmouseY.html" target="p5ref">pmouseY</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
+      </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>Mirroring</h1>
+
+        <p>You could make different algorithms for warious effects for drawing. Mirroring is a straight-forward and visually nice looking algorithm. In the example below, the canvas is mirrored vertically in the middle. In the next example the canvas is mirrored both vertically and horizontaly.</p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="sketch6"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
+
+          <pre id="editor" filepath="sketches/interaction4/interaction4.pde"></pre>
+
+          <div id="reference">
+            <b>Reference</b><br/>
+
+            <a href="https://processing.org/reference/point_.html" target="p5ref">point</a><br/>
+            <a href="https://processing.org/reference/line_.html" target="p5ref">line</a><br/>
+            <a href="https://processing.org/reference/mouseClicked_.html" target="p5ref">mouseClicked</a><br/>
+            <a href="https://processing.org/reference/mouseX.html" target="p5ref">mouseX</a><br/>
+            <a href="https://processing.org/reference/mouseY.html" target="p5ref">mouseY</a><br/>
+            <a href="https://processing.org/reference/pmouseX.html" target="p5ref">pmouseX</a><br/>
+            <a href="https://processing.org/reference/pmouseY.html" target="p5ref">pmouseY</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
+      </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>Mirroring part. 2</h1>
+
+        <p>The example below draws point to four mirrored positions. Can you modify the example and use line-function instead of point? You'll need to use pmouseX and pmouseY and do the same mirror calculations to those values too.</p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="sketch6"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
+
+          <pre id="editor" filepath="sketches/interaction5/interaction5.pde"></pre>
+
+          <div id="reference">
+            <b>Reference</b><br/>
+
+            <a href="https://processing.org/reference/point_.html" target="p5ref">point</a><br/>
+            <a href="https://processing.org/reference/line_.html" target="p5ref">line</a><br/>
+            <a href="https://processing.org/reference/mouseClicked_.html" target="p5ref">mouseClicked</a><br/>
+            <a href="https://processing.org/reference/mouseX.html" target="p5ref">mouseX</a><br/>
+            <a href="https://processing.org/reference/mouseY.html" target="p5ref">mouseY</a><br/>
+            <a href="https://processing.org/reference/pmouseX.html" target="p5ref">pmouseX</a><br/>
+            <a href="https://processing.org/reference/pmouseY.html" target="p5ref">pmouseY</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
+      </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>Next</h1>
+        <p>Continue or move to the next section.</p>
       </div> <!-- slide -->
 
     </div> <!-- section -->

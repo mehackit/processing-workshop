@@ -17,6 +17,28 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+/******************** GENERAL ********************/
+
+#welcome_text {
+  position: absolute;
+  width: 400px;
+  height: 120px;
+  top:50%;
+  left:50%;
+  margin:-60px 0 0 -200px;
+  z-index: 9999;
+  text-align: center;
+}
+
+#welcome_animation {
+  position: absolute;
+  width: 900px;
+  height: 700px;
+  top:50%;
+  left:50%;
+  margin:-350px 0 0 -450px;
+}
+
 /******************** TYPOGRAPHY ********************/
 
 h1 {
@@ -43,12 +65,12 @@ p:last-of-type {
 /******************** FULLPAGE.JS ********************/
 
 .section{
-  width: 800px !important;
+  width: 1000px !important;
   margin: auto;
   position: relative;
 }
 
-.section h1 {
+.section h1, h2{
   text-align: center;
 }
 
@@ -74,11 +96,15 @@ p:last-of-type {
 .display {
   position: absolute;
   /*background-color: #FFF;*/
-  z-index: 99999;
+  z-index: 99;
 }
 
 .canvas {
   border: 1px solid #000000;
+}
+
+.noborder {
+  border: none;
 }
 
 .controls {
@@ -106,7 +132,7 @@ nav {
   font-family: 'Oswald', sans-serif;
   background: #333333;
   height: 50px;
-  z-index: 9999;
+  z-index: 99;
 } 
 
 #logo {
