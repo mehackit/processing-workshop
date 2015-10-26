@@ -48,12 +48,22 @@
             <li><a href="#interaction/1">Mouse</a></li>
           </ul>
         </li>
+        <li data-menuanchor="noise">
+          <a href="#noise">Noise</a>
+        </li>
+        <li data-menuanchor="transform">
+          <a href="#transform">Transform</a>
+        </li>
+        <li data-menuanchor="movie">
+          <a href="#movie">Export to movie</a>
+        </li>
       </ul>
     </div>
   </nav>
 
   <div id="fullpage">
 
+    <!-- home -->
     <div class="section active">
       <div class="slide">
         <div id="welcome_text">
@@ -68,12 +78,13 @@
         </div>
 
         <div id="welcome_animation">
-          <canvas id="sketch" class="canvas noborder" type='example' data-processing-sources="sketches/bg_animation/bg_animation.pde"></canvas>
+          <canvas id="bg_animation" class="canvas noborder" type='example' data-processing-sources="sketches/bg_animation/bg_animation.pde"></canvas>
         </div>
 
       </div> <!-- slide --> 
     </div> <!-- section -->
 
+    <!-- welcome -->
     <div class="section">
       <div class="slide">
         <h1>Welcome</h1>
@@ -102,33 +113,68 @@
       </div> <!-- slide -->
     </div> <!-- section -->
 
-
+    <!-- animation -->
     <div class="section"> 
 
       <div class="slide">
         <h1>Animation</h1>
         <div class="display">
-          <canvas id="sketch1" class="canvas" type='example' data-processing-sources="sketches/helloworld1/helloworld1.pde"></canvas>
+          <canvas id="helloworld0" class="canvas" type='example' data-processing-sources="sketches/helloworld0/helloworld0.pde"></canvas>
         </div>
+      </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>Drawing a shape</h1>
+        
+        <p>A program is made of statements. A statement ends in a semi-colon (;).</p>
+
+        <p>The first statement below calls <a href="https://processing.org/reference/size_.html" target="p5ref">size-function</a>, which sets the size for the canvas. Size-function needs two parameters. First one is width and secon is height.</p>
+
+        <p>Second statement calls <a href="https://processing.org/reference/rect_.html" target="p5ref">rectangle-function</a>. First parameter sets the x-coordinate and second parameter sets the y-coordinate of the rectangle's upper left corner. Trird parameter sets the width and fourth parameter sets the height of the rectangle. Parameters are separated by comma (,).</p>
+
+        <p>Try the exmple below and draw rectangles with the rect-function and circles with the <a href="https://processing.org/reference/ellipse_.html" target="p5ref">ellipse-function</a>. Next slide shows how the coordinate system works with processing.</p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="helloworld1"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
+
+          <pre id="editor" filepath="sketches/helloworld1/helloworld1.pde"></pre>
+
+          <div id="reference">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/reference/size_.html" target="p5ref">size</a><br/>
+            <a href="https://processing.org/reference/rect_.html" target="p5ref">rect</a><br/>
+            <a href="https://processing.org/reference/ellipse_.html" target="p5ref">ellipse</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
       </div> <!-- slide -->
 
       <div class="slide">
         <h1>Coordinates</h1>
-        <p>Processing canvas works with coordinates. It might be a bit different than you could have learnt in school: the upper left corner is (0,0) and when you go left x gets bigger and when you go down y gets bigger. The sketch below illustrates this.</p>
+        <p>Processing canvas works with coordinates. The upper left corner is (0,0). X gets bigger when you go right and y gets biggerwhen you go down. The sketch below illustrates this.</p>
         <div class="display">
-          <canvas id="sketch1.1" class="canvas" type='example' data-processing-sources="sketches/coordinates/coordinates.pde"></canvas>
+          <canvas id="sketch_coordinates" class="canvas" type='example' data-processing-sources="sketches/coordinates/coordinates.pde"></canvas>
         </div>
       </div> <!-- slide -->
 
       <div class="slide">
-        <h1>Rectangles and shapes</h1>
-        
-        <p>Let's start with drawing basic shapes to the canvas. You can open Processing and create new sketch or try the examples with the editor below. Notice that the browser editor doesn't save your work and Processing editor might help you if you make mistakes. Below you find some heavily commented Processing code. The example walks you through the basics of a processing sketch. The statements that make up the program are divided into two functions: setup() and draw(). Statements in setup function are executed once when the program begins and statements in the draw function are executed again and again, as long as the program runs.</p>
-        <p>In the draw function you find the following statement: 'rect(100, 100, 50, 50);'. This statement tells the computer to draw a rectangle with the x-coordinate 100, y-coordinate 100, width of 50 and height of 50. Try to change the paremeters, so that the rectangle is drawn with coordintaes(200,200) and width and height of 112. After that try to draw circles for eyes with the ellipse function and line as a mouth with the line function.</p>
+        <h1>Structure of a processing sketch</h1>
+
+        <p>A processing sketch is divided into two functions: setup() and draw(). Statements in setup function are executed once when the program begins. Statements in the draw function are executed again and again, as long as the program runs.</p>
+
+        <p>In the draw function you find the following statement: 'rect(100, 100, 50, 50);'. This statement tells the computer to draw a rectangle with the x-coordinate of 100, y-coordinate of 100, width of 50 and height of 50.</p>
+
+        <p>Use rect, ellipse and <a href="https://processing.org/reference/line_.html" target="p5ref">line</a> -functions to create a simple illustration, for example a smiley face.</p>
 
         <div class="editor-wrapper">
           <div class="display">
-            <canvas class="canvas" id="sketch2"></canvas>
+            <canvas class="canvas" id="helloworld2"></canvas>
           </div>
 
           <div class="controls">
@@ -155,12 +201,13 @@
       <div class="slide">
         <h1>Random</h1>
 
-        <p>In the last example, everything was a bit static. You propably would have been faster with using a pen when you draw your smiley face. Let's do something where the computer is good at. Let's create an animation with the help of a random generator.</p>
+        <p>In the last example, everything was a bit static. It propably would have been faster to use pen and paper to draw a smiley face. Let's do something where the computer is good at. Let's create an animation with the help of a random generator.</p>
+
         <p>'random(min, max);' returns a random decimal number between min and max. You could use random function to generate x and y coordinates for a shape. Try the example below and create different shapes with random position and size.</p>
 
         <div class="editor-wrapper">
           <div class="display">
-            <canvas class="canvas" id="sketch3"></canvas>
+            <canvas class="canvas" id="helloworld3"></canvas>
           </div>
 
           <div class="controls">
@@ -183,12 +230,12 @@
         <h1>Variables</h1>
 
         <p>Quite often you'll want to store something. You can store different things with a thing called variable. A variable is like a box where you can put things and take things out when you need them.</p>
-        <p>In Processing you'll have to state what kind of things you want to store in the box. For a computer a whole number (1, 2, 4902, ...) is a different thing than a decimal number (1.0, 3.14, ...). So when you create a variable, you'll have to state is the variable for a whole number, decimal number, a string or maybe something other (boolean, color, int, float, String are quite common, but for now just use float).</p>
+        <p>In Processing you'll have to state what kind of things you want to store in the box. For a computer a whole number (1, 2, 4902, ...) is a different thing than a decimal number (1.0, 3.14, ...). So when you create a variable, you'll have to state if the variable iss a whole number, decimal number, a string or maybe something other (boolean, color, int, float, String are quite common, but for now just use float).</p>
         <p>It also matter where you create your variable. If you create your variable inside the draw function, it will only be visible in the draw function. If you create the variable before setup funciton, it will be visible to the whole sketch.</p>
 
         <div class="editor-wrapper">
           <div class="display">
-            <canvas class="canvas" id="sketch4"></canvas>
+            <canvas class="canvas" id="helloworld4"></canvas>
           </div>
 
           <div class="controls">
@@ -220,7 +267,7 @@
 
         <div class="editor-wrapper">
           <div class="display">
-            <canvas class="canvas" id="sketch5"></canvas>
+            <canvas class="canvas" id="helloworld5"></canvas>
           </div>
 
           <div class="controls">
@@ -232,6 +279,34 @@
 
           <div id="reference">
             <b>Reference</b><br/>
+            <a href="https://processing.org/reference/background_.html" target="p5ref">background</a><br/>
+            <a href="https://processing.org/tutorials/color/" target="p5ref">color</a><br/>
+            <a href="https://processing.org/reference/fill_.html" target="p5ref">fill</a><br/>
+            <a href="https://processing.org/reference/stroke_.html" target="p5ref">stroke</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
+      </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>Example with transparent colors and random</h1>
+
+        <p>Below is a simple example with line and random functions. Adding a bit transparency to the fill color creates a nice glowing effect.</p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="helloworld6"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
+
+          <pre id="editor" filepath="sketches/helloworld6/helloworld6.pde"></pre>
+
+          <div id="reference">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/reference/background_.html" target="p5ref">background</a><br/>
             <a href="https://processing.org/tutorials/color/" target="p5ref">color</a><br/>
             <a href="https://processing.org/reference/fill_.html" target="p5ref">fill</a><br/>
             <a href="https://processing.org/reference/stroke_.html" target="p5ref">stroke</a><br/>
@@ -247,7 +322,7 @@
 
         <div class="editor-wrapper">
           <div class="display">
-            <canvas class="canvas" id="sketch6"></canvas>
+            <canvas class="canvas" id="helloworld7"></canvas>
           </div>
 
           <div class="controls">
@@ -255,7 +330,7 @@
             <button class="editor_button" id="btn_stop">Stop</button>        
           </div>
 
-          <pre id="editor" filepath="sketches/helloworld6/helloworld6.pde"></pre>
+          <pre id="editor" filepath="sketches/helloworld7/helloworld7.pde"></pre>
 
           <div id="reference">
             <b>Reference</b><br/>
@@ -278,12 +353,13 @@
 
     </div> <!-- section -->
 
+    <!-- interaction -->
     <div class="section">
 
       <div class="slide">
         <h1>Interaction</h1>
         <div class="display">
-          <canvas id="sketch7" class="canvas" type='example' data-processing-sources="sketches/interaction1/interaction1.pde"></canvas>
+          <canvas id="interaction0" class="canvas" type='example' data-processing-sources="sketches/interaction0/interaction0.pde"></canvas>
         </div>
       </div> <!-- slide -->
 
@@ -296,7 +372,39 @@
 
         <div class="editor-wrapper">
           <div class="display">
-            <canvas class="canvas" id="sketch6"></canvas>
+            <canvas class="canvas" id="interaction1"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
+
+          <pre id="editor" filepath="sketches/interaction1/interaction1.pde"></pre>
+
+          <div id="reference">
+            <b>Reference</b><br/>
+
+            <a href="https://processing.org/reference/point_.html" target="p5ref">point</a><br/>
+            <a href="https://processing.org/reference/line_.html" target="p5ref">line</a><br/>
+            <a href="https://processing.org/reference/mouseClicked_.html" target="p5ref">mouseClicked</a><br/>
+            <a href="https://processing.org/reference/mouseX.html" target="p5ref">mouseX</a><br/>
+            <a href="https://processing.org/reference/mouseY.html" target="p5ref">mouseY</a><br/>
+            <a href="https://processing.org/reference/pmouseX.html" target="p5ref">pmouseX</a><br/>
+            <a href="https://processing.org/reference/pmouseY.html" target="p5ref">pmouseY</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
+      </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>Drawing a line</h1>
+
+        <p>Point function makes the drawing a bit, well, pointy. We can make a smoother result usling line. Line function draws a line bitween two points. We get the curren mouse position with mouseX and mouseY. Processing also has variables for the previous positions called pmouseX and pmouseY.</p>
+        <p>In the draw function I have used an if-statement. If-statement checks if the given condition is true and, if it is, executes the statements</p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="interaction2"></canvas>
           </div>
 
           <div class="controls">
@@ -321,14 +429,15 @@
       </div> <!-- slide -->
 
       <div class="slide">
-        <h1>Drawing a line</h1>
+        <h1>Mirroring</h1>
 
-        <p>Point function makes the drawing a bit, well, pointy. We can make a smoother result usling line. Line function draws a line bitween two points. We get the curren mouse position with mouseX and mouseY. Processing also has variables for the previous positions called pmouseX and pmouseY.</p>
-        <p>In the draw function I have used an if-statement. If-statement checks if the given condition is true and, if it is, executes the statements</p>
+        <p>You could make different algorithms for warious effects for drawing. Mirroring is a straight-forward and visually nice looking algorithm. In the example below, the canvas is mirrored vertically in the middle.</p>
+
+        <p>Can you modify the example to use line-function onstead of point? You'll need to use pmouseX and pmouseY variables and do the same mirror calculations to those values too.</p>
 
         <div class="editor-wrapper">
           <div class="display">
-            <canvas class="canvas" id="sketch6"></canvas>
+            <canvas class="canvas" id="interaction3"></canvas>
           </div>
 
           <div class="controls">
@@ -353,13 +462,13 @@
       </div> <!-- slide -->
 
       <div class="slide">
-        <h1>Mirroring</h1>
+        <h1>Mirroring part. 2</h1>
 
-        <p>You could make different algorithms for warious effects for drawing. Mirroring is a straight-forward and visually nice looking algorithm. In the example below, the canvas is mirrored vertically in the middle. In the next example the canvas is mirrored both vertically and horizontaly.</p>
+        <p>This example draws point to four mirrored positions. You could try to use line instead of point or draw some other shapeslike ellipses or rectangles to the mirrored positions. You could also modify the sketch to draw only when mouse is pressed.</p>
 
         <div class="editor-wrapper">
           <div class="display">
-            <canvas class="canvas" id="sketch6"></canvas>
+            <canvas class="canvas" id="interaction4"></canvas>
           </div>
 
           <div class="controls">
@@ -384,42 +493,36 @@
       </div> <!-- slide -->
 
       <div class="slide">
-        <h1>Mirroring part. 2</h1>
-
-        <p>The example below draws point to four mirrored positions. Can you modify the example and use line-function instead of point? You'll need to use pmouseX and pmouseY and do the same mirror calculations to those values too.</p>
-
-        <div class="editor-wrapper">
-          <div class="display">
-            <canvas class="canvas" id="sketch6"></canvas>
-          </div>
-
-          <div class="controls">
-            <button class="editor_button" id="btn_start">Start</button>
-            <button class="editor_button" id="btn_stop">Stop</button>        
-          </div>
-
-          <pre id="editor" filepath="sketches/interaction5/interaction5.pde"></pre>
-
-          <div id="reference">
-            <b>Reference</b><br/>
-
-            <a href="https://processing.org/reference/point_.html" target="p5ref">point</a><br/>
-            <a href="https://processing.org/reference/line_.html" target="p5ref">line</a><br/>
-            <a href="https://processing.org/reference/mouseClicked_.html" target="p5ref">mouseClicked</a><br/>
-            <a href="https://processing.org/reference/mouseX.html" target="p5ref">mouseX</a><br/>
-            <a href="https://processing.org/reference/mouseY.html" target="p5ref">mouseY</a><br/>
-            <a href="https://processing.org/reference/pmouseX.html" target="p5ref">pmouseX</a><br/>
-            <a href="https://processing.org/reference/pmouseY.html" target="p5ref">pmouseY</a><br/>
-          </div>
-        </div> <!-- editor-wrapper -->
-      </div> <!-- slide -->
-
-      <div class="slide">
         <h1>Next</h1>
         <p>Continue or move to the next section.</p>
       </div> <!-- slide -->
 
     </div> <!-- section -->
+
+    <!-- noise -->
+    <div class="section"> <!-- section -->
+
+      <div class="slide">
+        <h1>Noise</h1>
+        <div class="display">
+          <canvas id="noise0" class="canvas" type='example' data-processing-sources="sketches/noise0/noise0.pde"></canvas>
+        </div>
+      </div> <!-- slide -->
+
+    </div> <!-- section -->
+
+    <!-- transform -->
+    <div class="section"> <!-- section -->
+
+      <div class="slide">
+        <h1>Transform</h1>
+        <div class="display">
+          <canvas id="transform0" class="canvas" type='example' data-processing-sources="sketches/transform0/transform0.pde"></canvas>
+        </div>
+      </div> <!-- slide -->
+
+    </div> <!-- section -->
+
   </div>
 </body>
 </html>

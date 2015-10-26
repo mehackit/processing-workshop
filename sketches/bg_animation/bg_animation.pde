@@ -19,6 +19,8 @@ int maxSize = 100;
 int previousMouseX = 0;
 int previousMouseY = 0;
 
+boolean elementRemoved = false;
+
 void setup() {
     size(900, 700);
     for (int i = 0; i < 10; ++i) {
@@ -31,6 +33,9 @@ void draw() {
     background(bg);
     for (int i = 0; i < elements.size(); ++i) {
         elements.get(i).update();
+    }
+    
+    for (int i = 0; i < elements.size(); ++i) {
         for (int j = i; j < elements.size(); ++j) {
             if (dist(elements.get(i).location.x, elements.get(i).location.y, elements.get(j).location.x, elements.get(j).location.y) < elements.get(i).radius + elements.get(j).radius) {
                 line(elements.get(i).location.x, elements.get(i).location.y, elements.get(j).location.x, elements.get(j).location.y);
@@ -41,32 +46,53 @@ void draw() {
 
 
 void mousePressed() {
-    previousMouseX = mouseX;
-    previousMouseY = mouseY;
+    Element clickedElement = getElementIfClicked(mouseX, mouseY);
+    if (clickedElement != null) {
+        elements.remove(clickedElement);
+        elementRemoved = true;
+    } else {
+        previousMouseX = mouseX;
+        previousMouseY = mouseY;
+    }
 }
 void mouseReleased() {
-    float radius = random(minSize, maxSize);
-    float x = mouseX;
-    float y = mouseY;
-
-    if (mouseX < radius) {
-        x = radius;    
-    } else if (mouseX > width - radius) {
-        x = width - radius;
-    }
-
-    if (mouseY < radius) {
-        y = radius;
-    } else if (mouseY > height - radius) {
-        y = height - radius;
-    }
-
-    if (previousMouseX - mouseX == 0 && previousMouseY - mouseY == 0) {
-        elements.add(new Element(x, y, radius));
+    if (elementRemoved) {
+        elementRemoved = false;
     } else {
-        PVector velocity = new PVector(map(mouseX - previousMouseX, -width, width, -5, 5), map(mouseY - previousMouseY, -height, height, -5, 5));
-        elements.add(new Element(x, y, radius, velocity));   
+        float radius = random(minSize, maxSize);
+        float x = mouseX;
+        float y = mouseY;
+
+        if (mouseX < radius) {
+            x = radius;    
+        } else if (mouseX > width - radius) {
+            x = width - radius;
+        }
+
+        if (mouseY < radius) {
+            y = radius;
+        } else if (mouseY > height - radius) {
+            y = height - radius;
+        }
+
+        if (previousMouseX - mouseX == 0 && previousMouseY - mouseY == 0) {
+            elements.add(new Element(x, y, radius));
+        } else {
+            PVector velocity = new PVector(map(mouseX - previousMouseX, -width, width, -10, 10), map(mouseY - previousMouseY, -height, height, -10, 10));
+            elements.add(new Element(x, y, radius, velocity));   
+        }
     }
+}
+
+Element getElementIfClicked(int x, int y) {
+    Element returnElement = null;
+    for (Element e : elements) {
+        if (dist(x, y, e.location.x, e.location.y) < e.radius) {
+            returnElement = e;
+            break;
+        }
+    }
+    return returnElement;
 }
 
 class Element {

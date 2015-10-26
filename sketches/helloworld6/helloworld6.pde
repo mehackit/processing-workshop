@@ -1,31 +1,14 @@
 void setup() {
     size(512, 512);
+    background(0); //paint the background black
+
 }
 
 void draw() {
-    // we could also dim the background on each frame,
-    // instead of painting it with a solid color.
+    // set stroke to a random shade of white between 240-255 with a random transparency between 1-20.
+    stroke(random(240, 255), random(1, 20));
 
-    // background() -method doesn't allow alpha values,
-    // but we can draw a transparent rectangle on the
-    // sreen on each frame and get a cool dimming effect:
-
-    fill(255, 10); //set fill to very transparent white
-    stroke(255, 10); // set stroke to very transparent white
-    //draw a transparent rectangle that covers the screen:
-    rect(0, 0, width, height); 
-
-    float x = random(0, width);
-    float y = random(0, height);
-    float radius = random(0, 100);
-
-    float red = random(0, 255);
-    float green = random(0, 255);
-    float blue = random(0, 255);
-    float alpha = random(0, 255);
-
-    fill(red, green, blue, alpha);
-    stroke(red, green, blue, alpha);
-    
-    ellipse(x, y, radius, radius); 
+    // draw a line from the center of the canvas to a random point on the canvas
+    line(width/2, height/2, random(0, width), random(0, height));
+    // width and height are variables that refer to the width and height set with the size function
 }

@@ -14,7 +14,7 @@ void setup() {
     // Each function statement has zero or more parameters. 
     // Parameters are data passed into the function
     // and are used as values for telling the computer what to do.
-    size(512, 512);
+    size(500, 500);
 }
 
 // The statements in draw() are executed until the 
@@ -24,5 +24,5 @@ void setup() {
 void draw() {
     //rect function draws a rectangle with the given parameters:
     //rect(x-coordinate, y-coordinate, width of rectangle, height of rectangle)
-    rect(100, 100, 50, 50);
+    rect(200, 200, 100, 100);
 }

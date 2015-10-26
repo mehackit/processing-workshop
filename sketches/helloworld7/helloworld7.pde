@@ -3,8 +3,6 @@ void setup() {
 }
 
 void draw() {
-    //background(255); //white background
-
     // we could also dim the background on each frame,
     // instead of painting it with a solid color.
 
