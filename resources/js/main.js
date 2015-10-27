@@ -36,16 +36,15 @@ function add_editor_if_needed(slide) {
 function add_example_if_needed(slide) {
   var example = slide.find('[type=example]:first');
   if (example.length > 0) {
-    //stop processing if running
-    if (processingInstance) {
-      switchSketchState(false);
-      processingInstance = null;
-    };
-    //start sketch
-    processingInstance = Processing.getInstanceById(example.attr('id'));
-    switchSketchState(true);
-    slide.find('.fp-tableCell:first').attr('style', 'vertical-align: baseline;');
-    centerAlignCanvas(slide);
+    var canvas = slide.find('.canvas:first')[0];
+    var filepath = slide.find('.canvas:first').attr('filepath');
+    $.ajax(filepath, {
+      dataType: 'text',
+      success: function (data) {
+        startSketch(data, canvas, slide);
+        slide.find('.fp-tableCell:first').attr('style', 'vertical-align: baseline;');
+      }
+    });
   };
 }
 
