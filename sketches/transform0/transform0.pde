@@ -21,7 +21,7 @@ void setup() {
 
 void draw() {
     background(51);
-    vertexInc = map(mouseX, 0, width, 0.15, 2);
+    // vertexInc = map(mouseX, 0, width, 0.15, 2);
     for (int i = 0; i < numOfArcs; ++i) {
         arcs[i].update();
     }
