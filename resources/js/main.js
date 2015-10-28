@@ -12,7 +12,8 @@ function initialize_fullpage() {
     slidesNavPosition: 'bottom',
     controlArrows: false,
 
-    afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
+    afterLoad: function(anchorLink, index){
+      // $.fn.fullpage.silentMoveTo(index, 0);
       add_editor_if_needed($(this).find('.slide:first'));
       add_example_if_needed($(this).find('.slide:first'));
     },
@@ -20,6 +21,31 @@ function initialize_fullpage() {
     afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
       add_editor_if_needed($(this));
       add_example_if_needed($(this));
+
+      if (index == 1) {
+        setTimeout(function(){
+          $( '#arrow1' ).fadeIn(500);
+        }, 1500);
+      } else if (index == 2 && slideIndex == 0) {
+        setTimeout(function(){
+          $( '#arrow2' ).fadeIn(500);
+        }, 1500);
+      } else if (index == 2 && slideIndex == 1) {
+        setTimeout(function(){
+          $( '#arrow3' ).fadeIn(500);
+        }, 1500);
+      }
+    },
+
+    onLeave: function(index, nextIndex, direction){
+      $( '#arrow1' ).hide();
+      $( '#arrow2' ).hide();
+      $( '#arrow3' ).hide();
+    },
+
+    onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex) {
+      $( '#arrow2' ).hide();
+      $( '#arrow3' ).hide();
     }
   });
 }
@@ -29,7 +55,7 @@ function add_editor_if_needed(slide) {
   var editor = slide.find('#editor:first');
   if (editor.length > 0) {
     initialize_ace(editor, slide);
-  };
+  }
 }
 
 //check if slide contains an example and run it

@@ -69,16 +69,14 @@
         <div id="welcome_text">
           <h1>Mehackit</h1>
           <h2>Media Art Hackaton with Procesing</h2>
-          <div id="arrow1"></div>
-          <script>
-            setTimeout(function(){
-              $( '#arrow1' ).append('<p>Press down arrow to continue</p><i class="fa fa-arrow-down fa-2x"></i>')
-            }, 3000);
-          </script>
         </div>
 
         <div id="welcome_animation">
           <canvas class="canvas noborder" type='example' filepath="sketches/bg_animation/bg_animation.pde"></canvas>
+        </div>
+
+        <div class="arrow" id="arrow1">
+          <p>Press down arrow to continue</p><i class="fa fa-arrow-down fa-2x"></i>
         </div>
 
       </div> <!-- slide --> 
@@ -91,12 +89,9 @@
         <p>This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can make with code and a bit on how to achieve those things. We'll be working with a language and environment called <a href="https://processing.org/">Processing</a>, which is widely used by students, artists, designers, researchers, and hobbyists. It's a good choice for for learning how to code within the context of the visual arts.</p>
 
         <p>First, <a href="https://processing.org/download/?processing">download and install Processing</a>. After that, press right arrow to move to the next slide. Next slide explains how to use this site.</p>
-        <div id="arrow2" style="text-align: center;"></div>
-        <script>
-          setTimeout(function(){
-            $( '#arrow2' ).append('<p>Press right arrow to move to next slide <i class="fa fa-arrow-right"></i></p>')
-          }, 3000);
-        </script>
+        <div class="arrow" id="arrow2">
+          <p>Press right arrow to move to next slide <i class="fa fa-arrow-right"></i></p>
+        </div>
       </div> <!-- slide -->
 
       <div class="slide">
@@ -104,12 +99,9 @@
         <p>The material is divided into four sections. Each section exhibits a small project and introduces new concepts along the way. After completing a section you can start creating your own project or move to the next section. Each section gives you more inspiration and tools to work with.</p>
         <p>The goal is that you create your own work of art and export it to a video. You can first follow the first section to get started and then decide wereither to move to the next section or start working on your own project.</p>
         <p style="text-align: center;"><img src="resources/img/content.png"></p>
-        <div id="arrow3" style="text-align: center;"></div>
-          <script>
-            setTimeout(function(){
-              $( '#arrow3' ).append('<p>Press down arrow to move to next section <i class="fa fa-arrow-down"></i></p>')
-            }, 3000);
-          </script>
+        <div class="arrow" id="arrow3">
+          <p>Press down arrow to move to next section <i class="fa fa-arrow-down"></i></p>
+        </div>
       </div> <!-- slide -->
     </div> <!-- section -->
 

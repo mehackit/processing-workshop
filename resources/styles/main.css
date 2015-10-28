@@ -17,8 +17,6 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-/******************** GENERAL ********************/
-
 #welcome_text {
   position: absolute;
   width: 400px;
@@ -37,6 +35,16 @@ body {
   top:50%;
   left:50%;
   margin:-350px 0 0 -450px;
+}
+
+.arrow {
+  position: absolute;
+  width: 400px;
+  top:85%;
+  left:50%;
+  margin-left: -200px;
+  text-align: center;
+  display: none;
 }
 
 /******************** TYPOGRAPHY ********************/
