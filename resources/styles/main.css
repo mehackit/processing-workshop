@@ -17,6 +17,17 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+code {
+  padding: 5px;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  background-color: #F5F5F5;
+}
+
+.center {
+  text-align: center;
+}
+
 #welcome_text {
   position: absolute;
   width: 400px;
@@ -129,6 +140,14 @@ p:last-of-type {
   width: 130px;
   font-family: "Monaco","Menlo","Ubuntu Mono","Droid Sans Mono","Consolas",monospace;
   font-size: 14px;
+}
+
+#editor.short {
+  height: 100px
+}
+
+#reference.short {
+  height: 90px;
 }
 
 /******************** MENU ********************/

@@ -2,7 +2,7 @@ var processingInstance;
 
 function initialize_fullpage() {
   $('#fullpage').fullpage({
-    anchors: ['home', 'welcome', 'helloWorld', 'interaction', 'noise', 'transform', 'movie'],
+    anchors: ['home', 'welcome', 'shapes', 'helloWorld', 'interaction', 'noise', 'transform', 'movie'],
     menu: '#menu',
     paddingTop: 50,
     verticalCentered: true,
@@ -12,13 +12,31 @@ function initialize_fullpage() {
     slidesNavPosition: 'bottom',
     controlArrows: false,
 
-    afterLoad: function(anchorLink, index){
-      // $.fn.fullpage.silentMoveTo(index, 0);
-      add_editor_if_needed($(this).find('.slide:first'));
-      add_example_if_needed($(this).find('.slide:first'));
+    afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
+      //move to first slide if on some other slide
+      if (slideIndex > 0) {
+        console.log("After Load on section " + index + ", slide " + slideIndex + " called");
+        // $.fn.fullpage.moveTo(index, 0);
+      } else {
+        console.log("After Load on section " + index + ", slide " + slideIndex + " called");
+        //afterSlideLoad is not called when new section with slide index 0 is loaded. Hence we do this stuff twice
+        add_editor_if_needed($(this).find('.slide:first'));
+        add_example_if_needed($(this).find('.slide:first'));
+
+        if (index == 1) {
+          setTimeout(function(){
+            $( '#arrow1' ).fadeIn(500);
+          }, 1500);
+        } else if (index == 2) {
+          setTimeout(function(){
+            $( '#arrow2' ).fadeIn(500);
+          }, 1500);
+        }
+      }
     },
 
     afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+      console.log("After Slide Load on section " + index + ", slide " + slideIndex + " called");
       add_editor_if_needed($(this));
       add_example_if_needed($(this));
 
@@ -84,32 +102,39 @@ function initialize_ace(editor, slide) {
   // get processing sketch filepath form filepath attribute
   var filepath = editor.attr('filepath');
 
-  // load file with ajax and pass a function that runs after success
-  $.ajax(filepath, {
-    dataType: 'text',
-    success: function (data) {
+  if (filepath) {
+    // load file with ajax and pass a function that runs after success
+    $.ajax(filepath, {
+      dataType: 'text',
+      success: function (data) {
         // set data to editor and move cursor to beginning
         ace_editor.setValue(data, -1);
+        loadEditor(ace_editor, slide);
+      }
+    });
+  } else {
+    loadEditor(ace_editor, slide);
+  } 
+}
 
-        // get canvas DOM_element from slide
-        var canvas = slide.find('.canvas:first')[0];
+function loadEditor(ace_editor, slide) {
+  // get canvas DOM_element from slide
+  var canvas = slide.find('.canvas:first')[0];
 
-        // hide canvas
-        slide.find(".display:first").attr('style', 'display: none;');
+  // hide canvas
+  slide.find(".display:first").attr('style', 'display: none;');
 
-        // add startSketch funtion to start button and show button
-        slide.find("#btn_start:first").click(function() { 
-          // get processing sketch source code from ACE editor
-          var sourceCode = ace_editor.getValue();
-          startSketch(sourceCode, canvas, slide); 
-        }).show();
+  // add startSketch funtion to start button and show button
+  slide.find("#btn_start:first").click(function() { 
+    // get processing sketch source code from ACE editor
+    var sourceCode = ace_editor.getValue();
+    startSketch(sourceCode, canvas, slide); 
+  }).show();
 
-        // add stopSketch function to stop button and hide button
-        slide.find("#btn_stop:first").click(function() { 
-          stopSketch(slide); 
-        }).hide();
-    }
-  });
+  // add stopSketch function to stop button and hide button
+  slide.find("#btn_stop:first").click(function() { 
+    stopSketch(slide); 
+  }).hide();
 }
 
 function startSketch(processingCode, canvas, slide) {

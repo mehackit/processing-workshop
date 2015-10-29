@@ -4,5 +4,6 @@ void setup() {
 }
 
 void draw() {
+    // draw a point to the current mouse position
     point(mouseX, mouseY);
 }

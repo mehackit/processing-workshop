@@ -17,9 +17,9 @@ void draw() {
     rect(0, 0, width, height); 
 
     strokeWeight(10);
-    float w = map(mouseX, 0, width, 0.3, 1.5);
-    float ww = map(mouseX, 0, width, -1, 1);
-    stroke(17*(w+1), 177*(ww+1), 167);
+    float rMultiply = map(mouseX, 0, width, 1.3, 2.5);
+    float gMultiply = map(mouseX, 0, width, 0, 2);
+    stroke(17*rMultiply, 177*gMultiply, 167);
 
     x1 = pmouseX;
     y1 = pmouseY;
