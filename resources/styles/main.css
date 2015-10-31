@@ -58,6 +58,10 @@ code {
   display: none;
 }
 
+#arrow4 {
+  top: 90%;
+}
+
 /******************** TYPOGRAPHY ********************/
 
 h1 {
@@ -108,7 +112,14 @@ footer {
 }
 
 footer p {
+  font-family: 'Oswald', sans-serif;
   padding-top: 50px;
+  letter-spacing: 2px;
+}
+
+footer p span {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 footer a , footer a:hover, footer a:visited {

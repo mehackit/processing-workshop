@@ -31,6 +31,10 @@ function initialize_fullpage() {
           setTimeout(function(){
             $( '#arrow2' ).fadeIn(500);
           }, 1500);
+        } else if (index == 3) {
+          setTimeout(function(){
+            $( '#arrow4' ).fadeIn(500);
+          }, 1500);
         }
       }
     },
@@ -52,6 +56,10 @@ function initialize_fullpage() {
         setTimeout(function(){
           $( '#arrow3' ).fadeIn(500);
         }, 1500);
+      } else if (index == 3 && slideIndex == 0) {
+        setTimeout(function(){
+          $( '#arrow4' ).fadeIn(500);
+        }, 1500);
       }
     },
 
@@ -59,11 +67,13 @@ function initialize_fullpage() {
       $( '#arrow1' ).hide();
       $( '#arrow2' ).hide();
       $( '#arrow3' ).hide();
+      $( '#arrow4' ).hide();
     },
 
     onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex) {
       $( '#arrow2' ).hide();
       $( '#arrow3' ).hide();
+      $( '#arrow4' ).hide();
     }
   });
 }
