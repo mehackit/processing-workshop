@@ -2,7 +2,7 @@ var processingInstance;
 
 function initialize_fullpage() {
   $('#fullpage').fullpage({
-    anchors: ['home', 'welcome', 'shapes', 'animation', 'interaction', 'noise', 'transform', 'other_resources', 'movie'],
+    anchors: ['home', 'welcome', 'shapes', 'animation', 'interaction', 'noise', 'transform', 'other_resources', 'movie', 'footer'],
     menu: '#menu',
     paddingTop: 50,
     verticalCentered: true,

@@ -101,7 +101,18 @@ p:last-of-type {
 
 footer {
   width:100%;
-  height:200px;
+  height:150px;
+  text-align: center;
+  color: black;
+  border-top: solid;
+}
+
+footer p {
+  padding-top: 50px;
+}
+
+footer a , footer a:hover, footer a:visited {
+  color: black;
 }
 
 /******************** EDITOR AND CANVAS ********************/
