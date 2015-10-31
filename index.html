@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>Processing JS, editor demo</title>
+  <title>Mehackit Media Art Workshop with Processing</title>
   <link rel="stylesheet" type="text/css" href="resources/styles/jquery.fullPage.css" />
   <link rel="stylesheet" type="text/css" href="resources/styles/main.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
@@ -25,40 +25,64 @@
     </div>
     <div id="navmenu">
       <ul id="menu">
-        <li data-menuanchor="welcome" class="active">
-          <a href="#welcome">Welcome</a>
-          <ul>
-            <li><a href="#welcome/1">Instructions</a></li>
-          </ul>
-        </li>
         <li data-menuanchor="shapes">
           <a href="#shapes">Shapes</a>
-        </li>
-        <li data-menuanchor="helloWorld">
-          <a href="#helloWorld">Animation</a>
           <ul>
-            <li><a href="#helloWorld/1">Coordinates</a></li>
-            <li><a href="#helloWorld/2">Rectangles and shapes</a></li>
-            <li><a href="#helloWorld/3">Random</a></li>
-            <li><a href="#helloWorld/4">Variables</a></li>
-            <li><a href="#helloWorld/5">Colors, fill, stroke and background</a></li>
-            <li><a href="#helloWorld/6">Background fade</a></li>
+            <li><a href="#shapes/1">Statements</a></li>
+            <li><a href="#shapes/2">Order</a></li>
+            <li><a href="#shapes/3">Size</a></li>
+            <li><a href="#shapes/4">Coordinates</a></li>
+            <li><a href="#shapes/5">Grayscale colors</a></li>
+            <li><a href="#shapes/6">Order and colors</a></li>
+            <li><a href="#shapes/7">RGB colors</a></li>
+            <li><a href="#shapes/9">Next</a></li>
+          </ul>
+        </li>
+        <li data-menuanchor="animation">
+          <a href="#animation">Animation</a>
+          <ul>
+            <li><a href="#animation/1">Setup and draw</a></li>
+            <li><a href="#animation/2">Random</a></li>
+            <li><a href="#animation/3">Function call as a parameter</a></li>
+            <li><a href="#animation/4">Variables</a></li>
+            <li><a href="#animation/5">Using variables</a></li>
+            <li><a href="#animation/6">Example with transparency</a></li>
+            <li><a href="#animation/7">Fade background</a></li>
+            <li><a href="#animation/8">Next</a></li>
           </ul>
         </li>
         <li data-menuanchor="interaction">
           <a href="#interaction">Interaction</a>
           <ul>
             <li><a href="#interaction/1">Mouse</a></li>
+            <li><a href="#interaction/2">Drawing a line</a></li>
+            <li><a href="#interaction/3">Mirroring</a></li>
+            <li><a href="#interaction/4">More mirroring</a></li>
+            <li><a href="#interaction/5">Next</a></li>            
           </ul>
         </li>
         <li data-menuanchor="noise">
           <a href="#noise">Noise</a>
+          <ul>
+            <li><a href="#noise/1">A bit random</a></li>
+            <li><a href="#noise/2">How to use noise</a></li>
+            <li><a href="#noise/3">Noise visualized</a></li>
+            <li><a href="#noise/4">Coordinates with noise</a></li>
+            <li><a href="#noise/5">Draw noise with while</a></li>
+            <li><a href="#noise/6">Animate noise with while</a></li>
+            <li><a href="#noise/7">Animate noise with for</a></li>
+            <li><a href="#noise/8">Nested for-loops</a></li>
+            <li><a href="#noise/9">Next</a></li>
+          </ul>
         </li>
         <li data-menuanchor="transform">
           <a href="#transform">Transform</a>
         </li>
+        <li data-menuanchor="other_resources">
+          <a href="#other_resources">Other resources</a>
+        </li>
         <li data-menuanchor="movie">
-          <a href="#movie">Export to movie</a>
+          <a href="#movie">Movie</a>
         </li>
       </ul>
     </div>
@@ -71,7 +95,7 @@
       <div class="slide">
         <div id="welcome_text">
           <h1>Mehackit</h1>
-          <h2>Media Art Hackaton with Procesing</h2>
+          <h2>Media Art Workshop with Procesing</h2>
         </div>
 
         <div id="welcome_animation">
@@ -100,7 +124,7 @@
 
       <div class="slide">
         <h1>Introduction</h1>
-        <p>The material is divided into four sections. Each section exhibits a small project and introduces new concepts along the way. After completing a section you can start creating your own project or move to the next section. Each section gives you more inspiration and tools to work with.</p>
+        <p>The material is divided into five sections. Each section exhibits a small project and introduces new concepts along the way. After completing a section you can start creating your own project or move to the next section. Each section gives you more inspiration and tools to work with.</p>
         <p>The goal is that you create your own work of art and export it to a video. You can first follow the first section to get started and then decide wereither to move to the next section or start working on your own project.</p>
         <p style="text-align: center;"><img src="resources/img/content.png"></p>
         <div class="arrow" id="arrow3">
@@ -112,7 +136,6 @@
     <!-- --------------------- drawing shapes --------------------- -->
 
     <div class="section">
-
       <div class="slide">
         <h1>Drawing Shapes</h1>
         <div class="display">
@@ -122,13 +145,9 @@
 
       <div class="slide">
         <h1>Statements</h1>
-        
         <p>A program is made of statements. A statement ends in a semi-colon (;). The statement below calls an ellipse-function, wich draws an ellipse:</p>
-
         <p class="center"><code>ellipse(20, 50, 10, 40);</code></p>
-
         <br />
-
         <p>Some functions need parameters. Ellipse-function needs four parameters. First and second parameters set the x and y coordinates, third and fourth parameters set the width and height of the ellipse. Parameters are separated by comma (,).</p>
         <pre style="text-align: center">
              parameters      
@@ -143,7 +162,6 @@ function name    |
                        |     
                      height  
         </pre>
-
         <p>Try the example in the editor below. Can you draw a circle with the ellipse-function?</p>
 
         <div class="editor-wrapper">
@@ -163,7 +181,6 @@ function name    |
             <a href="https://processing.org/reference/ellipse_.html" target="p5ref">ellipse</a><br/>
           </div>
         </div> <!-- editor-wrapper -->
-
       </div> <!-- slide -->
 
       <div class="slide">
@@ -194,7 +211,6 @@ function name    |
             <a href="https://processing.org/reference/ellipse_.html" target="p5ref">ellipse</a><br/>
           </div>
         </div> <!-- editor-wrapper -->
-
       </div> <!-- slide -->
 
       <div class="slide">
@@ -203,7 +219,6 @@ function name    |
           <p>The canvas is quite small. Use the following statement in the beginning of your sketch to make your canvas bigger:</p>
           <p class="center"><code>size(500,500);</code></p>
           <p>The statement calls size-function, which sets the size for the canvas. Size-function needs two parameters. The first one is the width of the canvas and the second one is the height.</p>
-          
         </div>
 
         <div class="editor-wrapper">
@@ -224,7 +239,6 @@ function name    |
             <a href="https://processing.org/reference/rect_.html" target="p5ref">rectangle</a>
           </div>
         </div> <!-- editor-wrapper -->
-
       </div> <!-- slide -->
 
       <div class="slide">
@@ -241,8 +255,7 @@ function name    |
         <p>In the digital world, color is defined as a range of numbers. Let's start with the simplest case: black & white or grayscale. 0 means black, 255 means white. In between, every other number (50, 87, 162, 209, and so on) is a shade of gray ranging from black to white.</p>
         <p>Calling a fill-function chances the fill color for all what's drawn after the fill-function call. Stroke-function does the same for outline color.</p>
         <p><code>fill(0);</code> Fill with one parameter sets a grayscale color. This one is black.</p>
-        <p><code>fill(255, 10);</code> Fill with two parameters sets a grayscale color with transparency. This one is quite transparent white.</p></p>
-
+        <p><code>fill(255, 10);</code> Fill with two parameters sets a grayscale color with transparency. This one is quite transparent white.</p>
         <p class="center">Try out fill and stroke to color the sketch below.</p>
 
         <div class="editor-wrapper">
@@ -265,6 +278,12 @@ function name    |
           </div>
         </div> <!-- editor-wrapper -->
       </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>Order and colors</h1>
+        <p>When you draw many shapes and define many colors, Processing will always use the most recently specified stroke and fill. Calling stroke or fill overrides the previous values and the following shapes are drawn with the new colors, until new colors are set:</p>
+        <p class="center"><img src="resources/img/colors_and_order.png"></p>
+      </div>
 
       <div class="slide">
         <h1>RGB Colors</h1>
@@ -301,6 +320,7 @@ function name    |
           </div>
         </div> <!-- editor-wrapper -->
       </div> <!-- slide -->
+
       <div class="slide">
         <h1>Putting it all together</h1>
         <p>So far we have covered:</p>
@@ -316,7 +336,6 @@ function name    |
     <!-- --------------------- animation --------------------- -->
 
     <div class="section">
-
       <div class="slide">
         <h1>Animation</h1>
         <div class="display">
@@ -354,9 +373,7 @@ function name    |
 
       <div class="slide">
         <h1>Random</h1>
-
-        <p>In the last example, everything was a bit static. It propably would have been faster to use pen and paper to draw a rectangle. Let's do something where the computer is good at. Let's create an animation with the help of the random-function.</p>
-
+        <p>In the last example, everything was a bit static. The draw-function got called over and over again (30-60 times per second), but it only draw the same rectangle each time. Let's create some mevement by changing where the rectange is drawn each frame.</p>
         <p><code>random(min, max);</code> returns a random decimal number between min and max. You could use random function to generate x and y coordinates for a shape. Try the example below and create different shapes with random position and size.</p>
 
         <div class="editor-wrapper">
@@ -382,7 +399,6 @@ function name    |
 
       <div class="slide">
         <h1>Function call as a parameter</h1>
-
         <p class="center"><img src="resources/img/dawg.jpg"></p>
         <p class="">In case you didn't notice, in the last example we gave function calls as parameters for the ellipse-function:</p>
         <p class="center"><code>ellipse(random(0, 512), random(0, 512), 50, 50);</code></p>
@@ -391,7 +407,6 @@ function name    |
 
       <div class="slide">
         <h1>Variables</h1>
-
         <p>Quite often you'll want to store something. You can store different things with a thing called variable. A variable is like a box where you can put things and take things out when you need them.</p>
         <p>In Processing you'll have to state what kind of things you want to store in the box. For a computer a whole number (1, 2, 4902, ...) is a different thing than a decimal number (1.0, 3.14, ...). So when you create a variable, you'll have to state if the variable is a whole number, decimal number, a string or maybe something other (boolean, color, int, float, String are quite common, but for now just use float).</p>
         <p>It also matter where you create your variable. If you create your variable inside the draw function, it will only be visible in the draw function. If you create the variable before setup funciton, it will be visible to the whole sketch.</p>
@@ -422,7 +437,6 @@ function name    |
 
       <div class="slide">
         <h1>Using variables</h1>
-
         <p>When you create a variable you have to state he variables type. After that you can change the variables value by assigning a new value to the variable.</p>
         <p>If you create a variable in the beginning of the sketch, it will be visible for the whole sketch. If you create a variable inside a function (like setup or draw) it will only be visible in the corresponding function.</p>
 
@@ -440,10 +454,11 @@ function name    |
 
           <div id="reference">
             <b>Reference</b><br/>
+            <a href="https://processing.org/reference/int.html" target="p5ref">int</a><br/>
             <a href="https://processing.org/reference/float.html" target="p5ref">float</a><br/>
+            <a href="https://processing.org/reference/frameRate_.html" target="p5ref">framerate</a><br/>
             <a href="https://processing.org/reference/width.html" target="p5ref">width</a><br/>
             <a href="https://processing.org/reference/height.html" target="p5ref">height</a><br/>
-            <a href="https://processing.org/tutorials/color/" target="p5ref">color</a><br/>
             <a href="https://processing.org/reference/fill_.html" target="p5ref">fill</a><br/>
             <a href="https://processing.org/reference/stroke_.html" target="p5ref">stroke</a><br/>
             <a href="https://processing.org/reference/random_.html" target="p5ref">random</a><br/>
@@ -455,7 +470,6 @@ function name    |
 
       <div class="slide">
         <h1>Example with transparent colors and random</h1>
-
         <p>Below is a simple example with line and random functions. Adding a bit transparency to the fill color creates a nice glowing effect.</p>
 
         <div class="editor-wrapper">
@@ -482,8 +496,7 @@ function name    |
 
       <div class="slide">
         <h1>Fade background</h1>
-
-        <p>You can do a lot of cool thing with transparen colors. For example, you get a nice fade effect if you use a transparent color instead of a solid background color.</p>
+        <p>You can do a lot of cool thing with transparent colors. For example, you get a nice fade effect if you use a transparent color instead of a solid background color.</p>
         <p>Background function doesent allow a transparent color as a parameter, but you can draw a canvas-sized rectangle instead. Check the example below and use it in your animation if you wish.</p>
 
         <div class="editor-wrapper">
@@ -518,7 +531,7 @@ function name    |
         <p>In this section we covered:</p>
         <p><code>setup</code>, <code>draw</code>, <code>functions as parameters</code>, <code>random</code>, and <code>variables</code>
         <br />
-        <p>Next you could open processing and start creating animations using the previous examples. So far we've only covered the random-function. If you feel like you need more to work with, check out the following sections.</p>
+        <p>Next you could open processing and start creating animations using the previous examples. If you feel like you need more to work with, check out the following sections.</p>
       </div> <!-- slide -->
     </div> <!-- section -->
 
@@ -668,13 +681,186 @@ function name    |
 
     <!-- --------------------- noise --------------------- -->
 
-    <div class="section"> <!-- section -->
+    <div class="section">
       <div class="slide">
         <h1>Noise</h1>
         <div class="display">
           <canvas class="canvas noborder" type='example' filepath="sketches/noise0/noise0.pde"></canvas>
         </div>
       </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>Noise is a bit random but not too much</h1>
+        <p class="center">Noise offers random values that are 'smoother' than totally random values.</p>
+        <div class="display">
+          <canvas class="canvas noborder" type='example' filepath="sketches/noise1/noise1.pde"></canvas>
+        </div>
+      </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>How to use noise</h1>
+        <p><code>noise()</code> always returns a value between 0-1 depending on the coordinate that is given as a parameter. <code>noise(0)</code> returns a value and if you call <code>noise(0)</code> again, you get the same value again. If you call <code>noise(0.01)</code> you get a new value. The graph below shows a <code>noise(x)</code> curve, i.e. the value of noise on y-axis at the corresponding x-value.</p> 
+        <p class="center"><img src="resources/img/noisechart.png"></p>
+        <p>Depending on how much you increment x each frame the values will be smoother or more random.</p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="noise2"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
+
+          <pre id="editor" class="short" filepath="sketches/noise2/noise2.pde"></pre>
+
+          <div id="reference" class="short">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/reference/noise_.html" target="p5ref">noise</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
+      </div> <!-- side -->
+
+      <div class="slide">
+        <h1>Noise-function visualized</h1>
+        <div class="display">
+          <canvas class="canvas noborder" type='example' filepath="sketches/noise/noise.pde"></canvas>
+        </div>
+      </div> <!-- side -->
+
+      <div class="slide">
+        <h1>Coordinates with noise</h1>
+        <p>Below is a full example where a rectangle's coordinates and size are generated with the noise-function. Try to modify the increment values and see how the sketch behaves differently. Following this example, you could also modify the previous section's interactive sketch to generate coordinates with noise instead of mouseX and mouseY.</p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="noise3"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
+
+          <pre id="editor" filepath="sketches/noise3/noise3.pde"></pre>
+
+          <div id="reference">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/reference/noise_.html" target="p5ref">noise</a><br/>
+            <a href="https://processing.org/reference/map_.html" target="p5ref">map</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
+      </div> <!-- side -->
+
+      <div class="slide">
+        <h1>Drawing noise curve with while-loop</h1>
+        <p>Now it's the time to learn about control structures. <code>While</code> loop is a powerful tool found in most ot the programming languages. If you wish, <a href="https://www.youtube.com/watch?v=RtAPBvz6k0Y">watch this video</a> from Daniel Shiffman as an introduction.</p>
+        <p>While-loop is repeated as long as the given condition is <code>true</code>. In the example below, the condition is <code>x < width</code> (x is smaller than 500). When x is 500, the condition will be false and the program will move forward and execute draw-funcion again.</p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="noise4"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
+
+          <pre id="editor" filepath="sketches/noise4/noise4.pde"></pre>
+
+          <div id="reference">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/reference/while.html" target="p5ref">while</a><br/>
+            <a href="https://processing.org/reference/map_.html" target="p5ref">map</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
+      </div> <!-- side -->
+
+      <div class="slide">
+        <h1>Animating noise curve with while-loop</h1>
+        <p>If we edit the previous example a little bit, we can animate the noise curve. So far we have been giving noise-function only one parameter. We can also give noise-function two parameters, x- and y-coordinate. If we add  a y-coordinate to the noise-function and increment the y-coordinate at the end of the draw-function we get slightly different curve on each frame:</p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="noise5"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
+
+          <pre id="editor" filepath="sketches/noise5/noise5.pde"></pre>
+
+          <div id="reference">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/reference/noise_.html" target="p5ref">noise</a><br/>
+            <a href="https://processing.org/reference/while.html" target="p5ref">while</a><br/>
+            <a href="https://processing.org/reference/map_.html" target="p5ref">map</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
+      </div> <!-- side -->
+
+      <div class="slide">
+        <h1>Animating noise curve with for-loop</h1>
+        <p>Additionally to while-loop, there is also a for loop in Processing and many other languages. For-loop doesen't introduce any new functionality. Everything you do with a for-loop, you could also do with the while-loop. For-loop is just a more convinient way to express things. Here's <a href="https://www.youtube.com/watch?v=h4ApLHe8tbk">a good video about for-loops</a> by Daniel Shiffman.</p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="noise6"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
+
+          <pre id="editor" filepath="sketches/noise6/noise6.pde"></pre>
+
+          <div id="reference">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/reference/for.html" target="p5ref">for</a><br/>
+            <a href="https://processing.org/reference/noise_.html" target="p5ref">noise</a><br/>
+            <a href="https://processing.org/reference/map_.html" target="p5ref">map</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
+      </div> <!-- side -->
+
+      <div class="slide">
+        <h1>Nested for-loops</h1>
+        <p>In the last example we animated a single noise curve. Why not use another for-loop and animate 20 curves!</p>
+        <p>The example has two nested for loops. The inner one draws a curve. The outer one repeats the inner loop with different values. Loops (especially nested loops) can be tricky to comprehend even for experienced programmers. Take your time and try to understand step-by-step what the code does.</p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="noise0"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
+
+          <pre id="editor" filepath="sketches/noise0/noise0.pde"></pre>
+
+          <div id="reference">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/reference/for.html" target="p5ref">for</a><br/>
+            <a href="https://processing.org/reference/noise_.html" target="p5ref">noise</a><br/>
+            <a href="https://processing.org/reference/map_.html" target="p5ref">map</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
+      </div> <!-- side -->
+
+      <div class="slide">
+        <h1>Next</h1>
+        <p>Phew! That was an intense section. We covered at least:</p>
+        <p><code>noise(x)</code>, <code>noise(x, y)</code>, <code>noise(x, y, z)</code>, <code>map</code>, <code>while</code> and <code>for</code>.
+        <br />
+        <p>Open processing and start creating or check the next section. Following the previous examples you could for example modify the mirror drawing sketch to use noise instead of mouse, create colors with noise or map mouse coordinates to create a color for your previous sketches.</p>
+      </div> <!-- side -->
     </div> <!-- section -->
 
     <!-- --------------------- transform --------------------- -->
@@ -688,6 +874,36 @@ function name    |
       </div> <!-- slide -->
     </div> <!-- section -->
 
-  </div>
+    <!-- --------------------- other resources --------------------- -->
+    <div class="section">
+      <div class="slide">
+        <h1>Other resources</h1>
+        <h2>Fun programming</h2>
+        <p><a href="http://funprogramming.org/">Funprogramming.org</a> has inspiring short tutorials and videos about processing. The examples can be very helpful for inspiration. For example this whole website is ispired by funprogramming :)</p>
+        <h2>Processing.org</h2>
+        <p><a href="https://processing.org/reference/">Processing reference</a> is the first place to go in doubt. Processing.org has also good <a href="https://processing.org/tutorials/">tutorials</a>, such as <a href="https://processing.org/tutorials/objects/">objects by Daniel Shiffman</a>.</p>
+        <h2>OpenProcessing.org</h2>
+        <p><a href="http://www.openprocessing.org/">OpenProcessing</a> is an online platform for sharing and discussing Processing sketches. <a href="http://www.openprocessing.org/classroom/4953">Here</a> and <a href="http://www.openprocessing.org/classroom/24992">here</a> you can find sketches created at mehackit courses.</p>
+      </div> <!-- slide -->
+    </div> <!-- section -->
+
+    <!-- --------------------- export to movie --------------------- -->
+    <div class="section">
+      <div class="slide">
+        <h1>Export to movie</h1>
+        <p>Add the following line of code to the end of the draw-function. This statement saves the current frame as and image.</p>
+        <p><code>saveFrame("frames/####.tif");</code></p>
+        <p>After that, open Processing and select Tools > Movie Maker. Select the frames folder, set compression as PNG and select "Same size as originals".</p>
+        <p class="center">
+          <a href="resources/img/moviemaker.png" target="blank_"><img src="resources/img/moviemaker.png" height="200" style="margin-right: 5px;"></a>
+          <a href="resources/img/moviemaker2.png" target="blank_"><img src="resources/img/moviemaker2.png" height="200"></a>
+        </p>
+        <p>If you want to share your work, create a 5-10 second video and send it to the given email at <a href="https://www.wetransfer.com/">we transfer</a>.</p>
+      </div> <!-- slide -->
+    </div> <!-- section -->
+  </div> <!-- fullpage -->
+  <footer>
+    <p>You've reached the footer</p>  
+  </footer>
 </body>
 </html>

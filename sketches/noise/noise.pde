@@ -1,6 +1,6 @@
 boolean animate_noise = true;
 
-color bg_color = color(250);
+color bg_color = color(228);
 color cordinates_color = color(0);
 color cordinates_limit_color = color(200, 100);
 color noise_color = color(200, 0, 0);
@@ -41,7 +41,7 @@ void draw_increment_control() {
     fill(200);
     rect(origo_x, cordinate_height + 10, width - origo_x - padding, 50);
     if (mouseX > origo_x && mouseX < width - padding && mouseY > cordinate_height + 10 && mouseY < cordinate_height + 10 + 50) {
-        noise_d = map(mouseX, origo_x, width - padding, 1, 200);
+        noise_d = map(mouseX, origo_x, width - padding, 1, 300);
         noise_selector_x = mouseX;
     }
     line(noise_selector_x, cordinate_height + 10, noise_selector_x, cordinate_height + 10 + 50);

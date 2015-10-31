@@ -2,7 +2,7 @@ var processingInstance;
 
 function initialize_fullpage() {
   $('#fullpage').fullpage({
-    anchors: ['home', 'welcome', 'shapes', 'helloWorld', 'interaction', 'noise', 'transform', 'movie'],
+    anchors: ['home', 'welcome', 'shapes', 'animation', 'interaction', 'noise', 'transform', 'other_resources', 'movie'],
     menu: '#menu',
     paddingTop: 50,
     verticalCentered: true,
@@ -16,7 +16,7 @@ function initialize_fullpage() {
       //move to first slide if on some other slide
       if (slideIndex > 0) {
         console.log("After Load on section " + index + ", slide " + slideIndex + " called");
-        // $.fn.fullpage.moveTo(index, 0);
+        $.fn.fullpage.moveTo(index, 0);
       } else {
         console.log("After Load on section " + index + ", slide " + slideIndex + " called");
         //afterSlideLoad is not called when new section with slide index 0 is loaded. Hence we do this stuff twice

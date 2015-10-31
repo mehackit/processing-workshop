@@ -97,6 +97,13 @@ p:last-of-type {
   position: relative;
 }
 
+/******************** FOOTER ********************/
+
+footer {
+  width:100%;
+  height:200px;
+}
+
 /******************** EDITOR AND CANVAS ********************/
 
 .editor-wrapper {

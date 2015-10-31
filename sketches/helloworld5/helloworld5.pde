@@ -1,31 +1,25 @@
+// this variable is visible everywhere in the sketch
+int radius = 1; // create an integer variable and assign a value to it
+
 void setup() {
     size(512, 512);
-    // call stoke weight here in setup because thre's no 
-    // use making the same call in draw method on each frame
-    strokeWeight(10); 
+    background(255); //set the background white
+    frameRate(10); // set max framerate to 10 frames per second
 }
 
 void draw() {
-    // create a decimal number variable and assign a random number between 0-100
-    float radius = random(0, 100); 
+    // these variables are only visible inside draw()
+    // create random color components.
+    float r = random(0, 255);
+    float g = random(0, 255);
+    float b = random(0, 255);
+    stroke(r, g, b);
+    fill(r, g, b);
 
-    // create and assign random values between 0-255 for each color component
-    float red = random(0, 255);
-    float green = random(0, 255);
-    float blue = random(0, 255);
-    float alpha = random(0, 255);
+    // draw circle to the center of the screen
+    ellipse(width/2, height/2, radius, radius);
 
-    // create stroke color with the color components
-    stroke(red, green, blue, alpha); 
-    // create a bit different fill color from the previous components
-    fill(255-red, 255-green, 255-blue, alpha); 
-    
-    //draw a circle with random x and y coordinates and random radius
-    ellipse(random(0, height), random(0, width), radius, radius); 
-
-    // assign a new random number between 0-100 to radius
-    radius = random(0, 100); 
-
-    //draw a rectangle with random x and y coordinates and the new random radius
-    rect(random(0, height), random(0, width), radius, radius); 
+    // assign a new value to r. Increase it by 1.
+    // next time the circle will be bigger
+    radius = radius + 1;
 }
