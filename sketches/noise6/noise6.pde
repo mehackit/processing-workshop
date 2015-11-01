@@ -1,4 +1,4 @@
-float noise_y = 0; // create variable for noise
+float z = 0.0;
 
 void setup() {
     size(500, 500);
@@ -12,10 +12,13 @@ void draw() {
     // float x = 0; creates decimal variable x and assigns value 0 to it
     // x < width; is a similar condition you used in while loop. The loop repeats as long as the condition is true
     // x = x + 1 increments the x in the end of each iteration. Same thing you wrote at the end of while-loop
-    for (float x = 0; x < width; x = x + 1) {
-        float y = map(noise(x/100, noise_y), 0, 1, 200, 400);
-        point(x, y);
+    for (float y = 0; y < height; y = y + 20) {
+        for (float x = 0; x < width; x = x + 1) {
+            float noise_y = map(noise(x/50, y/50, z), 0, 1, -50, 50);
+            point(x, y + noise_y);
+        }
     }
     // when x is 500 the program will move forward. In this case increment noise_y
-    noise_y = noise_y + 0.01;
+    // noise_y = noise_y + 0.01;
+    z += 0.05;
 }
