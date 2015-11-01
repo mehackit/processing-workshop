@@ -870,18 +870,34 @@ function name    |
 
     <div class="section"> <!-- section -->
       <div class="slide">
-        <h1>Translate</h1>
+        <h1>2D Transformations</h1>
         <div class="display">
           <canvas class="canvas noborder" type='example' filepath="sketches/transform0/transform0.pde"></canvas>
         </div>
       </div> <!-- slide -->
 
       <div class="slide">
-        <h1>Transform</h1>
-        <p>Processing has helpful functions like <code>translate</code>.
-        <div class="display">
-          <canvas class="canvas noborder" type='example' filepath="sketches/transform0/transform0.pde"></canvas>
-        </div>
+        <h1>Translate</h1>
+        <p>Processing has helpful functions like <code>translate</code>, <code>rotate</code> and <code>scale</code>, that make it easy to move, spin, grow or shrink objects in your sketch. Let's look at <code>translate</code> first.</p>
+        <p>Translate moves the whole coordinate system to a new location. You can create a complex shape relative to position 0,0 and move the shape around by moving the whole canvas.</p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="transform1"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
+
+          <pre id="editor" filepath="sketches/transform1/transform1.pde"></pre>
+
+          <div id="reference">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/reference/translate_.html" target="p5ref">translate</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
       </div> <!-- slide -->
     </div> <!-- section -->
 

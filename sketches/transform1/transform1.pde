@@ -7,8 +7,7 @@ void setup() {
 void draw() {
     // translate moves the whole coordinate sytem to the gizen location
     translate(200, 200); // try different values to see how translate works
-    scale(x);
-    // now point (0,0) is actually at (200,200) because the coordinate system has been moved
+    // now point (0,0) is actually at (200,200)
     rect(0, 0, 100, 100);
     ellipse(25, 25, 30, 30);
     ellipse(75, 25, 30, 30);
