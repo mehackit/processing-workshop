@@ -833,12 +833,12 @@ function name    |
 
       <div class="slide">
         <h1>Nested for-loops</h1>
-        <p>In the last example we animated a single noise curve. Why not use another for-loop and animate 20 curves!</p>
+        <p>In the last example we animated a single noise curve. Why not use another for-loop and animate 25 curves!</p>
         <p>The example has two nested for loops. The inner one draws a curve. The outer one repeats the inner loop with different values. Loops (especially nested loops) can be tricky to comprehend even for experienced programmers. Take your time and try to understand step-by-step what the code does.</p>
 
         <div class="editor-wrapper">
           <div class="display">
-            <canvas class="canvas" id="noise0"></canvas>
+            <canvas class="canvas" id="noise7"></canvas>
           </div>
 
           <div class="controls">
@@ -846,7 +846,7 @@ function name    |
             <button class="editor_button" id="btn_stop">Stop</button>        
           </div>
 
-          <pre id="editor" filepath="sketches/noise0/noise0.pde"></pre>
+          <pre id="editor" filepath="sketches/noise7/noise7.pde"></pre>
 
           <div id="reference">
             <b>Reference</b><br/>
@@ -870,11 +870,19 @@ function name    |
 
     <div class="section"> <!-- section -->
       <div class="slide">
-        <h1>Transform</h1>
+        <h1>Translate</h1>
+        <p>Processing has helpful functions like <code>translate</code>, </p>
         <div class="display">
           <canvas class="canvas noborder" type='example' filepath="sketches/transform0/transform0.pde"></canvas>
         </div>
       </div> <!-- slide -->
+
+      <!-- <div class="slide">
+        <h1>Transform</h1>
+        <div class="display">
+          <canvas class="canvas noborder" type='example' filepath="sketches/transform0/transform0.pde"></canvas>
+        </div>
+      </div> <!-- slide --> -->
     </div> <!-- section -->
 
     <!-- --------------------- other resources --------------------- -->
@@ -895,21 +903,34 @@ function name    |
       <div class="slide">
         <h1>Export to movie</h1>
         <p>Add the following line of code to the end of the draw-function. This statement saves the current frame as and image.</p>
-        <p><code>saveFrame("frames/####.tif");</code></p>
-        <p>After that, open Processing and select Tools > Movie Maker. Select the frames folder, set compression as PNG and select "Same size as originals".</p>
+        <p class="center"><code>saveFrame("frames/####.tif");</code></p>
+        <p>Now run your program and every frame will be saved as an image to the frames folder. Then open Processing and select Tools > Movie Maker. Select the frames folder, set compression as PNG and select "Same size as originals".</p>
         <p class="center">
           <a href="resources/img/moviemaker.png" target="blank_"><img src="resources/img/moviemaker.png" height="200" style="margin-right: 5px;"></a>
           <a href="resources/img/moviemaker2.png" target="blank_"><img src="resources/img/moviemaker2.png" height="200"></a>
         </p>
         <p class="center">If you want to share your work, create a 5-10 second video and send it to the given email at <a href="https://www.wetransfer.com/" target="_blank">we transfer</a>.</p>
       </div> <!-- slide -->
+      <div class="slide">
+        <h1>Sign your work</h1>
+        <p>If you wish, you can sign your work. Add the following snippet to the end of your draw-function to add your name, nick or initials to the corner of the canvas:</p>
+        
+        <div class="editor-wrapper">
+          <pre id="editor" class="short" filepath="sketches/signature/signature.pde"></pre>
+
+          <div id="reference" class="short">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/reference/text_.html" target="p5ref">text</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
+      </div> <!-- slide -->
     </div> <!-- section -->
     <div class="section fp-auto-height">
       <footer>
-        <P>
-        <span>MEHACKIT 2015</span> |
-        <span>LICENCED UNDER <A HREF="HTTP://CREATIVECOMMONS.ORG/LICENSES/BY-NC/4.0/">CC BY-NC 4.0</A></span> |
-        <span>FORK AT <A HREF="HTTPS://GITHUB.COM/OHSS/MEHACKIT-PROCESSING">GITHUB</A></P></span>
+        <p>
+        <span><a href="http://mehackit.org">MEHACKIT</a> 2015</span> |
+        <span>LICENCED UNDER <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></span> |
+        <span>FORK AT <a href="https://github.com/ohss/mehackit-processing">GITHUB</a></p></span>
       </footer>
     </div> <!-- section -->
   </div> <!-- fullpage -->

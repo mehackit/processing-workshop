@@ -1377,6 +1377,7 @@
             FP.setFitToSection(!v.element.hasClass(AUTO_HEIGHT));
 
             //callback (afterLoad) if the site is not just resizing and readjusting the slides
+            // Added current slide (getAnchor(v.activeSlide), v.activeSlide.index()) as a parameter for afterLoad callback!
             $.isFunction(options.afterLoad) && !v.localIsResizing && options.afterLoad.call(v.element, v.anchorLink, (v.sectionIndex + 1), getAnchor(v.activeSlide), v.activeSlide.index());
 
             playMedia(v.element)
