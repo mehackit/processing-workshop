@@ -899,6 +899,163 @@ function name    |
           </div>
         </div> <!-- editor-wrapper -->
       </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>How translate works</h1>
+        <p class="center small">Images and text from <a href="https://processing.org/tutorials/transform2d/" target="_blank">2D Transformations tutorial</a> by J David Eisenberg</p>
+        <p>In the first image below, you see a rectangle drawn with <code>rect(20, 20, 40, 40);</code>.</p>
+        <p>If you want to move the rectangle 60 units right and 80 units down, you can just change the coordinates by adding to the x and y starting point: <code>rect(20 + 60, 20 + 80, 40, 40);</code> (second image).</p>
+        <p>But there is a more interesting way to do it: move the coordinate system instead. If you move the coordinates 60 units right and 80 units down, you will get exactly the same visual result. Moving the coordinate system is called translation. In the third image <code>translate(60, 80);</code> is called first and then <code>rect(20, 20, 40, 40);</code>. This comes very handy when you want to draw and move more complex shapes.</p>
+        <p class="center"><img height="230" src="resources/img/translate.png"> <img height="230" src="resources/img/translate_new_coords.png"> <img height="230" src="resources/img/translate_moved_grid.png"></p>
+      </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>Moving coordinate system back to its original position</h1>
+        <p>When you call translate, the whole coordinate system moves. If you call translate inside the draw-function, Processing will automatically move the coordinate system to its original position before the function loops again. You can also control this behaviour. <code>pushMatrix()</code> saves the current position of the coordinate system. Then you can do your transformations and finally call <code>popMatrix()</code>, which restores the coordinate system to the way it was before.</p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="transform2"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
+
+          <pre id="editor" filepath="sketches/transform2/transform2.pde"></pre>
+
+          <div id="reference">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/reference/translate_.html" target="p5ref">translate</a><br/>
+            <a href="https://processing.org/reference/pushMatrix_.html" target="p5ref">pushMatrix</a><br/>
+            <a href="https://processing.org/reference/popMatrix_.html" target="p5ref">popMatrix</a><br/>
+            <a href="https://processing.org/reference/void.html" target="p5ref">void</a><br/>
+            <a href="https://processing.org/reference/for.html" target="p5ref">for</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
+      </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>Rotation: radians and degrees</h1>
+        <p class="center small">Images and text from <a href="https://processing.org/tutorials/transform2d/" target="_blank">2D Transformations tutorial</a> by J David Eisenberg</p>
+        <p>In addition to moving the grid, you can also rotate it with the <code>rotate()</code> function. This function takes one argument, which is the number of radians that you want to rotate. In Processing, all the functions that have to do with rotation measure angles in radians rather than degrees. When you talk about angles in degrees, you say that a full circle has 360°. When you talk about angles in radians, you say that a full circle has 2π radians. Here is a diagram of how Processing measures angles in degrees (black) and radians (red).</p>
+        <p class="center"><img src="resources/img/degrees.png"></p>
+        <p>Since most people think in degrees, Processing has a built-in <code>radians()</code> function which takes a number of degrees as its argument and converts it for you. It also has a <code>degrees()</code> function that converts radians to degrees. 
+      </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>Rotating (the wrong way)</h1>
+        <p class="center small">Images and text from <a href="https://processing.org/tutorials/transform2d/" target="_blank">2D Transformations tutorial</a> by J David Eisenberg</p>
+        <p class="center">Let’s try rotating a square clockwise 45 degrees:</p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="transform3"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
+
+          <pre id="editor" class="short" filepath="sketches/transform3/transform3.pde"></pre>
+
+          <div id="reference" class="short">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/reference/rotate_.html" target="p5ref">rotate</a><br/>
+            <a href="https://processing.org/reference/translate_.html" target="p5ref">translate</a><br/>
+            <a href="https://processing.org/reference/pushMatrix_.html" target="p5ref">pushMatrix</a><br/>
+            <a href="https://processing.org/reference/popMatrix_.html" target="p5ref">popMatrix</a><br/>
+            <a href="https://processing.org/reference/radians_.html" target="p5ref">radians</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
+        <p> How come the square got moved and cut off? The answer is: the square did not move. The grid was rotated. Here is what really happened. As you can see, on the rotated coordinate system, the square still has its upper left corner at (40, 40):</p>
+        <p class="center"><img src="resources/img/rotated_grid.png"></p>
+      </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>Rotating (the right way)</h1>
+        <p class="center small">Images and text from <a href="https://processing.org/tutorials/transform2d/" target="_blank">2D Transformations tutorial</a> by J David Eisenberg</p>
+        <p> The correct way to rotate the square is to: 1) Translate the coordinate system’s origin (0, 0) to where you want the upper left of the square to be. 2) Rotate the grid π/4 radians (45°) 3) Draw the square at the origin.</p>
+        <p class="center"><a href="resources/img/correct_rotate_grid.png" target="_blank"><img src="resources/img/correct_rotate_grid.png" height="100"></a></p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="transform4"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
+
+          <pre id="editor" filepath="sketches/transform4/transform4.pde"></pre>
+
+          <div id="reference">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/reference/rotate_.html" target="p5ref">rotate</a><br/>
+            <a href="https://processing.org/reference/translate_.html" target="p5ref">translate</a><br/>
+            <a href="https://processing.org/reference/pushMatrix_.html" target="p5ref">pushMatrix</a><br/>
+            <a href="https://processing.org/reference/popMatrix_.html" target="p5ref">popMatrix</a><br/>
+            <a href="https://processing.org/reference/radians_.html" target="p5ref">radians</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
+      </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>Scaling</h1>
+        <p class="center small">Images and text from <a href="https://processing.org/tutorials/transform2d/" target="_blank">2D Transformations tutorial</a> by J David Eisenberg</p>
+        <p>The final coordinate system transformation is scaling, which changes the size of the grid. Take a look at this example, which draws a square, then scales the grid to twice its normal size, and draws it again.</p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="transform5"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
+
+          <pre id="editor" class="short" filepath="sketches/transform5/transform5.pde"></pre>
+
+          <div id="reference" class="short">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/reference/scale_.html" target="p5ref">scale</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
+
+        <p> First, you can see that the square appears to have moved. It hasn’t, of course. Its upper left corner is still at (20, 20) on the scaled-up grid, but that point is now twice as far away from the origin as it was in the original coordinate system. You can also see that the lines are thicker. That’s no optical illusion—the lines really are twice as thick, because the coordinate system has been scaled to double its size. There is no law saying that you have to scale the x and y dimensions equally. Try using scale(3.0, 0.5) to make the x dimension three times its normal size and the y dimension only half its normal size. </p>
+
+      </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>Scaling with sine-function</h1>
+        <p>Before you used noise-function to generate nice smooth values for forexample coordinates. Let's do something similar with sine-function for scaling objects.</p>
+        <p>Sine-function fluctuates nicely between -1 and 1. If we call <code>sine(x)</code> and move x a little bit on each frame, we get values that alternate smoothly between -1 an 1:</p>
+
+        <p class="center"><img src="resources/img/sine.png" height="100"></p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="transform6"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>        
+          </div>
+
+          <pre id="editor" filepath="sketches/transform6/transform6.pde"></pre>
+
+          <div id="reference">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/reference/scale_.html" target="p5ref">scale</a><br/>
+            <a href="https://processing.org/reference/sin_.html" target="p5ref">sin</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
+      </div> <!-- slide -->
     </div> <!-- section -->
 
     <!-- --------------------- other resources --------------------- -->

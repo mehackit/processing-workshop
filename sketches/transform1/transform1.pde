@@ -1,5 +1,3 @@
-float x = 0.0;;
-
 void setup() {
     size(500, 500);
 }
@@ -14,5 +12,4 @@ void draw() {
     ellipse(25, 25, 5, 5);
     ellipse(75, 25, 5, 5);
     line(10, 80, 90, 80);
-    x += 0.01;
 }

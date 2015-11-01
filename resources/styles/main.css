@@ -85,6 +85,10 @@ p:last-of-type {
   padding-bottom: 12px;
 }
 
+.small {
+  font-size: 70%;
+}
+
 /******************** FULLPAGE.JS ********************/
 
 .section{
