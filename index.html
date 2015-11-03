@@ -35,7 +35,8 @@
             <li><a href="#shapes/5">Grayscale colors</a></li>
             <li><a href="#shapes/6">Order and colors</a></li>
             <li><a href="#shapes/7">RGB colors</a></li>
-            <li><a href="#shapes/9">Next</a></li>
+            <li><a href="#shapes/9">Using RGB colors</a></li>
+            <li><a href="#shapes/10">Next</a></li>
           </ul>
         </li>
         <li data-menuanchor="animation">
@@ -140,7 +141,7 @@
       <div class="slide">
         <h1>Introduction</h1>
         <p>The material is divided into five sections. Each section exhibits a small project and introduces new concepts along the way. After completing a section you can start creating your own project or move to the next section. Each section gives you more inspiration and tools to work with.</p>
-        <p>The goal is that you create your own work of art and export it to a video. You can first follow the first section to get started and then decide wereither to move to the next section or start working on your own project.</p>
+        <p>The goal is that you create your own work of art and export it to a video. You can first follow the first section to get started and then decide whether to move to the next section or start working on your own project.</p>
         <p style="text-align: center;"><img src="resources/img/content.png"></p>
         <div class="arrow" id="arrow3">
           <p>Press down arrow to move to next section <i class="fa fa-arrow-down"></i></p>
@@ -305,12 +306,17 @@ function name    |
 
       <div class="slide">
         <h1>RGB Colors</h1>
-        <p class="center"><img src="resources/img/rgb.png" height="100px"></p>
+        <p class="center"><img src="resources/img/rgb.png" height="200px"></p>
         <p>You can mix red, green, and blue to create colors. As it was with grayscale, each component gets a value between 0 and 255.</p>
         <p><code>fill(255, 255, 0);</code> Fill with three parameters sets a red-green-blue color. This one is yellow.</p>
         <p><code>fill(0, 255, 255, 200);</code> Fill with four parameters sets a RGB-color with transparency. This one is a little bit tansparent cyan.</p>
         <p><code>background(255,0,0);</code> Covers the whole canvas with the specified color. This one is red.</p>
         <p>You can turn off fill and stroke with <code>noStroke();</code> and <code>noFill();</code>. <code>strokeWeight(1);</code> sets the thikness of outlines.</p>
+      </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>Using RGB colors</h1>
+        <p class="center">Try out <code>fill</code>, <code>background</code>, <code>noStroke</code>, <code>noFill</code>, and <code>strokeWeight</code> to color the sketch below:</p>
 
         <div class="editor-wrapper">
           <div class="display">
@@ -337,7 +343,7 @@ function name    |
             <a href="https://processing.org/reference/triangle_.html" target="p5ref">triangle</a><br/>
           </div>
         </div> <!-- editor-wrapper -->
-      </div> <!-- slide -->
+      </div>
 
       <div class="slide">
         <h1>Putting it all together</h1>
