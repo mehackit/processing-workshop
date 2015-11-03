@@ -15,10 +15,10 @@ function initialize_fullpage() {
     afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
       //move to first slide if on some other slide
       if (slideIndex > 0) {
-        console.log("After Load on section " + index + ", slide " + slideIndex + " called");
-        // $.fn.fullpage.moveTo(index, 0);
+        // console.log("After Load on section " + index + ", slide " + slideIndex + " called");
+        $.fn.fullpage.moveTo(index, 0);
       } else {
-        console.log("After Load on section " + index + ", slide " + slideIndex + " called");
+        // console.log("After Load on section " + index + ", slide " + slideIndex + " called");
         //afterSlideLoad is not called when new section with slide index 0 is loaded. Hence we do this stuff twice
         add_editor_if_needed($(this).find('.slide:first'));
         add_example_if_needed($(this).find('.slide:first'));
@@ -40,7 +40,7 @@ function initialize_fullpage() {
     },
 
     afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
-      console.log("After Slide Load on section " + index + ", slide " + slideIndex + " called");
+      // console.log("After Slide Load on section " + index + ", slide " + slideIndex + " called");
       add_editor_if_needed($(this));
       add_example_if_needed($(this));
 
