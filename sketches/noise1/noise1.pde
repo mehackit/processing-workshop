@@ -2,7 +2,7 @@ int r = 50;
 float seed = 0;
 
 void setup() {
-    size(512, 512);
+    size(512, 400);
 }
 
 void draw() {
