@@ -77,12 +77,27 @@
         </li>
         <li data-menuanchor="transform">
           <a href="#transform">Transform</a>
+          <ul>
+            <li><a href="#transform/1">Translate</a></li>
+            <li><a href="#transform/2">How translate works</a></li>
+            <li><a href="#transform/3">pushMatrix</a></li>
+            <li><a href="#transform/4">Radians and degrees</a></li>
+            <li><a href="#transform/5">Rotating (the wrong way)</a></li>
+            <li><a href="#transform/6">Rotating (the right way)</a></li>
+            <li><a href="#transform/7">Scaling</a></li>
+            <li><a href="#transform/8">Scaling with sine-function</a></li>
+            <li><a href="#transform/9">All transforms together</a></li>
+            <li><a href="#transform/10">Next</a></li>
+          </ul>
         </li>
         <li data-menuanchor="other_resources">
           <a href="#other_resources">Other resources</a>
         </li>
         <li data-menuanchor="movie">
           <a href="#movie">Movie</a>
+          <ul>
+            <li><a href="#movie/1">Sign your work</a></li>
+          </ul>
         </li>
       </ul>
     </div>
@@ -1033,7 +1048,7 @@ function name    |
       <div class="slide">
         <h1>Scaling with sine-function</h1>
         <p>Before you used noise-function to generate nice smooth values for forexample coordinates. Let's do something similar with sine-function for scaling objects.</p>
-        <p>Sine-function fluctuates nicely between -1 and 1. If we call <code>sine(x)</code> and move x a little bit on each frame, we get values that alternate smoothly between -1 an 1:</p>
+        <p>Sine-function fluctuates nicely between -1 and 1. If we call <code>sine(x)</code> and move x a little bit on each frame, we get values that alternate between -1 an 1. Add + 1 to that value and we get values between 0-2 for the scale:</p>
 
         <p class="center"><img src="resources/img/sine.png" height="100"></p>
 
@@ -1044,7 +1059,7 @@ function name    |
 
           <div class="controls">
             <button class="editor_button" id="btn_start">Start</button>
-            <button class="editor_button" id="btn_stop">Stop</button>        
+            <button class="editor_button" id="btn_stop">Stop</button>
           </div>
 
           <pre id="editor" filepath="sketches/transform6/transform6.pde"></pre>
@@ -1055,6 +1070,44 @@ function name    |
             <a href="https://processing.org/reference/sin_.html" target="p5ref">sin</a><br/>
           </div>
         </div> <!-- editor-wrapper -->
+      </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>Using different 2D transformations together</h1>
+        <p>Now you can combine different transformations. Below is a sketch that draws four spinning rectangles around mouse. Individual rectangles are rotating counter clockwise and circulating mouse clockwise. The rectangles are also scaled using sine-function.</p>
+
+        <p class="center"><img src="resources/img/sine.png" height="100"></p>
+
+        <div class="editor-wrapper">
+          <div class="display">
+            <canvas class="canvas" id="transform7"></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="editor_button" id="btn_start">Start</button>
+            <button class="editor_button" id="btn_stop">Stop</button>
+          </div>
+
+          <pre id="editor" filepath="sketches/transform7/transform7.pde"></pre>
+
+          <div id="reference">
+            <b>Reference</b><br/>
+            <a href="https://processing.org/reference/pushMatrix_.html" target="p5ref">pushMatrix</a><br/>
+            <a href="https://processing.org/reference/popMatrix_.html" target="p5ref">popMatrix</a><br/>
+            <a href="https://processing.org/reference/translate_.html" target="p5ref">translate</a><br/>
+            <a href="https://processing.org/reference/rotate_.html" target="p5ref">rotate</a><br/>
+            <a href="https://processing.org/reference/scale_.html" target="p5ref">scale</a><br/>
+            <a href="https://processing.org/reference/sin_.html" target="p5ref">sin</a><br/>
+            <a href="https://processing.org/reference/radians_.html" target="p5ref">radians</a><br/>
+            <a href="https://processing.org/reference/rectMode_.html" target="p5ref">rectMode</a><br/>
+          </div>
+        </div> <!-- editor-wrapper -->
+      </div> <!-- slide -->
+
+      <div class="slide">
+        <h1>Next</h1>
+        <p>In this section we covered: <code>translate</code>, <code>rotate</code>, <code>scale</code>, <code>radians</code>, <code>pushMatrix</code>, <code>popMatrix</code> and <code>sin</code></p>
+        <p>Now it's time to create something from all the different concepts covered in this material. Next section lists few other resources that might give you inspiration.</p>
       </div> <!-- slide -->
     </div> <!-- section -->
 
