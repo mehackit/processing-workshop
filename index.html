@@ -396,7 +396,7 @@ function name    |
       <div class="slide">
         <h1>Random</h1>
         <p>In the last example, everything was a bit static. The draw-function got called over and over again (30-60 times per second), but it only draw the same rectangle each time. Let's create some movement by changing where the rectange is drawn each frame.</p>
-        <p><code>random(min, max);</code> returns a random decimal number between min and max. The example below uses random to generate values cor the x and y coordinate of a rectangle. Try out the example and create different shapes with random position and size.</p>
+        <p><code>random(min, max);</code> returns a random decimal number between min and max. The example below uses random to generate values for the x and y coordinate of a rectangle. Try out the example and create different shapes with random position and size.</p>
 
         <div class="editor-wrapper">
           <div class="display">
@@ -519,8 +519,8 @@ function name    |
 
       <div class="slide">
         <h1>Fade background</h1>
-        <p>You can do a lot of cool thing with transparent colors. For example, you get a nice fade effect if you use a transparent color instead of a solid background color.</p>
-        <p>Background function doesent allow a transparent color as a parameter, but you can draw a canvas-sized rectangle instead. Check the example below and use it in your animation if you wish.</p>
+        <p>You can do a lot of cool things with transparent colors. For example, you get a nice fade effect if you use a transparent color instead of a solid background color.</p>
+        <p>Background function doesn't allow a transparent color as a parameter, but you can draw a canvas-sized rectangle instead. Check the example below and use it in your animation if you wish.</p>
 
         <div class="editor-wrapper">
           <div class="display">
@@ -573,7 +573,7 @@ function name    |
 
         <p>Let's make something interactive. Processing has some nice functions for working with the users mouse. You can get the coordinates with <code>mouseX</code> and <code>mouseY</code> variables, which are updated each frame.</p>
 
-        <p>The example below draws a point to the current mouse coordinate. You can edit the code to draw for example a rectangle, circle or a line to the curren mouse position.</p>
+        <p>The example below draws a point to the current mouse coordinate. You can edit the code to draw for example a rectangle, circle or a line to the current mouse position.</p>
 
         <div class="editor-wrapper">
           <div class="display">
@@ -601,7 +601,7 @@ function name    |
       <div class="slide">
         <h1>Drawing a line</h1>
 
-        <p>Point function makes the drawing a bit, well, pointy. We can make a smoother result usling line. Line function draws a line bitween two points. We get the curren mouse position with <code>mouseX</code> and <code>mouseY</code>. Processing also has variables for the previous positions called <code>pmouseX</code> and <code>pmouseY</code>.</p>
+        <p>Point function makes the drawing a bit, well, pointy. We can make a smoother result usling line. Line function draws a line bitween two points. We get the current mouse position with <code>mouseX</code> and <code>mouseY</code>. Processing also has variables for the previous positions called <code>pmouseX</code> and <code>pmouseY</code>.</p>
         <p>In the draw function I have used a <code>mousePressed</code>-variable and an <code>if</code>-statement. If-statement checks if the given condition is true and, if it is, executes the statements. Just like <code>mouseX</code> is a variable, Processing has a <code>mousePressed</code>-variable wich is <code>true</code>, if the mouse is pressed and otherwise <code>false</code>.</p>
 
         <div class="editor-wrapper">
@@ -632,9 +632,9 @@ function name    |
       <div class="slide">
         <h1>Mirroring</h1>
 
-        <p>You could make different algorithms for warious effects for drawing. Mirroring is a straight-forward and visually nice looking algorithm. In the example below, the canvas is mirrored vertically in the middle.</p>
+        <p>You could make different algorithms for various effects for drawing. Mirroring is a straight-forward and visually nice looking algorithm. In the example below, the canvas is mirrored vertically in the middle.</p>
 
-        <p>Can you modify the example to use line-function onstead of point? You'll need to use pmouseX and pmouseY variables and do the same mirror calculations to those values too.</p>
+        <p>Can you modify the example to use line-function instead of point? You'll need to use pmouseX and pmouseY variables and do the same mirror calculations to those values too.</p>
 
         <div class="editor-wrapper">
           <div class="display">
@@ -696,7 +696,7 @@ function name    |
       <div class="slide">
         <h1>Next</h1>
         <p>In this section we covered:</p>
-        <p><code>mouseX</code>, <code>mouseY</code>, <code>pMouseX</code>, <code>pMouseY</code>, <code>mouseClicked</code>, <code>if</code> and <code>mirroring</code>.
+        <p><code>mouseX</code>, <code>mouseY</code>, <code>pMouseX</code>, <code>pMouseY</code>, <code>mousePressed</code>, <code>if</code> and <code>mirroring</code>.
         <br />
         <p>Next you could open processing and start creating interactive sketches using the previous examples. If you feel like you need more to work with, check out the following sections.</p>
       </div> <!-- slide -->
@@ -828,7 +828,7 @@ function name    |
 
       <div class="slide">
         <h1>Animating noise curve with for-loop</h1>
-        <p>Additionally to while-loop, there is also a for loop in Processing and many other languages. For-loop doesen't introduce any new functionality. Everything you do with a for-loop, you could also do with the while-loop. For-loop is just a more convinient way to express things. Here's <a href="https://www.youtube.com/watch?v=h4ApLHe8tbk" target="_blank">a good video about for-loops</a> by Daniel Shiffman.</p>
+        <p>Additionally to while-loop, there is also a for loop in Processing and many other languages. For-loop doesn't introduce any new functionality. Everything you do with a for-loop, you could also do with the while-loop. For-loop is just a more convinient way to express things. Here's <a href="https://www.youtube.com/watch?v=h4ApLHe8tbk" target="_blank">a good video about for-loops</a> by Daniel Shiffman.</p>
 
         <div class="editor-wrapper">
           <div class="display">
@@ -854,7 +854,7 @@ function name    |
       <div class="slide">
         <h1>Nested for-loops</h1>
         <p>In the last example we animated a single noise curve. Why not use another for-loop and animate 25 curves!</p>
-        <p>The example has two nested for loops. The inner one draws a curve. The outer one repeats the inner loop with different values. Loops (especially nested loops) can be tricky to comprehend even for experienced programmers. Take your time and try to understand step-by-step what the code does.</p>
+        <p>The example has two nested for-loops. The inner one draws a curve. The outer one repeats the inner loop with different values. Loops (especially nested loops) can be tricky to comprehend even for experienced programmers. Take your time and try to understand step-by-step what the code does.</p>
 
         <div class="editor-wrapper">
           <div class="display">
@@ -880,7 +880,7 @@ function name    |
       <div class="slide">
         <h1>Next</h1>
         <p>Phew! That was an intense section. We covered at least:</p>
-        <p><code>noise(x)</code>, <code>noise(x, y)</code>, <code>noise(x, y, z)</code>, <code>map</code>, <code>while</code> and <code>for</code>.
+        <p><code>noise(x)</code>, <code>noise(x, y)</code>, <code>noise(x, y, z)</code>, <code>map()</code>, <code>while</code> and <code>for</code>.
         <br />
         <p>Open processing and start creating or check the next section. Following the previous examples you could for example modify the mirror drawing sketch to use noise instead of mouse, create colors with noise or map mouse coordinates to create a color for your previous sketches.</p>
       </div> <!-- side -->

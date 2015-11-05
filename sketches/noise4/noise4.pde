@@ -8,7 +8,7 @@ void draw() {
     float x = 0;
     // while loop repeats as long as the condition (in this case "x is smaller than 500") is true
     while (x < width) {
-        // x gets values betwee 0-500. Divide x by 100 so incremented by 0.01 on each iteration
+        // x gets values between 0-500. Divide x by 100 so incremented by 0.01 on each iteration
         // map the noise value to 200-400
         float y = map(noise(x/100), 0, 1, 200, 400);
         point(x, y);
