@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Statements</title>
+  <meta name="description" content="Statements">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/poole.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+<body>
+  <!-- <div class="page-wrapper"> -->
+
+    <div class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      <h1>
+        <a href="http://localhost:4000/">
+          <img alt="logo" src="/img/mehackit_logo_white.png" />
+        </a>
+      </h1>
+      <p class="lead">Creative programming workshop with Processing</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      
+      
+
+      
+        
+        
+          <a class="sidebar-nav-item  " href="/exercises/1_introduction/1-welcome.html">Introduction</a>
+        
+      
+        
+        
+          <a class="sidebar-nav-item  " href="/exercises/2_shapes/1-shapes.html">Shapes</a>
+        
+          <a class="sidebar-nav-item sub  active" href="/exercises/2_shapes/2-statements.html">Statements</a>
+        
+      
+        
+        
+          <a class="sidebar-nav-item  " href="/exercises/3_animation/animation.html">Animation</a>
+        
+      
+    </nav>
+
+    <p> &#10084; Mehackit 2016</p>
+  </div>
+</div>
+
+    <div class="content container">
+      <div class="exercise">
+  <p class="chapter-title center"><small>Shapes</small></p>
+  <!-- <h1 class="exercise-title">Statements</h1> -->
+  <h1 id="statements">Statements</h1>
+
+<p>A program is made of statements. A statement ends in a semi-colon (;). The statement below calls an ellipse-function, wich draws an ellipse:</p>
+
+<p class="center"><code>ellipse(20, 50, 10, 40);</code></p>
+
+<p>Some functions need parameters. Ellipse-function needs four parameters. First and second parameter set the x and y coordinate, third and fourth parameter set the width and height of the ellipse. Parameters are separated by comma (,).</p>
+
+<pre style="text-align: center">
+             parameters      
+                 |           
+function name    |           
+     |           |           
+     |           |           
+     |    /------+-----\     
+  ellipse(20, 50, 10, 40);   
+          |   |   |    |     
+          x   y  width |     
+                       |     
+                     height  
+</pre>
+
+<p>Try the example in the editor below. Can you draw a circle with the ellipse-function?</p>
+
+<div class="editor-wrapper">
+  <div class="display">
+    <canvas class="canvas" id="shapes1"></canvas>
+  </div>
+
+  <div class="controls">
+    <button class="editor_button" id="btn_start">Start</button>
+    <button class="editor_button" id="btn_stop">Stop</button>        
+  </div>
+
+  <div class="editor-container">
+    <div id="editor" filepath="/sketches/shapes1/shapes1.pde"></div>
+  </div>
+
+  <div class="reference">
+    <b>Reference</b><br />
+    <a href="https://processing.org/reference/ellipse_.html" target="p5ref">ellipse</a><br />
+  </div>
+</div>
+<p><!-- editor-wrapper --></p>
+
+</div>
+
+
+
+    
+    
+
+    
+    
+
+    
+        
+            
+            <a href="/exercises/3_animation/animation.html" class="exercise-nav nav-next" aria-label="Next: Animation"><i class="fa fa-angle-right"></i></a>
+        
+        
+            <a href="/exercises/2_shapes/1-shapes.html" class="exercise-nav nav-prev" aria-label="Previous: Shapes"><i class="fa fa-angle-left"></i></a>
+        
+    
+    
+
+    
+    
+
+    </div>
+
+    <!-- jQuery -->
+<script src="/js/jquery.js"></script>
+
+<!-- ACE editor -->
+<script src="/js/ace/src/ace.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Projessing JS -->
+<script src="/js/processing/processing-1.4.8.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Main JS -->
+<script src="/js/main.js"></script>
+  <!-- </div> -->
+</body>
+</html>
