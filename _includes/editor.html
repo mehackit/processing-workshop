@@ -1,0 +1,26 @@
+<div class="editor-wrapper">
+  <div class="display">
+    <canvas class="canvas"></canvas>
+  </div>
+
+  <div class="controls">
+    <button class="editor_button" id="btn_start">
+      <i class="fa fa-play fa-2x"></i>
+    </button>
+    <button class="editor_button" id="btn_stop">
+      <i class="fa fa-stop fa-2x"></i>
+    </button>        
+  </div>
+
+  <div class="editor-container">
+    <div id="editor" filepath="{{ include.filepath | prepend: site.baseurl}}"></div>
+  </div>
+
+  <div class="reference">
+    <b>Reference</b><br/>
+    {% assign references = include.references | split: ", "  %}
+    {% for reference in references %}
+      <a href="https://processing.org/reference/{{ reference }}.html" target="p5ref">{{reference | remove: "_" }}</a><br/>
+    {% endfor %}
+  </div>
+</div> <!-- editor-wrapper -->

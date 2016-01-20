@@ -35,6 +35,9 @@ html {
 @media (min-width: 58em) {
   html {
     font-size: 20px; } }
+button {
+  margin: 5px 0; }
+
 /*
  * Full page wrapper for background animation
  *
