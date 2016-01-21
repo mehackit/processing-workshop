@@ -8,8 +8,8 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>Introduction</title>
-  <meta name="description" content="This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can mak...">
+  <title>Variables</title>
+  <meta name="description" content="Often you’ll want to store something. You can store different things with a thing called variable. A variable is like a box where you can put things and take...">
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/poole.css">
@@ -48,7 +48,7 @@
       
         
         
-          <a class="sidebar-nav-item   active" href="/exercises/1_introduction/1-welcome.html">Introduction</a>
+          <a class="sidebar-nav-item  " href="/exercises/1_introduction/1-welcome.html">Introduction</a>
         
       
         
@@ -80,7 +80,7 @@
         
           <a class="sidebar-nav-item sub " href="/exercises/3_animation/4-function-as-a-parameter.html">Function as a parameter</a>
         
-          <a class="sidebar-nav-item sub " href="/exercises/3_animation/5-variables.html">Variables</a>
+          <a class="sidebar-nav-item sub  active" href="/exercises/3_animation/5-variables.html">Variables</a>
         
           <a class="sidebar-nav-item sub " href="/exercises/3_animation/6-using-variables.html">Using variables</a>
         
@@ -172,67 +172,103 @@
 
     <div class="content container">
       <div class="exercise">
-  <p class="chapter-title center"><small>Introduction</small></p>
-  <h1 class="exercise-title">Introduction</h1>
-  <p>This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can make with code. We’ll be working with a language and environment called <a href="https://processing.org/" target="_blank">Processing</a>, which is widely used by students, artists, designers, researchers, and hobbyists. It’s a good choice for for learning how to code within the context of the visual arts.</p>
+  <p class="chapter-title center"><small>Animation</small></p>
+  <h1 class="exercise-title">Variables</h1>
+  <p>Often you’ll want to store something. You can store different things with a thing called variable. A variable is like a box where you can put things and take things out when you need them.</p>
 
-<p>The material is divided into five sections. Each section exhibits a small project and introduces new concepts along the way. After completing a section you can start creating your own project or move to the next section. Each section gives you more inspiration and tools to work with.</p>
+<p>In Processing, you’ll have to state what kind of things you want to store in the box. For a computer a whole number (1, 2, 4902, …) is a different thing than a decimal number (1.0, 3.14, …). So when you create a variable, you’ll have to state if the variable is a whole number, decimal number, a string or maybe something other. Boolean, color, int, float, String are quite common, but for now just you can just use float.</p>
 
-<p>The goal is that you create your own work of art and export it to a video. You can first follow the first section to get started and then decide whether to move to the next section or start working on your own project.</p>
+<p>It also matter where you create your variable. If you create your variable inside the draw function, it will only be visible in the draw function. If you create the variable before the setup function, it will be visible to the whole sketch.</p>
 
-<p><img src="/img/content.png" alt="content" /></p>
+<div class="editor-wrapper">
+  <div class="display">
+    <canvas class="canvas"></canvas>
+  </div>
 
-<p>First, <a href="https://processing.org/download/?processing" target="_blank">download and install Processing</a>. After that, press right arrow to move to the next page.</p>
+  <div class="controls">
+    <button class="editor_button" id="btn_start">
+      <i class="fa fa-play fa-2x"></i>
+    </button>
+    <button class="editor_button" id="btn_stop">
+      <i class="fa fa-stop fa-2x"></i>
+    </button>        
+  </div>
+
+  <div class="editor-container">
+    <div id="editor" filepath="/sketches/helloworld4/helloworld4.pde"></div>
+  </div>
+
+  <div class="reference">
+    <b>Reference</b><br />
+    
+    
+      <a href="https://processing.org/reference/float.html" target="p5ref">float</a><br />
+    
+      <a href="https://processing.org/reference/integersFloats.html" target="p5ref">integersFloats</a><br />
+    
+      <a href="https://processing.org/reference/width.html" target="p5ref">width</a><br />
+    
+      <a href="https://processing.org/reference/height.html" target="p5ref">height</a><br />
+    
+      <a href="https://processing.org/reference/random_.html" target="p5ref">random</a><br />
+    
+      <a href="https://processing.org/reference/ellipse_.html" target="p5ref">ellipse</a><br />
+    
+  </div>
+</div>
+<p><!-- editor-wrapper --></p>
 
 </div>
 
 
 
     
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
         
             
-            <a href="/exercises/2_shapes/1-shapes.html" class="exercise-nav nav-next" aria-label="Next: Shapes"><i class="fa fa-angle-right"></i></a>
+            <a href="/exercises/3_animation/6-using-variables.html" class="exercise-nav nav-next" aria-label="Next: Using variables"><i class="fa fa-angle-right"></i></a>
         
         
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
+            <a href="/exercises/3_animation/4-function-as-a-parameter.html" class="exercise-nav nav-prev" aria-label="Previous: Function as a parameter"><i class="fa fa-angle-left"></i></a>
+        
     
     
 

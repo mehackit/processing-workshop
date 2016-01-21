@@ -4,15 +4,13 @@ chapter: Shapes
 title: Statements
 ---
 
-# Statements
-
 A program is made of statements. A statement ends in a semi-colon (;). The statement below calls an ellipse-function, wich draws an ellipse:
 
 <p class="center"><code>ellipse(20, 50, 10, 40);</code></p>
 
 Some functions need parameters. Ellipse-function needs four parameters. First and second parameter set the x and y coordinate, third and fourth parameter set the width and height of the ellipse. Parameters are separated by comma (,).
 
-<pre style="text-align: center">
+<pre class="center">
              parameters      
                  |           
 function name    |           

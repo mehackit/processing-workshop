@@ -38,6 +38,13 @@ html {
 button {
   margin: 5px 0; }
 
+code {
+  padding: 0.25em 0em; }
+
+.highlight {
+  margin-left: 0px;
+  margin-right: 0px; }
+
 /*
  * Full page wrapper for background animation
  *
@@ -49,6 +56,9 @@ html, body {
 .exercise img {
   display: block;
   margin: 2rem auto; }
+
+img.inline {
+  display: inline-block; }
 
 /*
  * Sidebar

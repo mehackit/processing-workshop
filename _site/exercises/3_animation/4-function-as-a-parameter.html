@@ -8,8 +8,8 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>Introduction</title>
-  <meta name="description" content="This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can mak...">
+  <title>Function as a parameter</title>
+  <meta name="description" content="">
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/poole.css">
@@ -48,7 +48,7 @@
       
         
         
-          <a class="sidebar-nav-item   active" href="/exercises/1_introduction/1-welcome.html">Introduction</a>
+          <a class="sidebar-nav-item  " href="/exercises/1_introduction/1-welcome.html">Introduction</a>
         
       
         
@@ -78,7 +78,7 @@
         
           <a class="sidebar-nav-item sub " href="/exercises/3_animation/3-random.html">Random</a>
         
-          <a class="sidebar-nav-item sub " href="/exercises/3_animation/4-function-as-a-parameter.html">Function as a parameter</a>
+          <a class="sidebar-nav-item sub  active" href="/exercises/3_animation/4-function-as-a-parameter.html">Function as a parameter</a>
         
           <a class="sidebar-nav-item sub " href="/exercises/3_animation/5-variables.html">Variables</a>
         
@@ -172,64 +172,66 @@
 
     <div class="content container">
       <div class="exercise">
-  <p class="chapter-title center"><small>Introduction</small></p>
-  <h1 class="exercise-title">Introduction</h1>
-  <p>This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can make with code. We’ll be working with a language and environment called <a href="https://processing.org/" target="_blank">Processing</a>, which is widely used by students, artists, designers, researchers, and hobbyists. It’s a good choice for for learning how to code within the context of the visual arts.</p>
+  <p class="chapter-title center"><small>Animation</small></p>
+  <h1 class="exercise-title">Function as a parameter</h1>
+  <p><img src="/img/dawg.jpg" /></p>
 
-<p>The material is divided into five sections. Each section exhibits a small project and introduces new concepts along the way. After completing a section you can start creating your own project or move to the next section. Each section gives you more inspiration and tools to work with.</p>
+<p>In case you didn’t notice, in the last example we gave functions as parameters for the ellipse-function:</p>
 
-<p>The goal is that you create your own work of art and export it to a video. You can first follow the first section to get started and then decide whether to move to the next section or start working on your own project.</p>
+<p class="center"><code>ellipse(random(0, 512), random(0, 512), 50, 50);</code></p>
 
-<p><img src="/img/content.png" alt="content" /></p>
+<p>We call the ellipse-function and give the random-functions as parameters.</p>
 
-<p>First, <a href="https://processing.org/download/?processing" target="_blank">download and install Processing</a>. After that, press right arrow to move to the next page.</p>
+<p>This is often quite handy. When the ellipse-function is called, it first executes the functions in its parameters (functions <code>random(0, 512)</code> and <code>random(0, 512)</code>). After those functions return their values, ellipse function get executed with the new parameters.</p>
 
 </div>
 
 
 
     
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
         
             
-            <a href="/exercises/2_shapes/1-shapes.html" class="exercise-nav nav-next" aria-label="Next: Shapes"><i class="fa fa-angle-right"></i></a>
+            <a href="/exercises/3_animation/5-variables.html" class="exercise-nav nav-next" aria-label="Next: Variables"><i class="fa fa-angle-right"></i></a>
         
         
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
+            <a href="/exercises/3_animation/3-random.html" class="exercise-nav nav-prev" aria-label="Previous: Random"><i class="fa fa-angle-left"></i></a>
+        
     
     
 

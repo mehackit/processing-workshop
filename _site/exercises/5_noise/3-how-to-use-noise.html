@@ -8,8 +8,8 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>Introduction</title>
-  <meta name="description" content="This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can mak...">
+  <title>How to use noise?</title>
+  <meta name="description" content="noise() always returns a value between 0-1 depending on the coordinate that is given as a parameter. noise(0) returns a value and if you call noise(0) again,...">
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/poole.css">
@@ -48,7 +48,7 @@
       
         
         
-          <a class="sidebar-nav-item   active" href="/exercises/1_introduction/1-welcome.html">Introduction</a>
+          <a class="sidebar-nav-item  " href="/exercises/1_introduction/1-welcome.html">Introduction</a>
         
       
         
@@ -114,7 +114,7 @@
         
           <a class="sidebar-nav-item sub " href="/exercises/5_noise/2-what-is-noise.html">What is noise?</a>
         
-          <a class="sidebar-nav-item sub " href="/exercises/5_noise/3-how-to-use-noise.html">How to use noise?</a>
+          <a class="sidebar-nav-item sub  active" href="/exercises/5_noise/3-how-to-use-noise.html">How to use noise?</a>
         
           <a class="sidebar-nav-item sub " href="/exercises/5_noise/4-noise-visualized.html">Noise visualized</a>
         
@@ -172,109 +172,135 @@
 
     <div class="content container">
       <div class="exercise">
-  <p class="chapter-title center"><small>Introduction</small></p>
-  <h1 class="exercise-title">Introduction</h1>
-  <p>This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can make with code. We’ll be working with a language and environment called <a href="https://processing.org/" target="_blank">Processing</a>, which is widely used by students, artists, designers, researchers, and hobbyists. It’s a good choice for for learning how to code within the context of the visual arts.</p>
+  <p class="chapter-title center"><small>Noise</small></p>
+  <h1 class="exercise-title">How to use noise?</h1>
+  <p><code>noise()</code> always returns a value between 0-1 depending on the coordinate that is given as a parameter. <code>noise(0)</code> returns a value and if you call <code>noise(0)</code> again, you get the same value again. If you call <code>noise(0.01)</code> you get a new value. The graph below shows a <code>noise(x)</code> curve, i.e. the value of noise on y-axis at the corresponding x-value.</p>
 
-<p>The material is divided into five sections. Each section exhibits a small project and introduces new concepts along the way. After completing a section you can start creating your own project or move to the next section. Each section gives you more inspiration and tools to work with.</p>
+<p><img src="/img/noisechart.png" /></p>
 
-<p>The goal is that you create your own work of art and export it to a video. You can first follow the first section to get started and then decide whether to move to the next section or start working on your own project.</p>
+<p>Depending on how much you increment x each frame the values will be smoother or more random.</p>
 
-<p><img src="/img/content.png" alt="content" /></p>
+<div class="editor-wrapper">
+  <div class="display">
+    <canvas class="canvas"></canvas>
+  </div>
 
-<p>First, <a href="https://processing.org/download/?processing" target="_blank">download and install Processing</a>. After that, press right arrow to move to the next page.</p>
+  <div class="controls">
+    <button class="editor_button" id="btn_start">
+      <i class="fa fa-play fa-2x"></i>
+    </button>
+    <button class="editor_button" id="btn_stop">
+      <i class="fa fa-stop fa-2x"></i>
+    </button>        
+  </div>
+
+  <div class="editor-container">
+    <div id="editor" filepath="/sketches/noise2/noise2.pde"></div>
+  </div>
+
+  <div class="reference">
+    <b>Reference</b><br />
+    
+    
+      <a href="https://processing.org/reference/noise_.html" target="p5ref">noise</a><br />
+    
+  </div>
+</div>
+<p><!-- editor-wrapper --></p>
 
 </div>
 
 
 
     
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
         
             
-            <a href="/exercises/2_shapes/1-shapes.html" class="exercise-nav nav-next" aria-label="Next: Shapes"><i class="fa fa-angle-right"></i></a>
+            <a href="/exercises/5_noise/4-noise-visualized.html" class="exercise-nav nav-next" aria-label="Next: Noise visualized"><i class="fa fa-angle-right"></i></a>
         
         
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
+            <a href="/exercises/5_noise/2-what-is-noise.html" class="exercise-nav nav-prev" aria-label="Previous: What is noise?"><i class="fa fa-angle-left"></i></a>
+        
     
     
 

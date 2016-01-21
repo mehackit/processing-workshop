@@ -8,8 +8,8 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>Introduction</title>
-  <meta name="description" content="This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can mak...">
+  <title>Order</title>
+  <meta name="description" content="Run the example below. You should see a circle.">
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/poole.css">
@@ -48,7 +48,7 @@
       
         
         
-          <a class="sidebar-nav-item   active" href="/exercises/1_introduction/1-welcome.html">Introduction</a>
+          <a class="sidebar-nav-item  " href="/exercises/1_introduction/1-welcome.html">Introduction</a>
         
       
         
@@ -57,7 +57,7 @@
         
           <a class="sidebar-nav-item sub " href="/exercises/2_shapes/2-statements.html">Statements</a>
         
-          <a class="sidebar-nav-item sub " href="/exercises/2_shapes/3-order.html">Order</a>
+          <a class="sidebar-nav-item sub  active" href="/exercises/2_shapes/3-order.html">Order</a>
         
           <a class="sidebar-nav-item sub " href="/exercises/2_shapes/4-size.html">Size</a>
         
@@ -172,37 +172,68 @@
 
     <div class="content container">
       <div class="exercise">
-  <p class="chapter-title center"><small>Introduction</small></p>
-  <h1 class="exercise-title">Introduction</h1>
-  <p>This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can make with code. We’ll be working with a language and environment called <a href="https://processing.org/" target="_blank">Processing</a>, which is widely used by students, artists, designers, researchers, and hobbyists. It’s a good choice for for learning how to code within the context of the visual arts.</p>
+  <p class="chapter-title center"><small>Shapes</small></p>
+  <h1 class="exercise-title">Order</h1>
+  <p>Run the example below. You should see a circle.</p>
 
-<p>The material is divided into five sections. Each section exhibits a small project and introduces new concepts along the way. After completing a section you can start creating your own project or move to the next section. Each section gives you more inspiration and tools to work with.</p>
+<div class="editor-wrapper">
+  <div class="display">
+    <canvas class="canvas"></canvas>
+  </div>
 
-<p>The goal is that you create your own work of art and export it to a video. You can first follow the first section to get started and then decide whether to move to the next section or start working on your own project.</p>
+  <div class="controls">
+    <button class="editor_button" id="btn_start">
+      <i class="fa fa-play fa-2x"></i>
+    </button>
+    <button class="editor_button" id="btn_stop">
+      <i class="fa fa-stop fa-2x"></i>
+    </button>        
+  </div>
 
-<p><img src="/img/content.png" alt="content" /></p>
+  <div class="editor-container">
+    <div id="editor" filepath="/sketches/shapes2/shapes2.pde"></div>
+  </div>
 
-<p>First, <a href="https://processing.org/download/?processing" target="_blank">download and install Processing</a>. After that, press right arrow to move to the next page.</p>
+  <div class="reference">
+    <b>Reference</b><br />
+    
+    
+      <a href="https://processing.org/reference/ellipse_.html" target="p5ref">ellipse</a><br />
+    
+  </div>
+</div>
+<p><!-- editor-wrapper --></p>
+
+<h2 id="order-matters">Order matters</h2>
+
+<p>Change the order of the statements to look like following (use ctrl+x &amp; ctrl+v):</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ellipse</span><span class="o">(</span><span class="mi">40</span><span class="o">,</span> <span class="mi">45</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">50</span><span class="o">);</span>
+<span class="n">ellipse</span><span class="o">(</span><span class="mi">50</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">20</span><span class="o">);</span></code></pre></figure>
+
+<p>What happens and why?</p>
 
 </div>
 
 
 
     
+    
+
+    
+    
+
+    
+    
+
+    
         
             
-            <a href="/exercises/2_shapes/1-shapes.html" class="exercise-nav nav-next" aria-label="Next: Shapes"><i class="fa fa-angle-right"></i></a>
+            <a href="/exercises/2_shapes/4-size.html" class="exercise-nav nav-next" aria-label="Next: Size"><i class="fa fa-angle-right"></i></a>
         
         
-    
-    
-
-    
-    
-
-    
-    
-
+            <a href="/exercises/2_shapes/2-statements.html" class="exercise-nav nav-prev" aria-label="Previous: Statements"><i class="fa fa-angle-left"></i></a>
+        
     
     
 

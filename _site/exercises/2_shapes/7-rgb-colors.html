@@ -8,8 +8,8 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>Introduction</title>
-  <meta name="description" content="This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can mak...">
+  <title>RGB Colors</title>
+  <meta name="description" content="You can mix red, green, and blue to create colors. As it was with grayscale, each component gets a value between 0 and 255.fill(255, 255, 0); Fill with three...">
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/poole.css">
@@ -48,7 +48,7 @@
       
         
         
-          <a class="sidebar-nav-item   active" href="/exercises/1_introduction/1-welcome.html">Introduction</a>
+          <a class="sidebar-nav-item  " href="/exercises/1_introduction/1-welcome.html">Introduction</a>
         
       
         
@@ -65,7 +65,7 @@
         
           <a class="sidebar-nav-item sub " href="/exercises/2_shapes/6-grayscale-colors.html">Grayscale colors</a>
         
-          <a class="sidebar-nav-item sub " href="/exercises/2_shapes/7-rgb-colors.html">RGB Colors</a>
+          <a class="sidebar-nav-item sub  active" href="/exercises/2_shapes/7-rgb-colors.html">RGB Colors</a>
         
           <a class="sidebar-nav-item sub " href="/exercises/2_shapes/8-next.html">Next</a>
         
@@ -172,49 +172,92 @@
 
     <div class="content container">
       <div class="exercise">
-  <p class="chapter-title center"><small>Introduction</small></p>
-  <h1 class="exercise-title">Introduction</h1>
-  <p>This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can make with code. We’ll be working with a language and environment called <a href="https://processing.org/" target="_blank">Processing</a>, which is widely used by students, artists, designers, researchers, and hobbyists. It’s a good choice for for learning how to code within the context of the visual arts.</p>
+  <p class="chapter-title center"><small>Shapes</small></p>
+  <h1 class="exercise-title">RGB Colors</h1>
+  <p><img src="/img/rgb.png" height="200px" /></p>
+<p>You can mix red, green, and blue to create colors. As it was with grayscale, each component gets a value between 0 and 255.</p>
+<p><code>fill(255, 255, 0);</code> Fill with three parameters sets a red-green-blue color. This one is yellow.</p>
+<p><code>fill(0, 255, 255, 200);</code> Fill with four parameters sets a RGB-color with transparency. This one is a little bit tansparent cyan.</p>
+<p><code>background(255,0,0);</code> Covers the whole canvas with the specified color. This one is red.</p>
+<p>You can turn off fill and stroke with <code>noStroke();</code> and <code>noFill();</code>. <code>strokeWeight(1);</code> sets the thikness of outlines.</p>
 
-<p>The material is divided into five sections. Each section exhibits a small project and introduces new concepts along the way. After completing a section you can start creating your own project or move to the next section. Each section gives you more inspiration and tools to work with.</p>
+<p>Try out <code>fill</code>, <code>background</code>, <code>noStroke</code>, <code>noFill</code>, and <code>strokeWeight</code> to color the sketch below:</p>
 
-<p>The goal is that you create your own work of art and export it to a video. You can first follow the first section to get started and then decide whether to move to the next section or start working on your own project.</p>
+<div class="editor-wrapper">
+  <div class="display">
+    <canvas class="canvas"></canvas>
+  </div>
 
-<p><img src="/img/content.png" alt="content" /></p>
+  <div class="controls">
+    <button class="editor_button" id="btn_start">
+      <i class="fa fa-play fa-2x"></i>
+    </button>
+    <button class="editor_button" id="btn_stop">
+      <i class="fa fa-stop fa-2x"></i>
+    </button>        
+  </div>
 
-<p>First, <a href="https://processing.org/download/?processing" target="_blank">download and install Processing</a>. After that, press right arrow to move to the next page.</p>
+  <div class="editor-container">
+    <div id="editor" filepath="/sketches/shapes5/shapes5.pde"></div>
+  </div>
+
+  <div class="reference">
+    <b>Reference</b><br />
+    
+    
+      <a href="https://processing.org/reference/fill_.html" target="p5ref">fill</a><br />
+    
+      <a href="https://processing.org/reference/stroke_.html" target="p5ref">stroke</a><br />
+    
+      <a href="https://processing.org/reference/background_.html" target="p5ref">background</a><br />
+    
+      <a href="https://processing.org/reference/noFill_.html" target="p5ref">noFill</a><br />
+    
+      <a href="https://processing.org/reference/noStroke_.html" target="p5ref">noStroke</a><br />
+    
+      <a href="https://processing.org/reference/strokeWeight_.html" target="p5ref">strokeWeight</a><br />
+    
+      <a href="https://processing.org/reference/line_.html" target="p5ref">line</a><br />
+    
+      <a href="https://processing.org/reference/triangle_.html" target="p5ref">triangle</a><br />
+    
+  </div>
+</div>
+<p><!-- editor-wrapper --></p>
 
 </div>
 
 
 
     
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
         
             
-            <a href="/exercises/2_shapes/1-shapes.html" class="exercise-nav nav-next" aria-label="Next: Shapes"><i class="fa fa-angle-right"></i></a>
+            <a href="/exercises/2_shapes/8-next.html" class="exercise-nav nav-next" aria-label="Next: Next"><i class="fa fa-angle-right"></i></a>
         
         
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
+            <a href="/exercises/2_shapes/6-grayscale-colors.html" class="exercise-nav nav-prev" aria-label="Previous: Grayscale colors"><i class="fa fa-angle-left"></i></a>
+        
     
     
 

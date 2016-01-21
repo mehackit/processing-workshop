@@ -8,8 +8,8 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>Introduction</title>
-  <meta name="description" content="This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can mak...">
+  <title>Mouse</title>
+  <meta name="description" content="Let’s make something interactive. Processing has some nice functions for working with the users mouse. You can get the coordinates with mouseX and mouseY var...">
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/poole.css">
@@ -48,7 +48,7 @@
       
         
         
-          <a class="sidebar-nav-item   active" href="/exercises/1_introduction/1-welcome.html">Introduction</a>
+          <a class="sidebar-nav-item  " href="/exercises/1_introduction/1-welcome.html">Introduction</a>
         
       
         
@@ -95,7 +95,7 @@
         
           <a class="sidebar-nav-item  " href="/exercises/4_interaction/1-interaction.html">Interaction</a>
         
-          <a class="sidebar-nav-item sub " href="/exercises/4_interaction/2-mouse.html">Mouse</a>
+          <a class="sidebar-nav-item sub  active" href="/exercises/4_interaction/2-mouse.html">Mouse</a>
         
           <a class="sidebar-nav-item sub " href="/exercises/4_interaction/3-drawing-a-line.html">Drawing a line</a>
         
@@ -172,85 +172,117 @@
 
     <div class="content container">
       <div class="exercise">
-  <p class="chapter-title center"><small>Introduction</small></p>
-  <h1 class="exercise-title">Introduction</h1>
-  <p>This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can make with code. We’ll be working with a language and environment called <a href="https://processing.org/" target="_blank">Processing</a>, which is widely used by students, artists, designers, researchers, and hobbyists. It’s a good choice for for learning how to code within the context of the visual arts.</p>
+  <p class="chapter-title center"><small>Interaction</small></p>
+  <h1 class="exercise-title">Mouse</h1>
+  <p>Let’s make something interactive. Processing has some nice functions for working with the users mouse. You can get the coordinates with <code>mouseX</code> and <code>mouseY</code> variables, which are updated each frame.</p>
 
-<p>The material is divided into five sections. Each section exhibits a small project and introduces new concepts along the way. After completing a section you can start creating your own project or move to the next section. Each section gives you more inspiration and tools to work with.</p>
+<p>The example below draws a point to the current mouse coordinate. You can edit the code to draw for example a rectangle, circle or a line to the current mouse position.</p>
 
-<p>The goal is that you create your own work of art and export it to a video. You can first follow the first section to get started and then decide whether to move to the next section or start working on your own project.</p>
+<div class="editor-wrapper">
+  <div class="display">
+    <canvas class="canvas"></canvas>
+  </div>
 
-<p><img src="/img/content.png" alt="content" /></p>
+  <div class="controls">
+    <button class="editor_button" id="btn_start">
+      <i class="fa fa-play fa-2x"></i>
+    </button>
+    <button class="editor_button" id="btn_stop">
+      <i class="fa fa-stop fa-2x"></i>
+    </button>        
+  </div>
 
-<p>First, <a href="https://processing.org/download/?processing" target="_blank">download and install Processing</a>. After that, press right arrow to move to the next page.</p>
+  <div class="editor-container">
+    <div id="editor" filepath="/sketches/interaciton1/interaciton1.pde"></div>
+  </div>
+
+  <div class="reference">
+    <b>Reference</b><br />
+    
+    
+      <a href="https://processing.org/reference/mouseX.html" target="p5ref">mouseX</a><br />
+    
+      <a href="https://processing.org/reference/mouseY.html" target="p5ref">mouseY</a><br />
+    
+      <a href="https://processing.org/reference/pmouseX.html" target="p5ref">pmouseX</a><br />
+    
+      <a href="https://processing.org/reference/pmouseY.html" target="p5ref">pmouseY</a><br />
+    
+      <a href="https://processing.org/reference/point_.html" target="p5ref">point</a><br />
+    
+  </div>
+</div>
+<p><!-- editor-wrapper --></p>
 
 </div>
 
 
 
     
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
         
             
-            <a href="/exercises/2_shapes/1-shapes.html" class="exercise-nav nav-next" aria-label="Next: Shapes"><i class="fa fa-angle-right"></i></a>
+            <a href="/exercises/4_interaction/3-drawing-a-line.html" class="exercise-nav nav-next" aria-label="Next: Drawing a line"><i class="fa fa-angle-right"></i></a>
         
         
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
+            <a href="/exercises/4_interaction/1-interaction.html" class="exercise-nav nav-prev" aria-label="Previous: Interaction"><i class="fa fa-angle-left"></i></a>
+        
     
     
 

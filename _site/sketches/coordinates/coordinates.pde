@@ -41,5 +41,5 @@ void draw(){
         yPos = 0;
     }
     ellipse(xPos + 10, yPos + 10, 1, 1);
-    text("x: " + (xPos) + " y: " + (yPos) + "", xPos + 10, yPos + 30);
+    text("x: " + (int(xPos)) + " y: " + (int(yPos)) + "", xPos + 10, yPos + 30);
 }

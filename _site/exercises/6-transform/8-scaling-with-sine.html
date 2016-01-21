@@ -8,8 +8,8 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>Introduction</title>
-  <meta name="description" content="This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can mak...">
+  <title>Scaling with sine</title>
+  <meta name="description" content="Before you used noise-function to generate nice smooth values for forexample coordinates. Let’s do something similar with sine-function for scaling objects.">
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/poole.css">
@@ -48,7 +48,7 @@
       
         
         
-          <a class="sidebar-nav-item   active" href="/exercises/1_introduction/1-welcome.html">Introduction</a>
+          <a class="sidebar-nav-item  " href="/exercises/1_introduction/1-welcome.html">Introduction</a>
         
       
         
@@ -147,7 +147,7 @@
         
           <a class="sidebar-nav-item sub " href="/exercises/6-transform/7-scaling.html">Scaling</a>
         
-          <a class="sidebar-nav-item sub " href="/exercises/6-transform/8-scaling-with-sine.html">Scaling with sine</a>
+          <a class="sidebar-nav-item sub  active" href="/exercises/6-transform/8-scaling-with-sine.html">Scaling with sine</a>
         
           <a class="sidebar-nav-item sub " href="/exercises/6-transform/9-2d-transformations.html">2D transformations together</a>
         
@@ -172,154 +172,182 @@
 
     <div class="content container">
       <div class="exercise">
-  <p class="chapter-title center"><small>Introduction</small></p>
-  <h1 class="exercise-title">Introduction</h1>
-  <p>This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can make with code. We’ll be working with a language and environment called <a href="https://processing.org/" target="_blank">Processing</a>, which is widely used by students, artists, designers, researchers, and hobbyists. It’s a good choice for for learning how to code within the context of the visual arts.</p>
+  <p class="chapter-title center"><small>Transform</small></p>
+  <h1 class="exercise-title">Scaling with sine</h1>
+  <p>Before you used noise-function to generate nice smooth values for forexample coordinates. Let’s do something similar with sine-function for scaling objects.</p>
 
-<p>The material is divided into five sections. Each section exhibits a small project and introduces new concepts along the way. After completing a section you can start creating your own project or move to the next section. Each section gives you more inspiration and tools to work with.</p>
+<p>Sine-function fluctuates nicely between -1 and 1. If we call <code>sin(x)</code> and move x a little bit on each frame, we get values that alternate between -1 an 1. Add + 1 to that value and we get values between 0-2 for the scale:</p>
 
-<p>The goal is that you create your own work of art and export it to a video. You can first follow the first section to get started and then decide whether to move to the next section or start working on your own project.</p>
+<p><img src="/img/sine.png" height="100" /></p>
 
-<p><img src="/img/content.png" alt="content" /></p>
+<div class="editor-wrapper">
+  <div class="display">
+    <canvas class="canvas"></canvas>
+  </div>
 
-<p>First, <a href="https://processing.org/download/?processing" target="_blank">download and install Processing</a>. After that, press right arrow to move to the next page.</p>
+  <div class="controls">
+    <button class="editor_button" id="btn_start">
+      <i class="fa fa-play fa-2x"></i>
+    </button>
+    <button class="editor_button" id="btn_stop">
+      <i class="fa fa-stop fa-2x"></i>
+    </button>        
+  </div>
+
+  <div class="editor-container">
+    <div id="editor" filepath="/sketches/transform6/transform6.pde"></div>
+  </div>
+
+  <div class="reference">
+    <b>Reference</b><br />
+    
+    
+      <a href="https://processing.org/reference/scale_.html" target="p5ref">scale</a><br />
+    
+      <a href="https://processing.org/reference/sin_.html" target="p5ref">sin</a><br />
+    
+  </div>
+</div>
+<p><!-- editor-wrapper --></p>
 
 </div>
 
 
 
     
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
         
             
-            <a href="/exercises/2_shapes/1-shapes.html" class="exercise-nav nav-next" aria-label="Next: Shapes"><i class="fa fa-angle-right"></i></a>
+            <a href="/exercises/6-transform/9-2d-transformations.html" class="exercise-nav nav-next" aria-label="Next: 2D transformations together"><i class="fa fa-angle-right"></i></a>
         
         
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
+            <a href="/exercises/6-transform/7-scaling.html" class="exercise-nav nav-prev" aria-label="Previous: Scaling"><i class="fa fa-angle-left"></i></a>
+        
     
     
 

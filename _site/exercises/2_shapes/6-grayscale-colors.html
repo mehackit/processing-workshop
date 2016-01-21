@@ -8,8 +8,8 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>Introduction</title>
-  <meta name="description" content="This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can mak...">
+  <title>Grayscale colors</title>
+  <meta name="description" content="">
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/poole.css">
@@ -48,7 +48,7 @@
       
         
         
-          <a class="sidebar-nav-item   active" href="/exercises/1_introduction/1-welcome.html">Introduction</a>
+          <a class="sidebar-nav-item  " href="/exercises/1_introduction/1-welcome.html">Introduction</a>
         
       
         
@@ -63,7 +63,7 @@
         
           <a class="sidebar-nav-item sub " href="/exercises/2_shapes/5-coordinates.html">Coordinates</a>
         
-          <a class="sidebar-nav-item sub " href="/exercises/2_shapes/6-grayscale-colors.html">Grayscale colors</a>
+          <a class="sidebar-nav-item sub  active" href="/exercises/2_shapes/6-grayscale-colors.html">Grayscale colors</a>
         
           <a class="sidebar-nav-item sub " href="/exercises/2_shapes/7-rgb-colors.html">RGB Colors</a>
         
@@ -172,46 +172,86 @@
 
     <div class="content container">
       <div class="exercise">
-  <p class="chapter-title center"><small>Introduction</small></p>
-  <h1 class="exercise-title">Introduction</h1>
-  <p>This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can make with code. We’ll be working with a language and environment called <a href="https://processing.org/" target="_blank">Processing</a>, which is widely used by students, artists, designers, researchers, and hobbyists. It’s a good choice for for learning how to code within the context of the visual arts.</p>
+  <p class="chapter-title center"><small>Shapes</small></p>
+  <h1 class="exercise-title">Grayscale colors</h1>
+  <p><img src="/img/grayscale.png" width="300px" /></p>
 
-<p>The material is divided into five sections. Each section exhibits a small project and introduces new concepts along the way. After completing a section you can start creating your own project or move to the next section. Each section gives you more inspiration and tools to work with.</p>
+<p>In the digital world, color is defined as a range of numbers. Let’s start with the simplest case: black and white or grayscale. 0 means black, 255 means white. In between, every other number (50, 87, 162, 209, and so on) is a shade of gray ranging from black to white.</p>
 
-<p>The goal is that you create your own work of art and export it to a video. You can first follow the first section to get started and then decide whether to move to the next section or start working on your own project.</p>
+<p>Calling a fill-function chances the fill color for all what’s drawn after the fill-function call. Stroke-function does the same for outline color.</p>
 
-<p><img src="/img/content.png" alt="content" /></p>
+<p><code>fill(0);</code> Fill with one parameter sets a grayscale color. This one is black.</p>
 
-<p>First, <a href="https://processing.org/download/?processing" target="_blank">download and install Processing</a>. After that, press right arrow to move to the next page.</p>
+<p><code>fill(255, 10);</code> Fill with two parameters sets a grayscale color with transparency. This one is quite transparent white.</p>
+
+<p>Try out fill and stroke to color the sketch below.</p>
+
+<div class="editor-wrapper">
+  <div class="display">
+    <canvas class="canvas"></canvas>
+  </div>
+
+  <div class="controls">
+    <button class="editor_button" id="btn_start">
+      <i class="fa fa-play fa-2x"></i>
+    </button>
+    <button class="editor_button" id="btn_stop">
+      <i class="fa fa-stop fa-2x"></i>
+    </button>        
+  </div>
+
+  <div class="editor-container">
+    <div id="editor" filepath="/sketches/shapes4/shapes4.pde"></div>
+  </div>
+
+  <div class="reference">
+    <b>Reference</b><br />
+    
+    
+      <a href="https://processing.org/reference/color.html" target="p5ref">color</a><br />
+    
+      <a href="https://processing.org/reference/fill_.html" target="p5ref">fill</a><br />
+    
+      <a href="https://processing.org/reference/stroke_.html" target="p5ref">stroke</a><br />
+    
+  </div>
+</div>
+<p><!-- editor-wrapper --></p>
+
+<p>When you draw many shapes and define many colors, Processing will always use the most recently specified stroke and fill. Calling stroke or fill overrides the previous values and the following shapes are drawn with the new colors, until new colors are set:</p>
+
+<p><img src="/img/colors_and_order.png" /></p>
 
 </div>
 
 
 
     
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
         
             
-            <a href="/exercises/2_shapes/1-shapes.html" class="exercise-nav nav-next" aria-label="Next: Shapes"><i class="fa fa-angle-right"></i></a>
+            <a href="/exercises/2_shapes/7-rgb-colors.html" class="exercise-nav nav-next" aria-label="Next: RGB Colors"><i class="fa fa-angle-right"></i></a>
         
         
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
+            <a href="/exercises/2_shapes/5-coordinates.html" class="exercise-nav nav-prev" aria-label="Previous: Coordinates"><i class="fa fa-angle-left"></i></a>
+        
     
     
 

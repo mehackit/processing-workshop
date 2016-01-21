@@ -8,8 +8,8 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>Introduction</title>
-  <meta name="description" content="This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can mak...">
+  <title>Using variables</title>
+  <meta name="description" content="When you create a variable, you have to state the variable’s type. After that you can change the variables value by assigning a new value to the variable.">
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/poole.css">
@@ -48,7 +48,7 @@
       
         
         
-          <a class="sidebar-nav-item   active" href="/exercises/1_introduction/1-welcome.html">Introduction</a>
+          <a class="sidebar-nav-item  " href="/exercises/1_introduction/1-welcome.html">Introduction</a>
         
       
         
@@ -82,7 +82,7 @@
         
           <a class="sidebar-nav-item sub " href="/exercises/3_animation/5-variables.html">Variables</a>
         
-          <a class="sidebar-nav-item sub " href="/exercises/3_animation/6-using-variables.html">Using variables</a>
+          <a class="sidebar-nav-item sub  active" href="/exercises/3_animation/6-using-variables.html">Using variables</a>
         
           <a class="sidebar-nav-item sub " href="/exercises/3_animation/7-example-with-transparency-and-random.html">Example with transparent colors and random</a>
         
@@ -172,70 +172,114 @@
 
     <div class="content container">
       <div class="exercise">
-  <p class="chapter-title center"><small>Introduction</small></p>
-  <h1 class="exercise-title">Introduction</h1>
-  <p>This website contains short examples and exercises to help you getting started with programming. The aim is to explore what kind of visual things you can make with code. We’ll be working with a language and environment called <a href="https://processing.org/" target="_blank">Processing</a>, which is widely used by students, artists, designers, researchers, and hobbyists. It’s a good choice for for learning how to code within the context of the visual arts.</p>
+  <p class="chapter-title center"><small>Animation</small></p>
+  <h1 class="exercise-title">Using variables</h1>
+  <p>When you create a variable, you have to state the variable’s type. After that you can change the variables value by assigning a new value to the variable.</p>
 
-<p>The material is divided into five sections. Each section exhibits a small project and introduces new concepts along the way. After completing a section you can start creating your own project or move to the next section. Each section gives you more inspiration and tools to work with.</p>
+<p class="center">Create new variable: <code>float f = 3.14;</code>. Assign a new value: <code>f = 6.28;</code></p>
 
-<p>The goal is that you create your own work of art and export it to a video. You can first follow the first section to get started and then decide whether to move to the next section or start working on your own project.</p>
+<p>If you create a variable in the beginning of the sketch, it will be visible for the whole sketch. If you create a variable inside a function (like setup or draw) it will only be visible in the corresponding function.</p>
 
-<p><img src="/img/content.png" alt="content" /></p>
+<div class="editor-wrapper">
+  <div class="display">
+    <canvas class="canvas"></canvas>
+  </div>
 
-<p>First, <a href="https://processing.org/download/?processing" target="_blank">download and install Processing</a>. After that, press right arrow to move to the next page.</p>
+  <div class="controls">
+    <button class="editor_button" id="btn_start">
+      <i class="fa fa-play fa-2x"></i>
+    </button>
+    <button class="editor_button" id="btn_stop">
+      <i class="fa fa-stop fa-2x"></i>
+    </button>        
+  </div>
+
+  <div class="editor-container">
+    <div id="editor" filepath="/sketches/helloworld5/helloworld5.pde"></div>
+  </div>
+
+  <div class="reference">
+    <b>Reference</b><br />
+    
+    
+      <a href="https://processing.org/reference/int.html" target="p5ref">int</a><br />
+    
+      <a href="https://processing.org/reference/float.html" target="p5ref">float</a><br />
+    
+      <a href="https://processing.org/reference/frameRate_.html" target="p5ref">frameRate</a><br />
+    
+      <a href="https://processing.org/reference/width.html" target="p5ref">width</a><br />
+    
+      <a href="https://processing.org/reference/height.html" target="p5ref">height</a><br />
+    
+      <a href="https://processing.org/reference/fill_.html" target="p5ref">fill</a><br />
+    
+      <a href="https://processing.org/reference/stroke_.html" target="p5ref">stroke</a><br />
+    
+      <a href="https://processing.org/reference/random_.html" target="p5ref">random</a><br />
+    
+      <a href="https://processing.org/reference/ellipse_.html" target="p5ref">ellipse</a><br />
+    
+      <a href="https://processing.org/reference/rect_.html" target="p5ref">rect</a><br />
+    
+  </div>
+</div>
+<p><!-- editor-wrapper --></p>
 
 </div>
 
 
 
     
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
         
             
-            <a href="/exercises/2_shapes/1-shapes.html" class="exercise-nav nav-next" aria-label="Next: Shapes"><i class="fa fa-angle-right"></i></a>
+            <a href="/exercises/3_animation/7-example-with-transparency-and-random.html" class="exercise-nav nav-next" aria-label="Next: Example with transparent colors and random"><i class="fa fa-angle-right"></i></a>
         
         
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
+            <a href="/exercises/3_animation/5-variables.html" class="exercise-nav nav-prev" aria-label="Previous: Variables"><i class="fa fa-angle-left"></i></a>
+        
     
     
 
