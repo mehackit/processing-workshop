@@ -12,4 +12,4 @@ Let’s try rotating a square clockwise 45 degrees:
 
 How come the square got moved and cut off? The answer is: the square did not move. The grid was rotated. Here is what really happened. As you can see, on the rotated coordinate system, the square still has its upper left corner at (40, 40):
 
-<img src="{{site.baseurl}}/img/rotated_grid.png">
+<img src="{{site.url}}/img/rotated_grid.png">

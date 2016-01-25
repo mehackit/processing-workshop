@@ -4,7 +4,7 @@ chapter: Animation
 title: Function as a parameter
 ---
 
-<img src="{{site.baseurl}}/img/dawg.jpg">
+<img src="{{site.url}}/img/dawg.jpg">
 
 In case you didn't notice, in the last example we gave functions as parameters for the ellipse-function:
 

@@ -3,7 +3,7 @@ layout: default
 title: Mehackit Creative programming workshop with Processing
 ---
 
-<canvas class="example" id="background" filepath="{{ 'sketches/bg_animation/bg_animation.pde' | prepend: site.baseurl }}"></canvas>
+<canvas class="example" id="background" filepath="{{ 'sketches/bg_animation/bg_animation.pde' | prepend: site.url }}"></canvas>
 
 <!-- <div class="page"> -->
 <div id="frontpage">
@@ -13,9 +13,9 @@ title: Mehackit Creative programming workshop with Processing
 <!-- </div> -->
 
 {% assign next = site.exercises | first %}
-<a href="{{ site.baseurl }}{{ next.url }}" class="exercise-nav nav-next" aria-label="Next: {{next.title}}">
+<a href="{{ site.url }}{{ next.url }}" class="exercise-nav nav-next" aria-label="Next: {{next.title}}">
   <i class="fa fa-angle-right"></i>
-  <img id="click_here_img" src="{{ site.baseurl }}/img/click_here.png">
+  <img id="click_here_img" src="{{ site.url }}/img/click_here.png">
   <script type="text/javascript">
     setTimeout(function(){ $('#click_here_img').fadeIn(500); }, 5000);
     setTimeout(function(){ $('#click_here_img').fadeOut(500); }, 15000);
