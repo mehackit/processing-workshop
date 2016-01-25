@@ -8,6 +8,6 @@ title: Rotating (the right way)
 
 The correct way to rotate the square is to: 1) Translate the coordinate system’s origin (0, 0) to where you want the upper left of the square to be. 2) Rotate the grid π/4 radians (45°) 3) Draw the square at the origin.
 
-<a href="{{site.pageurl}}/img/correct_rotate_grid.png" target="_blank"><img src="{{site.pageurl}}/img/correct_rotate_grid.png" height="100"></a>
+<a href="{{site.url}}/img/correct_rotate_grid.png" target="_blank"><img src="{{site.url}}/img/correct_rotate_grid.png" height="100"></a>
 
 {% include editor.html filepath="/sketches/transform4/transform4.pde" references="rotate_, translate_, pushMatrix, popMatrix_, radians_" %}

@@ -8,4 +8,4 @@ Let's make something interactive. Processing has some nice functions for working
 
 The example below draws a point to the current mouse coordinate. You can edit the code to draw for example a rectangle, circle or a line to the current mouse position.
 
-{% include editor.html filepath="/sketches/interaciton1/interaciton1.pde" references="mouseX, mouseY, pmouseX, pmouseY, point_" %}
+{% include editor.html filepath="/sketches/interaction1/interaction1.pde" references="mouseX, mouseY, pmouseX, pmouseY, point_" %}

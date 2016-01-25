@@ -10,6 +10,6 @@ The material is divided into five sections. Each section exhibits a small projec
 
 The goal is that you create your own work of art and export it to a video. You can first follow the first section to get started and then decide whether to move to the next section or start working on your own project.
 
-![content](/img/content.png)
+![content]({{site.url}}/img/content.png)
 
 First, <a href="https://processing.org/download/?processing" target="_blank">download and install Processing</a>. After that, press right arrow to move to the next page.
