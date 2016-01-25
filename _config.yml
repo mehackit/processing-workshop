@@ -3,7 +3,7 @@ title: Mehackit Media Art Workshop with Processing
 email: hello@mehackit.org
 description: Creative programming workshop with Processing
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://mehackit.github.io/processing-workshop" # the base hostname & protocol for your site
+url: "http://processing.mehackit.org" # the base hostname & protocol for your site
 twitter_username: mehackit
 github_username:  ohss
 
