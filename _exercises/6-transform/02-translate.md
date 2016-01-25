@@ -20,4 +20,4 @@ If you want to move the rectangle 60 units right and 80 units down, you can just
 
 But there is a more interesting way to do it: move the coordinate system instead. If you move the coordinates 60 units right and 80 units down, you will get exactly the same visual result. Moving the coordinate system is called translation. In the third image <code>translate(60, 80);</code> is called first and then <code>rect(20, 20, 40, 40);</code>. This comes very handy when you want to draw and move more complex shapes.
 
-<img class="inline" height="230" src="{{page.url}}/img/translate.png"> <img class="inline" height="230" src="{{page.url}}/img/translate_new_coords.png"> <img class="inline" height="230" src="{{page.url}}/img/translate_moved_grid.png">
+<img class="inline" height="230" src="{{site.url}}/img/translate.png"> <img class="inline" height="230" src="{{site.url}}/img/translate_new_coords.png"> <img class="inline" height="230" src="{{site.url}}/img/translate_moved_grid.png">
