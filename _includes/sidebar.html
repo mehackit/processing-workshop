@@ -24,7 +24,7 @@
       {% for chapter in chapters %}
         {% assign chapter_exercises = site.exercises | where: "chapter" , chapter %}
         {% for exercise in chapter_exercises %}
-          <a class="sidebar-nav-item {% unless forloop.first %}sub{% endunless %} {% if page.url == exercise.url %} active{% endif %}" href="{{ exercise.url }}">{{ exercise.title }}</a>
+          <a class="sidebar-nav-item {% unless forloop.first %}sub{% endunless %} {% if page.url == exercise.url %} active{% endif %}" href="{{ exercise.url | prepend: site.url }}">{{ exercise.title }}</a>
         {% endfor %}
       {% endfor %}
     </nav>
