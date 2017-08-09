@@ -27,7 +27,7 @@ number = number * 2;  // set the value as number * 2 which is 22 * 2 which is 44
 
 ## Variable visibility
 
-What's the difference between these two programs?
+What's the difference between this program...
 
 {% highlight java %}
 float x = 0;
@@ -41,6 +41,8 @@ void draw() {
   x = x + 1;
 }
 {% endhighlight %}
+
+...and this?
 
 {% highlight java %}
 void setup() {
