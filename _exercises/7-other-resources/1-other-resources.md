@@ -15,3 +15,7 @@ title: Other resources
 ## OpenProcessing.org
 
 <a href="http://www.openprocessing.org/" target="_blank">OpenProcessing</a> is an online platform for sharing and discussing Processing sketches. <a href="http://www.openprocessing.org/classroom/4953" target="_blank">Here</a> and <a href="http://www.openprocessing.org/classroom/24992" target="_blank">here</a> you can find sketches created at mehackit courses.
+
+## Nature of Code
+
+<a href="http://natureofcode.com/book/">Nature of code</a> is an interactive book by Daniel Shiffman. Th book focuses on the programming strategies and techniques behind computer simulations of natural systems using Processing. 
